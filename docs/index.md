@@ -9,7 +9,7 @@ Open sourcing documentation allows us to:
 
 - Streamline changes in documentation in easy to understand manner
 - Everyone can create requests for particular topic via [Issue Creation on
-  GitHub FIXME](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose)
+  GitHub](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose)
 - Build community and engage it in process
 
 ## How documentation is organized?
