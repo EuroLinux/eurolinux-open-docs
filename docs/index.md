@@ -1,16 +1,27 @@
-# Home
+# EuroLinux
+EuroLinux is enterprise 
 
-Several of the EuroLinux documentation are open source and hosted on GitHub and
-GitHub pages. There are also docs for our customer that are available at
-[EuroLinux Support Portal](https://support.euro-linux.com). You can make changes and
-even create documentation via pull requests.
 
+## About Documentation
+This is EuroLinux community driven documentation.
+ 
+**We welcome your contributions to EuroLinux!**
+
+You can:
+- contriubute via Pull Reqest to this repo see [Contriubtion Guide](#Contributors guide)
+- can create requests for particular topic via [Issue Creation on
+   GitHub](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose)
+ - star t   
 Open sourcing documentation allows us to:
 
 - Streamline changes in documentation in easy to understand manner
-- Everyone can create requests for particular topic via [Issue Creation on
-  GitHub](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose)
+- Everyone 
 - Build community and engage it in process
+
+
+
+
+**Note:  As EuroLinux is in Open Core model there are also additional documentation for our customer that are available at [EuroLinux Support Portal](https://support.euro-linux.com).**
 
 ## How documentation is organized?
 
@@ -22,7 +33,12 @@ Documentation is organized in the following manner:
 - Release Notes 
  
 ## Contributors guide
+### How to contribute
+TODO
+ Step - by -step instruction (make fork, PR etc)
 
+
+### Tools
 We are using `mkdocs` with `mkdocs-material` to build and style our
 documentation.
 
