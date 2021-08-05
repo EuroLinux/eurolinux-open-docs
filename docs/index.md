@@ -4,24 +4,20 @@ EuroLinux is enterprise
 
 ## About Documentation
 This is EuroLinux community driven documentation.
- 
+
 **We welcome your contributions to EuroLinux!**
 
 You can:
-- contriubute via Pull Reqest to this repo see [Contriubtion Guide](#Contributors guide)
+
+- star the repository to show your support
+- contribute via Pull Request to this repo see [Contriubtion Guide](#Contributors guide)
 - can create requests for particular topic via [Issue Creation on
    GitHub](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose)
- - star t   
-Open sourcing documentation allows us to:
-
-- Streamline changes in documentation in easy to understand manner
-- Everyone 
-- Build community and engage it in process
 
 
 
-
-**Note:  As EuroLinux is in Open Core model there are also additional documentation for our customer that are available at [EuroLinux Support Portal](https://support.euro-linux.com).**
+!!! info additional documentation
+    As EuroLinux is in Open Core model there are also additional documentation for our customer that are available at [EuroLinux Support Portal](https://support.euro-linux.com).
 
 ## How documentation is organized?
 
