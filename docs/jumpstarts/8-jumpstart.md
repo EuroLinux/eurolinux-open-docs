@@ -28,7 +28,7 @@ CPU).
 
 During our internal testing, we were able to boot and use very basic and already
 installed services on Virtual Machine with only 256 MB of RAM however, without
-additional memory or at least swap space available things like updating system
+additional memory or at least swap space available, things like updating the system
 will result in actions of Kernel Out of Memory (OOM) Killer.
 
 
@@ -68,7 +68,7 @@ support is planned at the end of Q3/beginning of Q4.
 
 ## How to install EuroLinux 8 from ISO
 
-### Where you can obtain ISO?
+### Where can you obtain ISO?
 
 We distribute EuroLinux in a responsible open core model. Because of that, you
 might download EuroLinux from different sources. The two primary sources are:
@@ -78,8 +78,8 @@ might download EuroLinux from different sources. The two primary sources are:
 - [https://customerportal.euro-linux.com](https://customerportal.euro-linux.com)
   for EuroLinux customers
 
-The only difference is that Customer Portal keep older versions when CDN that
-is used for mirroring, keep only two latest ISO for each version to save
+The only difference is that Customer Portal keep older versions when CDN
+is used for mirroring, keep only the two latest ISO for each version to save
 space (single EuroLinux AppStream isos might take up to 10 GB).
 
 
@@ -125,15 +125,15 @@ the system.
 
 #### Anaconda installer **LOCALIZATION** section:
 
-- **Keyboard** - this section allows you to setup the keyboard layouts. Including
-  default keyboard layout, additionally layout and key combination to switch
+- **Keyboard** - this section allows you to setup the keyboard layouts, including
+  the default keyboard layout, additionally layout and key combination to switch
   between them.
 - **Language support** - additional languages packages that should be installed.
-- **Time & Date** - you can configure date, time zone, enable NTP and NTP servers.
+- **Time & Date** - you can configure the date, time zone, enable NTP and NTP servers.
 
 #### Anaconda installer **SOFTWARE** section:
 
-##### Configuring source of the installatin
+##### Configuring source of the installation
 
 Here you might configure the source of your installation. By default, the system
 installs from ISO image. **This is one of the officially supported ways to install
@@ -164,8 +164,11 @@ For EuroLinux beta:
   Name: PowerToolsBeta
 
 !!! Warning "Limited support."
-    **Network hybrid installation from ISO and public repositories is not our primary goal in the QA process**. Packages in EuroLinux repositories are regularly updated, and it might be impossible to install a system from an external source.  Depending on the state of the upstream, we might not fix potential
-    issue.
+    **Network hybrid installation from ISO and public repositories is not our
+    primary goal in the QA process**. Packages in EuroLinux repositories are
+    regularly updated, and it might be impossible to install a system from an
+    external source.  Depending on the state of the upstream, we might not fix
+    a potential issue.
 
 Below example configuration:
 
@@ -182,7 +185,8 @@ or Minimal. There is also the possibility to install additional packages groups.
 
 #### Anaconda installer **SYSTEM** section:
 
-- **Installation selection** allows choosing on which disk the system will be installed. If you want to have a fully encrypted system, you should enable
+- **Installation selection** allows choosing on which disk the system will be
+  installed. If you want to have a fully encrypted system, you should enable
   encryption in this step.
 - **KDUMP** allows choosing if KDUMP (Kernel crash dump collection mechanism)
   should be enabled.
@@ -193,11 +197,13 @@ or Minimal. There is also the possibility to install additional packages groups.
 
 - **Root Password** - by default, the root user is disabled. If a user is created in
   **User Creation** section, the root account could stay disabled
-- **User Creation** section allows creating a regular user in the system. If the "Make this user administrator" option is checked, the root account could be disabled.
+- **User Creation** section allows creating a regular user in the system. If
+  the "Make this user administrator" option is checked, the root account could
+  be disabled.
 
 
-**After applying all necessary changes** installation could start with "Begin
-Installation" button.
+**After applying all necessary changes**, installation could start with the
+"Begin Installation" button.
 
 
 ### Disk partition recommended minimums
@@ -216,14 +222,14 @@ For UEFI, an EFI system partition is also required.
 If your storage allows it, the following partitions are also highly recommended:
 
 - `swap` - 1GB or more depending on the system RAM and workload. Swap is also required for hibernation. Depending on the workload of the system, it should be at least as spacious as system RAM.
-- `/home` - at least 1GB - but in most cases, if `/` can be as big as 80GB
+- `/home` - at least 1GB - but in most cases, if `/` can be as big as 80GB,
   then `/home/` usually takes the rest of the
   free space
 
 
 ### installation in basic graphic mode
 
-If there is a problem loading/running your graphic card driver (it might results in a black
+Suppose there is a problem loading/running your graphic card driver (it might results in a black
 screen/error message or graphic artefacts). There is the possibility to install EuroLinux
 in basic graphic mode.
 
@@ -246,7 +252,7 @@ To install EuroLinux in the text mode:
 
 Before running the installation, you have to fill in all necessary information
 (represented as `!` in selection). It's a good idea to refresh the menu with
-++r+enter++ command shortly after installer start.
+++r+enter++ command shortly after the installer started.
 
 ![TODO](TODO-IMAGE)
 
