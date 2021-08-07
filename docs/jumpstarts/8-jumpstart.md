@@ -239,7 +239,7 @@ If your storage allows it, the following partitions are also highly recommended:
   free space
 
 
-### installation in basic graphic mode
+### Installing EuroLinux in basic graphic mode
 
 Suppose there is a problem loading/running your graphic card driver (it might results in a black
 screen/error message or graphic artefacts). There is the possibility to install EuroLinux
