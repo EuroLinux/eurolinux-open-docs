@@ -1,8 +1,8 @@
 site_name: EuroLinux Documentation
 site_author: EuroLinux Community
 site_url: https://docs.euro-linux.com/
-repo_name: docs-example-2
-repo_url: https://github.com/AlexBaranowski/docs-example-2
+repo_name: eurolinux-open-docs
+repo_url: https://github.com/EuroLinux/eurolinux-open-docs
 
 # EuroLinux theme settings
 theme:
