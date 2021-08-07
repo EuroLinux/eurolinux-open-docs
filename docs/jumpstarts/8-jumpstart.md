@@ -109,19 +109,28 @@ and check if checksums match.
 The second mechanism for checking ISO integrity is built-in the installer itself.
 When you start the installation, use the following:
 
-![TODO obrazek]()
+![Installation 1](../assets/8-jumpstart/g-inst-1.png)
 
 After booting up, the ISO checking process will start.
 
+![Installation 2](../assets/8-jumpstart/g-inst-2.png)
 
-![TODO obrazek]()
 
 ### Installation with GUI
 
 Because even minimal installation image uses GUI the whole process is simple
 and straightforward. EuroLinux 8, as well as previous versions, uses Anaconda
 installer that clearly informs the user what needs to be done in order to install
-the system.
+the system. 
+
+Firsty you have to choose language that will be used during
+installation: ![Installation 3](../assets/8-jumpstart/g-inst-3.png)
+
+After configuring installer language you should state similar to:
+
+
+![Installation 2](../assets/8-jumpstart/g-inst-4.png)
+
 
 #### Anaconda installer **LOCALIZATION** section:
 
@@ -170,9 +179,10 @@ For EuroLinux beta:
     external source.  Depending on the state of the upstream, we might not fix
     a potential issue.
 
-Below example configuration:
+Below you can see example configuration that was used to install
+system:
 
-![TODO](TODO)
+![Adding additonal repositories](../assets/8-jumpstart/additional-repos.png)
 
 After changing the installation source, you will have to confirm **Software
 Selection**.
@@ -182,6 +192,8 @@ Selection**.
 Software selection allows you to customize which packages will be installed.
 You might choose from base environment groups like Server with GUI, Workstation
 or Minimal. There is also the possibility to install additional packages groups.
+
+![Software selection section](../assets/8-jumpstart/g-inst-5.png)
 
 #### Anaconda installer **SYSTEM** section:
 
@@ -248,17 +260,17 @@ To install EuroLinux in the text mode:
 - Add `inst.text` to the end of the kernel boot command line
 - Press ++enter++
 
-![TODO](TODO-IMAGE)
+![Text Install 1](../assets/8-jumpstart/text-inst-1.png)
 
 Before running the installation, you have to fill in all necessary information
 (represented as `!` in selection). It's a good idea to refresh the menu with
 ++r+enter++ command shortly after the installer started.
 
-![TODO](TODO-IMAGE)
+![Text Install 2](../assets/8-jumpstart/text-inst-2.png)
 
 After customization, you are ready to start your installation.
 
-![TODO](TODO-IMAGE)
+![Text Install 3](../assets/8-jumpstart/text-inst-3.png)
 
 
 ### Other possibilities
@@ -273,22 +285,27 @@ Please consult upstream documentation about these topics.
 
 ## Using EuroLinux
 
-From this point, you can use EuroLinux as any other RHEL™ based distribution.
+From this point, you can use EuroLinux as any other RHEL™ based
+distribution.
 
 
 ### Submitting a Request for Change
 
-We truly care. If there is something that you believe could/should be
-changed/improved in the EuroLinux distribution and does not break compatibility
-with the upstream project, then drop us the issue on GitHub! All contributors are
-extremely welcome.
+We truly care. If there is something that you believe could/should
+be changed/improved in the EuroLinux distribution and does not break
+compatibility with the upstream project, then drop us the issue on
+GitHub! All contributors are extremely welcome.
 
 [EuroLinux Distro Bugs and RFC](https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc/)
 
 ### Submitting a Bug report
 
-We decided that submitting bug reports should not involve registration into some
-nasty miserable software. At the very same time, we know that most open-source developers have GitHub profiles. This choice makes the decision making and work as transparent as possible. That's why we decided to use it as the primary way to submit bugs.
+We decided that submitting bug reports should not involve
+registration into some nasty miserable software. At the very same
+time, we know that most open-source developers have GitHub profiles.
+This choice makes the decision making and work as transparent as
+possible. That's why we decided to use it as the primary way to
+submit bugs.
 
 [EuroLinux Distro Bugs and RFC](https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc/)
 
