@@ -1,5 +1,4 @@
 # EuroLinux
-EuroLinux is enterprise 
 
 
 ## About Documentation
