@@ -56,7 +56,7 @@ end
 ```
 
 It's also possible to install EuroLinux on less than 5 GB of space, but it also
-require extra attention.
+requires extra attention.
 
 All absolute minimums for cloud deployments described above are not officially
 supported by EuroLinux.
@@ -78,23 +78,25 @@ might download EuroLinux from different sources. The two primary sources are:
 - [https://customerportal.euro-linux.com](https://customerportal.euro-linux.com)
   for EuroLinux customers
 
-The only difference is that Customer Portal keep older versions when CDN
-is used for mirroring, keep only the two latest ISO for each version to save
+The only difference is that Customer Portal keeps older versions when CDN, that
+is used for mirroring, keeps only the two latest ISO for each version to save
 space (single EuroLinux AppStream isos might take up to 10 GB).
 
 
-Lastly, if you are running a huge deployment - you might consider setup your
-own mirror and download ISOs from Intranet.
+Lastly, if you are running a huge deployment - you might consider setting up
+your own mirror and download ISOs from Intranet.
 
 ### How to check ISO integrity
 
 During download, many things can happen - from a network or sending host
-failure to single-bit error. To check if ISO is undamaged, there are
-two mechanisms in place. The first one allows you to check integrity without running
-ISO. For each ISO available for the EuroLinux distro, there is a file that has
-checksums saved. Filename says which algorithm was used to calculate
-the cryptographic digest. For example, you can browse
-https://fbi.cdn.euro-linux.com/isos/ and read the `sha1sums.txt` file.
+failure to single-bit error. To check if ISO is undamaged, there are two
+mechanisms in place. The first one allows you to check integrity without
+running ISO. For each EuroLinux ISO there's a file with its checksums and
+appropriate digest algorithms. Filename says which algorithm was used to
+calculate the cryptographic digest. For example, you can browse
+[https://fbi.cdn.euro-linux.com/isos/](https://fbi.cdn.euro-linux.com/isos/)
+and read the `sha1sums.txt` file.
+
 
 
 When ISO download is completed, you can invoke the `sha1sum` command on the ISO file
@@ -106,8 +108,8 @@ and check if checksums match.
 ```
 
 
-The second mechanism for checking ISO integrity is built-in the installer itself.
-When you start the installation, use the following:
+The second mechanism for checking ISO integrity is built-in inside the
+installer itself. When you start the installation, use the following:
 
 ![Installation 1](../assets/8-jumpstart/g-inst-1.png)
 
@@ -123,10 +125,10 @@ and straightforward. EuroLinux 8, as well as previous versions, uses Anaconda
 installer that clearly informs the user what needs to be done in order to install
 the system. 
 
-Firsty you have to choose language that will be used during
+Firstly you have to choose language that will be used during
 installation: ![Installation 3](../assets/8-jumpstart/g-inst-3.png)
 
-After configuring installer language you should state similar to:
+After configuring installer language you should see state similar to:
 
 
 ![Installation 2](../assets/8-jumpstart/g-inst-4.png)
@@ -135,7 +137,7 @@ After configuring installer language you should state similar to:
 #### Anaconda installer **LOCALIZATION** section:
 
 - **Keyboard** - this section allows you to setup the keyboard layouts, including
-  the default keyboard layout, additionally layout and key combination to switch
+  the default keyboard layout, additional layouts and key combination to switch
   between them.
 - **Language support** - additional languages packages that should be installed.
 - **Time & Date** - you can configure the date, time zone, enable NTP and NTP servers.
@@ -176,13 +178,13 @@ For EuroLinux beta:
     **Network hybrid installation from ISO and public repositories is not our
     primary goal in the QA process**. Packages in EuroLinux repositories are
     regularly updated, and it might be impossible to install a system from an
-    external source.  Depending on the state of the upstream, we might not fix
+    external source. Depending on the state of the upstream, we might not fix
     a potential issue.
 
-Below you can see example configuration that was used to install
-system:
+Below you can see the example configuration that was used to install
+a system:
 
-![Adding additonal repositories](../assets/8-jumpstart/additional-repos.png)
+![Adding additional repositories](../assets/8-jumpstart/additional-repos.png)
 
 After changing the installation source, you will have to confirm **Software
 Selection**.
@@ -214,8 +216,8 @@ or Minimal. There is also the possibility to install additional packages groups.
   be disabled.
 
 
-**After applying all necessary changes**, installation could start with the
-"Begin Installation" button.
+**After applying all the necessary changes**, installation can be started with
+the "Begin Installation" button.
 
 
 ### Disk partition recommended minimums
@@ -245,7 +247,7 @@ Suppose there is a problem loading/running your graphic card driver (it might re
 screen/error message or graphic artefacts). There is the possibility to install EuroLinux
 in basic graphic mode.
 
-To do so, on the welcome menu, choose `Troubleshooting`, and then "Install in
+To do so choose `Troubleshooting` on the welcome menu, and then "Install in
 the basic graphics mode".
 
 From this point, the process is identical to standard installation with GUI.
@@ -313,7 +315,7 @@ This repository allows you to stay in **direct contact** with EuroLinux
 developers.
 
 
-####  Other ways to submit a bug report
+#### Other ways to submit a bug report
 
 - `support AT euro-linux dot com`
 - [EuroLinux Support Portal (subscription required)](https://support.euro-linux.com)
