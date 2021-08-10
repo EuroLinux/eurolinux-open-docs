@@ -4,8 +4,6 @@ name: Deploy docs on GH Pages
 on: 
   push: 
     branches: [master] 
-  pull_request: 
-    branches: [master] 
 jobs: 
   build: 
     name: Build and deploy 
