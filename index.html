@@ -608,25 +608,27 @@
                 
                 <h1 id="eurolinux">EuroLinux</h1>
 <h2 id="about-documentation">About Documentation</h2>
-<p>This is EuroLinux community driven documentation.</p>
+<p>This is EuroLinux community-driven documentation.</p>
 <p><strong>We welcome your contributions to EuroLinux!</strong></p>
 <p>You can:</p>
 <ul>
 <li>star the repository to show your support</li>
-<li>contribute via Pull Request to this repo see <a href="#Contributors guide">Contriubtion Guide</a></li>
-<li>can create requests for particular topic via <a href="https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose">Issue Creation on
-   GitHub</a></li>
+<li>contribute via a Pull Request - see <a href="#contributors-guide">Contribution Guide</a></li>
+<li>create requests for a particular topic via <a href="https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose">Issue Creation on
+  GitHub</a></li>
 </ul>
 <div class="admonition info additional documentation">
 <p class="admonition-title">Info</p>
-<p>As EuroLinux is in Open Core model there are also additional documentation for our customer that are available at <a href="https://support.euro-linux.com">EuroLinux Support Portal</a>.</p>
+<p>As EuroLinux is in Open Core model there are also additional documentation
+for our customer that are available at <a href="https://support.euro-linux.com">EuroLinux Support
+Portal</a>.</p>
 </div>
 <h2 id="how-documentation-is-organized">How documentation is organized?</h2>
 <p>Documentation is organized in the following manner:</p>
 <ul>
 <li>JumpStarts - Installation guides with extras</li>
 <li>HowTo - How To guides on various topics</li>
-<li>Errats - EuroLinux erratas in the form of the web pages</li>
+<li>Erratas - EuroLinux erratas in the form of the web pages</li>
 <li>Release Notes </li>
 </ul>
 <h2 id="contributors-guide">Contributors guide</h2>
@@ -641,16 +643,15 @@ documentation.</p>
 <li><a href="https://squidfunk.github.io/mkdocs-material/">Material for MkDocs site</a></li>
 </ul>
 <h3 id="setup-environment-locally">Setup environment locally</h3>
-<p>Because MkDocs is Python based to run this documentation locally you need at
-least:</p>
+<p>Because MkDocs is Python based, you need at least these installed to run this
+documentation locally:</p>
 <ul>
 <li>python3 (3.6+)</li>
 <li>pip</li>
-<li>virutalenv</li>
+<li>virtualenv</li>
 </ul>
-<p>Installed on your system.</p>
-<p>Firstly lets create virtualenv, so you don't bloat your system python
-libraries and environment:
+<p>First, let's create a virtualenv, so you don't bloat your system-wide python
+environment:
 <div class="highlight"><pre><span></span><code>virtualenv -p /usr/bin/python3 venv
 </code></pre></div></p>
 <p>Then activate virtualenv</p>
@@ -660,7 +661,7 @@ libraries and environment:
 <p>Fish:
 <div class="highlight"><pre><span></span><code>. venv/bin/activate.fish
 </code></pre></div></p>
-<p>Now you are ready to install mkdocs and other Python packages:
+<p>Now you are ready to install MkDocs and other Python packages:
 <div class="highlight"><pre><span></span><code>pip install -r requirements.txt
 </code></pre></div></p>
 <p>After it serving documentation on your host is as easy as running:
@@ -672,13 +673,13 @@ libraries and environment:
 <p>It will build documentation and save it into <code>site</code> directory</p>
 <div class="admonition warning">
 <p class="admonition-title">Please don't include site directory in pull requests</p>
-<p>Because we deploy this documentation with GitHub Pages the <code>site</code> directory
-is not gitignored</p>
+<p>Because we deploy this documentation with GitHub Pages, the <code>site</code>
+directory is not gitignored</p>
 </div>
 <h3 id="markdown-cheat-sheet-for-this-project">Markdown cheat sheet for this project</h3>
 <p>We created simple cheat sheet for MkDocs markdown syntax with extensions
 enabled in this project. It can be found
-<a href="HowTo/documentation-markdown/">Here</a></p>
+<a href="HowTo/documentation-markdown/">here</a>.</p>
                 
               
               

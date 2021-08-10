@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.euro-linux.com/</loc>
-         <lastmod>2021-08-09</lastmod>
+         <lastmod>2021-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/documentation-markdown/</loc>
-         <lastmod>2021-08-09</lastmod>
+         <lastmod>2021-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/jumpstarts/8-jumpstart/</loc>
-         <lastmod>2021-08-09</lastmod>
+         <lastmod>2021-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.3/</loc>
-         <lastmod>2021-08-09</lastmod>
+         <lastmod>2021-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.4-beta/</loc>
-         <lastmod>2021-08-09</lastmod>
+         <lastmod>2021-08-10</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>

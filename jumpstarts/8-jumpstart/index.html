@@ -398,10 +398,10 @@
         
           <li class="md-nav__item">
   <a href="#x86_64-64-bit-amdintel-architecture" class="md-nav__link">
-    x86_64 (64 bit AMD/INTEL architecture)
+    x86_64 (64 bit AMD/Intel architecture)
   </a>
   
-    <nav class="md-nav" aria-label="x86_64 (64 bit AMD/INTEL architecture)">
+    <nav class="md-nav" aria-label="x86_64 (64 bit AMD/Intel architecture)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -694,10 +694,10 @@
         
           <li class="md-nav__item">
   <a href="#x86_64-64-bit-amdintel-architecture" class="md-nav__link">
-    x86_64 (64 bit AMD/INTEL architecture)
+    x86_64 (64 bit AMD/Intel architecture)
   </a>
   
-    <nav class="md-nav" aria-label="x86_64 (64 bit AMD/INTEL architecture)">
+    <nav class="md-nav" aria-label="x86_64 (64 bit AMD/Intel architecture)">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -905,10 +905,10 @@
                 
                 
                 <h1 id="eurolinux-8-jump-start">EuroLinux 8 Jump Start</h1>
-<p>This document contains the necessary information to set up your first EuroLinux 8
-installation. </p>
+<p>This document contains the necessary information to set up your first EuroLinux
+8 installation. </p>
 <h2 id="system-requirements">System Requirements</h2>
-<h3 id="x86_64-64-bit-amdintel-architecture">x86_64 (64 bit AMD/INTEL architecture)</h3>
+<h3 id="x86_64-64-bit-amdintel-architecture">x86_64 (64 bit AMD/Intel architecture)</h3>
 <p>Minimal and recommended requirements are following:</p>
 <table>
 <thead>
@@ -948,10 +948,11 @@ CPU). </p>
 recommended requirements.</p>
 </div>
 <h4 id="about-absolute-minimums-for-cloud-deployment">About absolute minimums for cloud deployment</h4>
-<p>During our internal testing, we were able to boot and use very basic and already
-installed services on Virtual Machine with only 256 MB of RAM however, without
-additional memory or at least swap space available, things like updating the system
-will result in actions of Kernel Out of Memory (OOM) Killer.</p>
+<p>During our internal testing, we were able to boot and use very basic and
+already installed services on Virtual Machine with only 256 MB of RAM. However,
+without additional memory or at least swap space available, things like
+updating the system will result in actions of Kernel Out of Memory (OOM)
+Killer.</p>
 <p>You can try it yourself with <a href="https://app.vagrantup.com/eurolinux-vagrant">EuroLinux Vagrant
 boxes</a> and following Vagrantfile:</p>
 <div class="highlight"><pre><span></span><code><span class="no">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
@@ -989,91 +990,96 @@ might download EuroLinux from different sources. The two primary sources are:</p
 <li><a href="https://customerportal.euro-linux.com">https://customerportal.euro-linux.com</a>
   for EuroLinux customers</li>
 </ul>
-<p>The only difference is that Customer Portal keeps older versions when CDN, that
-is used for mirroring, keeps only the two latest ISO for each version to save
-space (single EuroLinux AppStream isos might take up to 10 GB).</p>
-<p>Lastly, if you are running a huge deployment - you might consider setting up
-your own mirror and download ISOs from Intranet.</p>
+<p>The only difference is that Customer Portal keeps older versions, when CDN,
+that is used for mirroring, keeps only two of the latest ISOs for each version
+to save space (single EuroLinux AppStream ISO might take up to 10 GB).</p>
+<p>If you are running a huge deployment, you might consider setting up your own
+mirror and download ISOs from Intranet.</p>
 <h3 id="how-to-check-iso-integrity">How to check ISO integrity</h3>
 <p>During download, many things can happen - from a network or sending host
 failure to single-bit error. To check if ISO is undamaged, there are two
-mechanisms in place. The first one allows you to check integrity without
-running ISO. For each EuroLinux ISO there's a file with its checksums and
-appropriate digest algorithms. Filename says which algorithm was used to
-calculate the cryptographic digest. For example, you can browse
+mechanisms in place.</p>
+<ul>
+<li>For each EuroLinux ISO there's a file with its checksums and appropriate
+  digest algorithms. Its name says, which algorithm was used to calculate the
+cryptographic digest. For example, you can browse
 <a href="https://fbi.cdn.euro-linux.com/isos/">https://fbi.cdn.euro-linux.com/isos/</a>
-and read the <code>sha1sums.txt</code> file.</p>
-<p>When ISO download is completed, you can invoke the <code>sha1sum</code> command on the ISO file
-and check if checksums match.</p>
+and read the <code>sha1sums.txt</code> file.</li>
+</ul>
+<p>When the ISO download is completed, you can invoke the <code>sha1sum</code> command on the
+ISO file and check if checksums match.</p>
 <div class="highlight"><pre><span></span><code>[Alex@SpaceShipEL8 Downloads]$ sha1sum EL-8.3-x86_64-20210624-appstream.iso 
 6a8abaaebe288553ec8568bd9de3f5fda5f1ddb5  EL-8.3-x86_64-20210624-appstream.iso
 </code></pre></div>
-<p>The second mechanism for checking ISO integrity is built-in inside the
-installer itself. When you start the installation, use the following:</p>
+<ul>
+<li>The second mechanism for checking ISO integrity is built-in inside the
+  installer itself. When you start the installation, use the <code>Test this media &amp;
+  install EuroLinux 8</code> entry:</li>
+</ul>
 <p><img alt="Installation 1" src="../../assets/8-jumpstart/g-inst-1.png" /></p>
 <p>After booting up, the ISO checking process will start.</p>
 <p><img alt="Installation 2" src="../../assets/8-jumpstart/g-inst-2.png" /></p>
 <h3 id="installation-with-gui">Installation with GUI</h3>
-<p>Because even minimal installation image uses GUI the whole process is simple
-and straightforward. EuroLinux 8, as well as previous versions, uses Anaconda
-installer that clearly informs the user what needs to be done in order to install
-the system. </p>
-<p>Firstly you have to choose language that will be used during
-installation: <img alt="Installation 3" src="../../assets/8-jumpstart/g-inst-3.png" /></p>
-<p>After configuring installer language you should see state similar to:</p>
+<p>Because even a minimal installation uses a GUI the whole process is simple and
+straightforward. EuroLinux 8, as well as previous versions, uses Anaconda
+installer that clearly informs the user what needs to be done in order to
+install the system. </p>
+<p>First, you have to choose the language that will be used during installation:
+<img alt="Installation 3" src="../../assets/8-jumpstart/g-inst-3.png" /></p>
+<p>After configuring the installer language you should see a menu similar to:</p>
 <p><img alt="Installation 2" src="../../assets/8-jumpstart/g-inst-4.png" /></p>
 <h4 id="anaconda-installer-localization-section">Anaconda installer <strong>LOCALIZATION</strong> section:</h4>
 <ul>
-<li><strong>Keyboard</strong> - this section allows you to setup the keyboard layouts, including
+<li><strong>Keyboard</strong> - this section allows you to setup keyboard layouts, including
   the default keyboard layout, additional layouts and key combination to switch
   between them.</li>
-<li><strong>Language support</strong> - additional languages packages that should be installed.</li>
-<li><strong>Time &amp; Date</strong> - you can configure the date, time zone, enable NTP and NTP servers.</li>
+<li><strong>Language support</strong> - additional languages packages that should be
+  installed.</li>
+<li><strong>Time &amp; Date</strong> - configure the date, time zone, enable NTP and NTP servers.</li>
 </ul>
 <h4 id="anaconda-installer-software-section">Anaconda installer <strong>SOFTWARE</strong> section:</h4>
 <h5 id="configuring-source-of-the-installation">Configuring source of the installation</h5>
-<p>Here you might configure the source of your installation. By default, the system
-installs from ISO image. <strong>This is one of the officially supported ways to install
-EuroLinux</strong>. </p>
-<p>If you enable NIC (Network Interface Card) in the <strong>Network</strong>
-installer section, you might add additional EuroLinux repositories and/or other
-repositories. If you add EuroLinux repositories, the installer will automatically
-download the newer version of the packages.</p>
-<p>repos:</p>
+<p>Here you might configure the source of your installation. By default, the
+system installs from the ISO image itself. <strong>This is one of the officially
+supported ways to install EuroLinux</strong>. </p>
+<p>If you enable a NIC (Network Interface Card) in the <strong>Network</strong> installer
+section, you might add additional EuroLinux repositories and/or other
+repositories. If you add EuroLinux repositories, the installer will
+automatically download newer version of the packages.</p>
+<p>EuroLinux 8 repositories:</p>
 <ul>
-<li>URL: https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-BaseOS/os<br />
+<li>URL: <code>https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-BaseOS/os</code><br />
   Name: BaseOSProd</li>
-<li>URL: https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-AppStream/os<br />
+<li>URL: <code>https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-AppStream/os</code><br />
   Name: AppStreamProd</li>
-<li>URL: https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-PowerTools/os<br />
+<li>URL: <code>https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-PowerTools/os</code><br />
   Name: PowerToolsProd</li>
 </ul>
-<p>For EuroLinux beta:</p>
+<p>For EuroLinux 8 beta:</p>
 <ul>
-<li>URL: https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-beta-BaseOS/os<br />
+<li>URL: <code>https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-beta-BaseOS/os</code><br />
   Name: BaseOSBeta</li>
-<li>URL: https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-beta-AppStream/os<br />
+<li>URL: <code>https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-beta-AppStream/os</code><br />
   Name: AppStreamBeta</li>
-<li>URL: https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-beta-PowerTools/os<br />
+<li>URL: <code>https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-beta-PowerTools/os</code><br />
   Name: PowerToolsBeta</li>
 </ul>
 <div class="admonition warning">
 <p class="admonition-title">Limited support.</p>
-<p><strong>Network hybrid installation from ISO and public repositories is not our
-primary goal in the QA process</strong>. Packages in EuroLinux repositories are
-regularly updated, and it might be impossible to install a system from an
-external source. Depending on the state of the upstream, we might not fix
-a potential issue.</p>
+<p><strong>Hybrid network installation from both ISO and public repositories
+is not our primary goal in the QA process</strong>. Packages in EuroLinux
+repositories are regularly updated, and it might be impossible to
+install a system from an external source. Depending on the state of the
+upstream, we might not fix a potential issue.</p>
 </div>
-<p>Below you can see the example configuration that was used to install
-a system:</p>
+<p>Below you can see an example configuration that was used to install a system:</p>
 <p><img alt="Adding additional repositories" src="../../assets/8-jumpstart/additional-repos.png" /></p>
 <p>After changing the installation source, you will have to confirm <strong>Software
 Selection</strong>.</p>
 <h5 id="software-selection">Software Selection</h5>
-<p>Software selection allows you to customize which packages will be installed.
-You might choose from base environment groups like Server with GUI, Workstation
-or Minimal. There is also the possibility to install additional packages groups.</p>
+<p>Software Selection allows you to customize which packages will be installed.
+You might choose from base environment groups like <em>Server with GUI</em>,
+<em>Workstation</em> or <em>Minimal</em>. You can also install additional package groups.</p>
 <p><img alt="Software selection section" src="../../assets/8-jumpstart/g-inst-5.png" /></p>
 <h4 id="anaconda-installer-system-section">Anaconda installer <strong>SYSTEM</strong> section:</h4>
 <ul>
@@ -1087,42 +1093,44 @@ or Minimal. There is also the possibility to install additional packages groups.
 </ul>
 <h4 id="anaconda-installer-user-settings-section">Anaconda installer <strong>USER SETTINGS</strong> section:</h4>
 <ul>
-<li><strong>Root Password</strong> - by default, the root user is disabled. If a user is created in
-  <strong>User Creation</strong> section, the root account could stay disabled</li>
+<li><strong>Root Password</strong> - by default, the root user is disabled. If a user is
+  created in <strong>User Creation</strong> section, the root account can stay disabled</li>
 <li><strong>User Creation</strong> section allows creating a regular user in the system. If
-  the "Make this user administrator" option is checked, the root account could
-  be disabled.</li>
+  the <em>Make this user administrator</em> option is checked, the root account can be
+  disabled.</li>
 </ul>
-<p><strong>After applying all the necessary changes</strong>, installation can be started with
-the "Begin Installation" button.</p>
+<p><strong>After applying all the necessary changes</strong>, the installation can be started
+with the "Begin Installation" button.</p>
 <h3 id="disk-partition-recommended-minimums">Disk partition recommended minimums</h3>
 <p>You need at least the following partitions.</p>
 <ul>
 <li><code>/boot</code> for Linux kernel and init ramdisks - 1GB</li>
-<li><code>/</code> (root partition) - at least 10 GB (very minimal system might use as little
-  as 2GB - but it requires extra attention and is not officially supported by
-  EuroLinux)</li>
+<li><code>/</code> (root partition) - at least 10 GB (a very minimal system might use as
+  little as 2GB - but it requires extra attention and is not officially
+  supported by EuroLinux)</li>
 </ul>
 <p>For UEFI, an EFI system partition is also required.</p>
 <ul>
 <li><code>/boot/efi</code>  - at least 100MB</li>
 </ul>
-<p>If your storage allows it, the following partitions are also highly recommended:</p>
+<p>If your storage allows it, the following partitions are also highly
+recommended:</p>
 <ul>
-<li><code>swap</code> - 1GB or more depending on the system RAM and workload. Swap is also required for hibernation. Depending on the workload of the system, it should be at least as spacious as system RAM.</li>
+<li><code>swap</code> - 1GB or more depending on the system RAM and workload. Swap is also
+  required for hibernation. Depending on the workload of the system, it should
+  be at least as spacious as system RAM.</li>
 <li><code>/home</code> - at least 1GB - but in most cases, if <code>/</code> can be as big as 80GB,
-  then <code>/home/</code> usually takes the rest of the
-  free space</li>
+  then <code>/home/</code> usually takes the rest of the free space</li>
 </ul>
 <h3 id="installing-eurolinux-in-basic-graphic-mode">Installing EuroLinux in basic graphic mode</h3>
-<p>Suppose there is a problem loading/running your graphic card driver (it might results in a black
-screen/error message or graphic artefacts). There is the possibility to install EuroLinux
-in basic graphic mode.</p>
-<p>To do so choose <code>Troubleshooting</code> on the welcome menu, and then "Install in
-the basic graphics mode".</p>
-<p>From this point, the process is identical to standard installation with GUI.</p>
+<p>Suppose there is a problem loading/running your graphics card driver (it might
+results in a black screen/error message or graphical artifacts). It's possible
+to install EuroLinux in basic graphics mode.</p>
+<p>To do so, choose <code>Troubleshooting</code> on the welcome menu, and then <em>Install
+EuroLinux 8 in basic graphics mode</em>.</p>
+<p>From this point the process is identical to a standard installation with GUI.</p>
 <h3 id="installing-eurolinux-in-text-mode">Installing EuroLinux in text mode</h3>
-<p>To install EuroLinux in the text mode:</p>
+<p>To install EuroLinux in text mode:</p>
 <ul>
 <li>Boot EuroLinux ISO</li>
 <li>Press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to stop installation options selection timeout</li>
@@ -1131,29 +1139,29 @@ the basic graphics mode".</p>
 <li>Press <span class="keys"><kbd class="key-enter">Enter</kbd></span></li>
 </ul>
 <p><img alt="Text Install 1" src="../../assets/8-jumpstart/text-inst-1.png" /></p>
-<p>Before running the installation, you have to fill in all necessary information
-(represented as <code>!</code> in selection). It's a good idea to refresh the menu with
-<span class="keys"><kbd class="key-r">R</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> command shortly after the installer started.</p>
+<p>Before running the installation you have to provide all the necessary
+information (represented as <code>!</code> in selection). It's a good idea to refresh the
+menu with <span class="keys"><kbd class="key-r">R</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> command shortly after the installer started.</p>
 <p><img alt="Text Install 2" src="../../assets/8-jumpstart/text-inst-2.png" /></p>
-<p>After customization, you are ready to start your installation.</p>
+<p>After customization you are ready to start your installation.</p>
 <p><img alt="Text Install 3" src="../../assets/8-jumpstart/text-inst-3.png" /></p>
 <h3 id="other-possibilities">Other possibilities</h3>
 <p>EuroLinux can also be installed in the following manner:</p>
 <ul>
 <li>Automated installation with a kickstart file.</li>
 <li>Installation with PXE</li>
-<li>Installing via VNC</li>
+<li>Installation via VNC</li>
 </ul>
 <p>Please consult upstream documentation about these topics.</p>
 <h2 id="using-eurolinux">Using EuroLinux</h2>
-<p>From this point, you can use EuroLinux as any other RHEL™ based
-distribution.</p>
+<p>From this point, you can use EuroLinux as any other RHEL™ based distribution.</p>
 <h3 id="submitting-a-request-for-change">Submitting a Request for Change</h3>
-<p>We truly care. If there is something that you believe could/should
-be changed/improved in the EuroLinux distribution and does not break
-compatibility with the upstream project, then drop us the issue on
-GitHub! All contributors are extremely welcome.</p>
-<p><a href="https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc/">EuroLinux Distro Bugs and RFC</a></p>
+<p>We truly care. If there is something that you believe could/should be
+changed/improved in the EuroLinux distribution and does not break compatibility
+with the upstream project, then drop us the issue on GitHub! All contributors
+are extremely welcome.</p>
+<p><a href="https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc/">EuroLinux Distro Bugs and
+RFC</a></p>
 <h3 id="submitting-a-bug-report">Submitting a Bug report</h3>
 <p>We decided that submitting bug reports should not involve
 registration into some nasty miserable software. At the very same
@@ -1161,13 +1169,15 @@ time, we know that most open-source developers have GitHub profiles.
 This choice makes the decision making and work as transparent as
 possible. That's why we decided to use it as the primary way to
 submit bugs.</p>
-<p><a href="https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc/">EuroLinux Distro Bugs and RFC</a></p>
+<p><a href="https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc/">EuroLinux Distro Bugs and
+RFC</a></p>
 <p>This repository allows you to stay in <strong>direct contact</strong> with EuroLinux
 developers.</p>
 <h4 id="other-ways-to-submit-a-bug-report">Other ways to submit a bug report</h4>
 <ul>
 <li><code>support AT euro-linux dot com</code></li>
-<li><a href="https://support.euro-linux.com">EuroLinux Support Portal (subscription required)</a></li>
+<li><a href="https://support.euro-linux.com">EuroLinux Support Portal (subscription
+  required)</a></li>
 </ul>
 <h4 id="securityconfidential-bug-report">Security/confidential bug report</h4>
 <p>Please use the e-mail provided above.</p>
