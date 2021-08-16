@@ -6,7 +6,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://docs.euro-linux.com/HowTo/documentation-markdown/</loc>
+         <loc>https://docs.euro-linux.com/HowTo/create-iso-with-repositories/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.euro-linux.com/HowTo/mirror-eurolinux-locally/</loc>
+         <lastmod>2021-08-16</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.euro-linux.com/HowTo/z-documentation-markdown/</loc>
          <lastmod>2021-08-16</lastmod>
          <changefreq>daily</changefreq>
     </url>
