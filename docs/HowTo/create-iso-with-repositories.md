@@ -1,6 +1,6 @@
 # How to create ISO file with EuroLinux repositories
 
-Creating ISO that contains RPM repositories is a straightforward process. Firstly
+Creating ISO that contains RPM repositories is a straightforward process. First
 you have to mirror repositories locally - mirroring is described in [Mirror
 EuroLinux Locally How To](mirror-eurolinux-locally.md).
 
@@ -22,8 +22,8 @@ mkisofs -R -J -o /var/eurolinux-repos.iso /repos/
 
 This file could be:
 
-- locally copied to the machine that will use
-- added to ISOs pool of Virtual Machine manager/orchistrator or cloud computing
+- locally copied to the machine that will be using it
+- added to ISOs pool of Virtual Machine manager/orchestrator or cloud computing
   platform of your choice
 
 ## Mounting ISO from local file

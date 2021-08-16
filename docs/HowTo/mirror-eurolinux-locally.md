@@ -67,7 +67,7 @@ repositories to the `/repos` directory with the following command.
 reposync -d -m --download-metadata -c /etc/yum-mirror-config/mirror_yum.conf -p /repos
 ```
 
-When the download finish, the next step is to create repodata and enable
+When the download finishes, the next step is to create repodata and enable
 groups.
 
 ```bash
@@ -104,7 +104,7 @@ sudo gunzip -c "$LAST_UI"  > "$REPO_DIR/updateinfo.xml"
 
 This short manual concludes mirroring EuroLinux locally.
 
-## Mirroring EuroLinux 7 **not supported way**
+## Mirroring EuroLinux 7 **unsupported way**
 
 There is also the possibility to mirror EuroLinux repositories even with a
 single or even test subscription.
@@ -145,7 +145,7 @@ sudo gunzip -c "$LAST_UI"  > "$REPO_DIR/updateinfo.xml"
 ## EuroLinux 8
 
 !!! info "Use Enterprise Linux 8"
-    Instructions below works on Enterprise Linux 8. Because EuroLinux 8 has
+    The instructions below work on Enterprise Linux 8. Because EuroLinux 8 has
     modular repositories and it is **not supported** to use `reposync` on the
     older system releases.
 
@@ -155,7 +155,7 @@ Making a local mirror for EuroLinux 8 is much simpler because:
 - reposync can pull repository metadata, erratas, and modules files
   automatically.
 
-Firstly - lets's create `/etc/yum-mirror-config/mirror_yum.conf`
+First - let's create `/etc/yum-mirror-config/mirror_yum.conf`
 
 ```ini
 [main]
