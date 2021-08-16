@@ -95,4 +95,4 @@ It will build documentation and save it into `site` directory
 ### Markdown cheat sheet for this project
 We created simple cheat sheet for MkDocs markdown syntax with extensions
 enabled in this project. It can be found
-[here](HowTo/documentation-markdown.md).
+[here](HowTo/z-documentation-markdown.md).
