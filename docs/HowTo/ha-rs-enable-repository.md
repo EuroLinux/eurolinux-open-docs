@@ -1,8 +1,8 @@
 # How to install High Availability and Resilient Storage in EuroLinux 8
 
-For the version of EuroLinux 8.4, you should update the `el-release` package.
-The newer version has `resilient-storage` and `high-availability` repositories
-saved in the `/etc/yum.repos.d/certify.repo` file.
+For EuroLinux 8.4, you should update the `el-release` package. The newer
+version has `resilient-storage` and `high-availability` repositories saved in
+the `/etc/yum.repos.d/certify.repo` file.
 
 ```
 sudo yum update -y el-release
@@ -77,7 +77,7 @@ sudo yum-config-manager --enable resilient-storage
 
 ## Installing HA and/or Resilient Storage
 
-Both High Availability, and Resilient Storage have rpm groups, so installing
+Both High Availability and Resilient Storage have rpm groups, so installing
 them is trivial.
 
 To install the High Availability add-on, invoke the following command:
@@ -120,7 +120,7 @@ sudo systemctl start pcsd.service
 sudo systemctl enable pcsd.service
 ```
 
-To make very basic test of the pcsd installation, we recommend setting
+To make a very basic test of the pcsd installation, we recommend setting
 `hacluster` user password. As `root` user, you can, for example invoke:
 
 ```
@@ -132,7 +132,7 @@ port 2224 (example: `https://MACHINE_IP:2224`) in your browser. The
 username is `hacluster` with password you set in previous step.
 
 !!! warning "HTTPS Required"
-    The web browser like Firefox and other programs like cURL will report
+    Web browser like Firefox and other programs like cURL will report
     "Connection reset by peer" or "The connection was reset" when connecting
     with cleartext HTTP.
     ```
@@ -140,7 +140,7 @@ username is `hacluster` with password you set in previous step.
     curl: (56) Recv failure: Connection reset by peer
     ```
 
-From this, point you can freely configure High Availability and Resilient
+From this point you can freely configure High Availability and Resilient
 Storage. We recommend using upstream documentation provided in Additional Links
 below.
 
