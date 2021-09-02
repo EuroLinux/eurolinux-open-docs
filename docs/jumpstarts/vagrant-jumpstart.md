@@ -39,7 +39,7 @@ providers or even operating systems. That is as long as they use a
 provider, which the box is built for.  
 
 EuroLinux Vagrant boxes are available at:
-https://app.vagrantup.com/eurolinux-vagrant  
+[https://app.vagrantup.com/eurolinux-vagrant](https://app.vagrantup.com/eurolinux-vagrant)  
 Let's use the box `eurolinux-vagrant/eurolinux-8` as an example.  
 
 ### Box details
@@ -64,7 +64,7 @@ vagrant ssh
 ```
 
 You should now be connected to the machine and able to perform your
-desired operations in it.  
+desired operations inside it.  
 Go ahead, play around, install your favourite developer tools, build an
 awesome, advanced, multi-component application and be sure everyone's
 able to deploy it on their workstations without any hassle!  
@@ -89,12 +89,14 @@ Vagrantfile. The parameters that you can tweak, e.g. the virtual
 machine's memory or the amount of CPUs you should adapt to your work -
 e.g. if you need additional resources for developing/running your
 application, go ahead and increase them. Once that's done, check out if
-they can be reduced once you know your software resource requirements.  
+they can be reduced once you know your software resource requirements.
+
 Depending on the task you want to achieve, whether it be a ready-made
 appliance **or** a base virtual system which gets provisioned with your
 application and its dependencies **or** something else, that's when
 changes to the specification must be made - e.g. the additional
-provisioning procedure shall be written.  
+provisioning procedure shall be written.
+
 As the comment quoted above says, refer to the comments the Vagrantfile
 provided for common options explanation. Once you know their purpose,
 try them out! Get comfortable with them and read [Upstream's 
@@ -102,3 +104,18 @@ documentation](https://docs.vagrantup.com/) for additional info, tips
 and more advanced, cool possibilities - such as a [multi-machine 
 infrastructure](https://www.vagrantup.com/docs/multi-machine) defined in
 a single Vagrantfile.
+
+## Additional resources
+
+### vagrant-libvirt plugin
+
+WIP: a complete hassle-free installing & building procedure will be written
+here.
+
+### Websites
+
+- Upstream's [official website](https://www.vagrantup.com/)
+- [Discover Vagrant Boxes](https://app.vagrantup.com/boxes/search?&q=eurolinux)
+  - using EuroLinux as an example
+- Upstream's [online documentation](https://docs.vagrantup.com.), worth
+  mentioning once more
