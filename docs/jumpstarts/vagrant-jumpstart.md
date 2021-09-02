@@ -116,6 +116,6 @@ here.
 
 - Upstream's [official website](https://www.vagrantup.com/)
 - [Discover Vagrant Boxes](https://app.vagrantup.com/boxes/search?&q=eurolinux)
-  - using EuroLinux as an example
+  \- using EuroLinux as an example
 - Upstream's [online documentation](https://docs.vagrantup.com.), worth
   mentioning once more
