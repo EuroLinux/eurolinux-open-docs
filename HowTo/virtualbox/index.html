@@ -11,14 +11,14 @@
         <meta name="author" content="EuroLinux Community">
       
       
-        <link rel="canonical" href="https://docs.euro-linux.com/HowTo/mirror-eurolinux-locally/">
+        <link rel="canonical" href="https://docs.euro-linux.com/HowTo/virtualbox/">
       
       <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.10">
     
     
       
-        <title>How to set up EuroLinux RPM internal mirror - EuroLinux Documentation</title>
+        <title>VirtualBox - EuroLinux Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-set-up-eurolinux-rpm-internal-mirror" class="md-skip">
+        <a href="#virtualbox" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to set up EuroLinux RPM internal mirror
+              VirtualBox
             
           </span>
         </div>
@@ -336,6 +336,18 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../mirror-eurolinux-locally/" class="md-nav__link">
+        How to set up EuroLinux RPM internal mirror
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -348,12 +360,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          How to set up EuroLinux RPM internal mirror
+          VirtualBox
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        How to set up EuroLinux RPM internal mirror
+        VirtualBox
       </a>
       
         
@@ -371,30 +383,110 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#system-requirement" class="md-nav__link">
-    System requirement
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-it-over-other-virtualisation-providers" class="md-nav__link">
+    Why use it over other virtualisation providers?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mirroring-eurolinux-7-the-official-way" class="md-nav__link">
-    Mirroring EuroLinux 7 - the official way
+  <a href="#installation-on-eurolinux-8" class="md-nav__link">
+    Installation on EuroLinux 8
   </a>
+  
+    <nav class="md-nav" aria-label="Installation on EuroLinux 8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usb-devices" class="md-nav__link">
+    USB devices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-pack" class="md-nav__link">
+    Extension Pack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mirroring-eurolinux-7-unsupported-way" class="md-nav__link">
-    Mirroring EuroLinux 7 unsupported way
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-cant-enable-hardware-virtualisation-and-prefer-software-emulation" class="md-nav__link">
+    I can't enable hardware virtualisation and prefer software emulation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#eurolinux-8" class="md-nav__link">
-    EuroLinux 8
+  <a href="#additional-resources" class="md-nav__link">
+    Additional resources
   </a>
+  
+    <nav class="md-nav" aria-label="Additional resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upstreams-release-pages" class="md-nav__link">
+    Upstream's release pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-fusion" class="md-nav__link">
+    RPM Fusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -402,18 +494,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../virtualbox/" class="md-nav__link">
-        VirtualBox
-      </a>
     </li>
   
 
@@ -570,30 +650,110 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#system-requirement" class="md-nav__link">
-    System requirement
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-it-over-other-virtualisation-providers" class="md-nav__link">
+    Why use it over other virtualisation providers?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mirroring-eurolinux-7-the-official-way" class="md-nav__link">
-    Mirroring EuroLinux 7 - the official way
+  <a href="#installation-on-eurolinux-8" class="md-nav__link">
+    Installation on EuroLinux 8
   </a>
+  
+    <nav class="md-nav" aria-label="Installation on EuroLinux 8">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usb-devices" class="md-nav__link">
+    USB devices
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-pack" class="md-nav__link">
+    Extension Pack
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mirroring-eurolinux-7-unsupported-way" class="md-nav__link">
-    Mirroring EuroLinux 7 unsupported way
+  <a href="#troubleshooting" class="md-nav__link">
+    Troubleshooting
   </a>
+  
+    <nav class="md-nav" aria-label="Troubleshooting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-cant-enable-hardware-virtualisation-and-prefer-software-emulation" class="md-nav__link">
+    I can't enable hardware virtualisation and prefer software emulation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#eurolinux-8" class="md-nav__link">
-    EuroLinux 8
+  <a href="#additional-resources" class="md-nav__link">
+    Additional resources
   </a>
+  
+    <nav class="md-nav" aria-label="Additional resources">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#upstreams-release-pages" class="md-nav__link">
+    Upstream's release pages
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rpm-fusion" class="md-nav__link">
+    RPM Fusion
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -609,192 +769,101 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/EuroLinux/eurolinux-open-docs/edit/master/docs/HowTo/mirror-eurolinux-locally.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/EuroLinux/eurolinux-open-docs/edit/master/docs/HowTo/virtualbox.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="how-to-set-up-eurolinux-rpm-internal-mirror">How to set up EuroLinux RPM internal mirror</h1>
-<p>This short how-to instructs how to set up your own <strong>internal</strong> EuroLinux mirror.
-External (publicly available) mirrors should not be set up this way.</p>
-<h2 id="system-requirement">System requirement</h2>
-<ul>
-<li>Internet connection for sync server is required</li>
-<li>The firewall must allow connection to EuroLinux servers</li>
-<li>For each version of EuroLinux, you need about 80 GB of storage</li>
-<li>You have to install utilities like reposync and createrepo. The following command will work on Enterprise Linux 7 and 8:
-  <div class="highlight"><pre><span></span><code><span class="c1"># --skip-broken because not all packages might be present</span>
-sudo yum install -y createrepo_c createrepo yum-utils dnf-utils --skip-broken
-</code></pre></div></li>
-</ul>
-<h2 id="mirroring-eurolinux-7-the-official-way">Mirroring EuroLinux 7 - the official way</h2>
-<p><strong>EuroLinux 7 is not open-core</strong>; therefore, only organizations with a proper
-license (EuroMan or Gold Key) can mirror it freely.</p>
-<div class="admonition information">
-<p class="admonition-title">We know</p>
-<p>We are well aware that it is possible to mirror repos even with a single
-license. You can read about that below.</p>
-</div>
-<p>The official way to mirror EuroLinux repositories is the following:</p>
-<ul>
-<li>You need a proper subscription, like EuroMan or Gold Key</li>
-<li>EuroLinux engineer will provide you with SSL certificates that we will name
-  <code>repo.key</code> and <code>repo.crt</code> and CA that we will name <code>ca.crt</code></li>
-</ul>
-<p>With repokeys residing in <code>/etc/yum-mirror-config/</code> directory create the
-following yum.config - example below is for EuroLinux 7 x86_64</p>
-<div class="highlight"><pre><span></span><code><span class="k">[main]</span>
-<span class="na">cachedir</span><span class="o">=</span><span class="s">/var/cache/yum/mirror/$basearch/$releasever</span>
-<span class="na">keepcache</span><span class="o">=</span><span class="s">0</span>
-<span class="na">debuglevel</span><span class="o">=</span><span class="s">2</span>
-<span class="na">logfile</span><span class="o">=</span><span class="s">/var/log/mirror-yum.log</span>
-<span class="na">exactarch</span><span class="o">=</span><span class="s">0</span>
-<span class="na">obsoletes</span><span class="o">=</span><span class="s">0</span>
-<span class="na">gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<span class="na">plugins</span><span class="o">=</span><span class="s">0</span>
-<span class="na">reposdir</span><span class="o">=</span><span class="s">/dev/null</span>
-
-<span class="k">[eurolinux-os-7]</span>
-<span class="na">name</span><span class="o">=</span><span class="s">el7_x86_64_os</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://cdn.euro-linux.com/dist/eurolinux/server/7/x86_64/os/</span>
-<span class="na">sslclientkey</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.key</span>
-<span class="na">sslclientcrt</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.crt</span>
-<span class="na">sslcacert</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/ca.crt</span>
-
-<span class="k">[eurolinux-updates-7]</span>
-<span class="na">name</span><span class="o">=</span><span class="s">el7_x86_64_updates</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://cdn.euro-linux.com/dist/eurolinux/server/7/x86_64/updates/</span>
-<span class="na">sslclientkey</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.key</span>
-<span class="na">sslclientcrt</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.crt</span>
-<span class="na">sslcacert</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/ca.crt</span>
+                <h1 id="virtualbox">VirtualBox</h1>
+<p>How to set up your VirtualBox installation.</p>
+<h2 id="introduction">Introduction</h2>
+<h3 id="use-cases">Use cases</h3>
+<p>Consider the following examples:
+- You use software that doesn't work on your EuroLinux 8 installation.
+- You want to try out some potentially dangerous actions and don't want to
+  endanger your machine.
+- You develop some awesome software and want to test it on several systems for
+  compatibility
+- You want an easily reproducible environment that works the same way on every
+  person's machine 
+- You need a multi-machine laboratory, maybe with several different systems and
+  don't have the resources for a physical equipment</p>
+<h3 id="why-use-it-over-other-virtualisation-providers">Why use it over other virtualisation providers?</h3>
+<p>VirtualBox is the provider with a copyleft license and a focus on
+interoperability when it comes to supporting different platforms. This allows
+you to cooperate with someone running a different operating system and when
+exchanging documentation - once written it's applicable to anyone that can run
+the software.<br />
+New VirtualBox versions usually support older operating systems too. One can
+enjoy the new features on a system, which has recently reached its End of Life,
+which can be indispensable for a company that can't migrate yet.</p>
+<h2 id="system-requirements">System requirements</h2>
+<p>A brief documentation is available at
+<a href="https://www.virtualbox.org/wiki/End-user_documentation">Upstream's</a>.  </p>
+<p>Your machine shall support hardware virtualisation. If it doesn't, you either
+need to perform additional troubleshooting - e.g. enable virtualisation in your
+machine's BIOS settings.</p>
+<div class="highlight"><pre><span></span><code>[ $(grep -cE &#39;vmx|svm&#39; /proc/cpuinfo) -gt 0 ] &amp;&amp; echo &quot;OK&quot;
 </code></pre></div>
-<p>After saving this file to <code>/etc/yum-mirror-config/mirror_yum.conf</code> you might download the
-repositories to the <code>/repos</code> directory with the following command.
-<div class="highlight"><pre><span></span><code>reposync -d -m --download-metadata -c /etc/yum-mirror-config/mirror_yum.conf -p /repos
-</code></pre></div></p>
-<p>When the download finishes, the next step is to create repodata and enable
-groups.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /repos/eurolinux-os-7/<span class="p">;</span> createrepo . -g comps.xml
-<span class="nb">cd</span> /repos/eurolinux-updates-7/<span class="p">;</span> createrepo . -g comps.xml
+<p>Make sure you're running EuroLinux 8 on x86_64 architecture rather than ARM.  </p>
+<div class="highlight"><pre><span></span><code>[ &quot;$(arch)&quot; == &quot;x86_64&quot; ] &amp;&amp; echo &quot;OK&quot;
 </code></pre></div>
-<div class="admonition info erratas">
-<p class="admonition-title">Info</p>
-<p>Enabling updateinfo (erratas information) is a little bit tricky, because
-firstly you have to find the newest updateinfo, unpack it, then invoke
-modifyrepo script. It can be automated with the script below.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="nv">REPO_DIR</span><span class="o">=</span>/repos/eurolinux-os-7/
-<span class="nb">unset</span> -v LAST_UI
-<span class="c1"># finding the newest file</span>
-<span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">&quot;</span>/*updateinfo.xml.gz<span class="p">;</span> <span class="k">do</span>
-  <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> -nt <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">LAST_UI</span><span class="o">=</span><span class="nv">$file</span>
-<span class="k">done</span>
-<span class="c1"># unpacking to updateinfo.xml file</span>
-sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
-<span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
-/usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
-
-<span class="nv">REPO_DIR</span><span class="o">=</span>/repos/eurolinux-updates-7/
-<span class="nb">unset</span> -v LAST_UI
-<span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">&quot;</span>/*updateinfo.xml.gz<span class="p">;</span> <span class="k">do</span>
-  <span class="o">[[</span> <span class="nv">$file</span> -nt <span class="nv">$LAST_UI</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">LAST_UI</span><span class="o">=</span><span class="nv">$file</span>
-<span class="k">done</span>
-sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
-<span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
-/usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
+<h2 id="installation-on-eurolinux-8">Installation on EuroLinux 8</h2>
+<p>As of today (2 September 2021), 6.1 is the main VirtualBox branch and this is
+the one we install in this guide.<br />
+Assuming your account has been made an administrator during the system
+installation process, simply run these commands for an installation:</p>
+<div class="highlight"><pre><span></span><code>sudo dnf groupinstall &quot;Development Tools&quot; -y
+sudo dnf config-manager \
+  --add-repo=https://download.virtualbox.org/virtualbox/rpm/el/virtualbox.repo
+sudo dnf install VirtualBox-6.1 -y
 </code></pre></div>
-<p>This short manual concludes mirroring EuroLinux locally.</p>
-<h2 id="mirroring-eurolinux-7-unsupported-way">Mirroring EuroLinux 7 <strong>unsupported way</strong></h2>
-<p>There is also the possibility to mirror EuroLinux repositories even with a
-single or even test subscription.</p>
-<div class="admonition warning">
-<p class="admonition-title">True Product – Real Support – Fair Price</p>
-<p>We are faithful to our values. We also know that it's always possible to
-cheat and not play fair. Please be aware that during support inqury, we
-might check if your system is registered and supported. To this day, we
-always had pleasure to work with honest companies - please don't ruin that.</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Mirroring other distros</p>
-<p>This instruction allows cloning other distros, including paid ones. If you
-want to mirror paid Linux distribution, note that this might breach the
-license/license agreement and endanger your organization.</p>
-</div>
-<p>After this short warning, you can mirror EuroLinux or other Enterprise Linux
-repositories with the following step:</p>
-<ul>
-<li>Register your system with <code>rhn_register</code> command for EuroLinux or another way
-  to mirror another system repositories.</li>
-</ul>
-<p>Then run the reposync with proper options (example for EuroLinux 7):</p>
-<div class="highlight"><pre><span></span><code>reposync -d -m --download-metadata --plugins -r el-server-7-x86_64 -p /repos/
-<span class="c1"># recreating repodata and updateinfo</span>
-<span class="nv">REPO_DIR</span><span class="o">=</span>/repos/el-server-7-x86_64/
-<span class="nb">cd</span> /repos/el-server-7-x86_64/<span class="p">;</span> createrepo . -g comps.xml
-<span class="nb">unset</span> -v LAST_UI
-<span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">&quot;</span>/*updateinfo.xml.gz<span class="p">;</span> <span class="k">do</span>
-  <span class="o">[[</span> <span class="nv">$file</span> -nt <span class="nv">$LAST_UI</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">LAST_UI</span><span class="o">=</span><span class="nv">$file</span>
-<span class="k">done</span>
-sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
-<span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
-/usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
+<p>VirtualBox should be ready to use!  </p>
+<h3 id="usb-devices">USB devices</h3>
+<p>If you want VirtualBox to support USB devices for your system account, run
+this command as well:  </p>
+<div class="highlight"><pre><span></span><code>sudo usermod -a -G vboxusers $USER
 </code></pre></div>
-<h2 id="eurolinux-8">EuroLinux 8</h2>
-<div class="admonition info">
-<p class="admonition-title">Use Enterprise Linux 8</p>
-<p>The instructions below work on Enterprise Linux 8. Because EuroLinux 8 has
-modular repositories and it is <strong>not supported</strong> to use <code>reposync</code> on the
-older system releases.</p>
-</div>
-<p>Making a local mirror for EuroLinux 8 is much simpler because:</p>
-<ul>
-<li>repositories are open</li>
-<li>reposync can pull repository metadata, erratas, and modules files
-  automatically.</li>
-</ul>
-<p>First - let's create <code>/etc/yum-mirror-config/mirror_yum.conf</code></p>
-<div class="highlight"><pre><span></span><code><span class="k">[main]</span>
-<span class="na">cachedir</span><span class="o">=</span><span class="s">/var/cache/yum/mirror/$basearch/$releasever</span>
-<span class="na">keepcache</span><span class="o">=</span><span class="s">0</span>
-<span class="na">debuglevel</span><span class="o">=</span><span class="s">2</span>
-<span class="na">logfile</span><span class="o">=</span><span class="s">/var/log/mirror-yum.log</span>
-<span class="na">plugins</span><span class="o">=</span><span class="s">1</span>
-<span class="na">exactarch</span><span class="o">=</span><span class="s">0</span>
-<span class="na">obsoletes</span><span class="o">=</span><span class="s">0</span>
-<span class="na">reposdir</span><span class="o">=</span><span class="s">/dev/null</span>
-
-<span class="k">[certify-baseos]</span>
-<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux certify BaseOS</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-BaseOS/os</span>
-<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
-<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8</span>
-<span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">1</span>
-
-<span class="k">[certify-appstream]</span>
-<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux certify AppStream</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-AppStream/os</span>
-<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
-<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8</span>
-<span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">1</span>
-
-<span class="k">[certify-powertools]</span>
-<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux certify PowerTools</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-PowerTools/os</span>
-<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
-<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
-<span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8</span>
-<span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">1</span>
+<p>then log out of your graphical session and log in again.  </p>
+<h3 id="extension-pack">Extension Pack</h3>
+<p>VirtualBox doesn't support certain technologies out-of-the-box, e.g. USB
+2.0/3.0 or builtin disk encryption, among others. If you want them to be
+supported, you will need VirtualBox Extension Pack. Make sure you have read
+<a href="https://www.virtualbox.org/wiki/VirtualBox_PUEL">its license</a> and understand
+its implications - you're responsible for compliance.<br />
+You may want to read <a href="https://www.virtualbox.org/wiki/Licensing_FAQ">Upstream's
+FAQ</a> for a quick start.</p>
+<p>Once you're sure you'll be able to comply with the licensing terms, run these
+commands to install the Extension Pack:</p>
+<div class="highlight"><pre><span></span><code>export vbox_version=&quot;$(VBoxManage --version | cut -d&#39;r&#39; -f 1)&quot;
+wget &quot;https://download.virtualbox.org/virtualbox/$vbox_version/Oracle_VM_VirtualBox_Extension_Pack-$vbox_version.vbox-extpack&quot;
+yes | sudo VBoxManage extpack install --replace Oracle_VM_VirtualBox_Extension_Pack-$vbox_version.vbox-extpack
 </code></pre></div>
-<p>Then you can invoke the <code>reposync</code> command with the following arguments:
-<div class="highlight"><pre><span></span><code>reposync --downloadcomps --download-metadata  -c /etc/yum-mirror-config/mirror_yum.conf  -p /repos
-</code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">Mirror using Enterprise Linux 8</p>
-<p>If you use Enterprise Linux 8 and mirror Enterprise Linux 7 repositories,
-you don't have to rebuild repositories metadata and updateinfo files.</p>
-</div>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<h3 id="i-cant-enable-hardware-virtualisation-and-prefer-software-emulation">I can't enable hardware virtualisation and prefer software emulation</h3>
+<p>As <a href="https://web.archive.org/web/20210830005115/https://www.virtualbox.org/wiki/Downloads">Upstream
+says</a>,
+for software mode you'll need VirtualBox branch 6.0 or older.</p>
+<blockquote>
+<p>Please also use version 6.0 if you need to run VMs with software
+virtualization, as this has been discontinued in 6.1.</p>
+</blockquote>
+<h2 id="additional-resources">Additional resources</h2>
+<h3 id="upstreams-release-pages">Upstream's release pages</h3>
+<p>If you prefer a manual download, check out <a href="https://www.virtualbox.org/wiki/Linux_Downloads">Upstream's Linux release
+pages</a> and use the one they
+provide for RHEL 8.</p>
+<h3 id="rpm-fusion">RPM Fusion</h3>
+<p>Alternatively you can use <a href="https://rpmfusion.org/">RPM Fusion</a> repository for
+installation. The software might differ in branding a bit and only the latest
+release is provided. Use these commands:  </p>
+<div class="highlight"><pre><span></span><code>sudo dnf localinstall \
+  https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
+sudo dnf localinstall --nogpgcheck \
+  https://mirrors.rpmfusion.org/free/el/rpmfusion-free-release-8.noarch.rpm -y
+sudo dnf install VirtualBox -y
+sudo akmods --kernels $(uname -r) &amp;&amp; sudo systemctl restart vboxdrv.service
+</code></pre></div>
                 
               
               
@@ -814,7 +883,7 @@ you don't have to rebuild repositories metadata and updateinfo files.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../ha-rs-enable-repository/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to install High Availability and Resilient Storage in EuroLinux 8" rel="prev">
+        <a href="../mirror-eurolinux-locally/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to set up EuroLinux RPM internal mirror" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -823,20 +892,20 @@ you don't have to rebuild repositories metadata and updateinfo files.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              How to install High Availability and Resilient Storage in EuroLinux 8
+              How to set up EuroLinux RPM internal mirror
             </div>
           </div>
         </a>
       
       
         
-        <a href="../virtualbox/" class="md-footer__link md-footer__link--next" aria-label="Next: VirtualBox" rel="next">
+        <a href="../z-documentation-markdown/" class="md-footer__link md-footer__link--next" aria-label="Next: Quick markdown and extensions guide" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              VirtualBox
+              Quick markdown and extensions guide
             </div>
           </div>
           <div class="md-footer__button md-icon">
