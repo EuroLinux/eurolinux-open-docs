@@ -1,4 +1,4 @@
-# Vagrant
+# Vagrant Jumpstart
 
 ## Introduction
 
