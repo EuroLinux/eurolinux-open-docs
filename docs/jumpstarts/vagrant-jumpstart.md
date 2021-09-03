@@ -92,7 +92,7 @@ application, go ahead and increase them. Once that's done, check out if
 they can be reduced once you know your software resource requirements.
 
 Depending on the task you want to achieve, whether it be a ready-made
-appliance **or** a base virtual system which gets provisioned with your
+appliance **or** a base virtual system that gets provisioned with your
 application and its dependencies **or** something else, that's when
 changes to the specification must be made - e.g. the additional
 provisioning procedure shall be written.
@@ -106,13 +106,6 @@ infrastructure](https://www.vagrantup.com/docs/multi-machine) defined in
 a single Vagrantfile.
 
 ## Additional resources
-
-### vagrant-libvirt plugin
-
-WIP: a complete hassle-free installing & building procedure will be written
-here.
-
-### Websites
 
 - Upstream's [official website](https://www.vagrantup.com/)
 - [Discover Vagrant Boxes](https://app.vagrantup.com/boxes/search?&q=eurolinux)
