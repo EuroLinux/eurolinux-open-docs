@@ -9,13 +9,30 @@ as described in [Vagrant jumpstart](../jumpstarts/vagrant-jumpstart.md).
 
 ### Why prefer libvirt over providers such as VirtualBox?
 
+KVM is a native virtualisation solution to Linux. This means a significant
+performance boost when compared to other providers at the slight cost of
+portability - if you only run Linux, then this is your solution of choice!  
 
+The performance boost can be easily seen in
+[tests](https://www.phoronix.com/scan.php?page=article&item=virtualbox-60-kvm&num=1)
+- it achieves near native performances by executing the guest code directly on
+the host CPU. This requires that both the host and guest machine use the same
+architecture of x86, PowerPC or S390.  
+
+Virt-Manager allows you can get a similar GUI experience out of KVM (among
+others) as that of e.g. VirtualBox, it is fully Free Software (no worrying
+about licensing shenanigans) and is more modular - you get several components
+that integrate well with each other rather than a one-size-fits all solution.  
 
 ## Building the plugin
 
 
 
 ```
+[ "$(command -v vagrant)" ] || \
+( read -p "Install Vagrant first before running the following commands" \
+  && exit 1 )
+
 sudo dnf groupinstall "Development Tools" "Virtualization Host" -y
 sudo dnf install cmake libvirt-devel ruby-devel -y
 
