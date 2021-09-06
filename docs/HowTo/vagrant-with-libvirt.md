@@ -7,26 +7,49 @@ Vagrant plugin that allows using libvirt as a provider. This has been tested on
 a clean installation of EuroLinux 8.4 - only Vagrant has been installed already
 as described in [Vagrant jumpstart](../jumpstarts/vagrant-jumpstart.md).  
 
+### Terminology
+
+- **QEMU** - a generic machine emulator
+- **KVM** - a virtualisation solution that is native to Linux. Used by QEMU to
+  achieve near native performances by executing the guest code directly on
+  the host CPU
+- **libvirt** - a management suite for several hypervisors
+
+While libvirt can manage many virtualisation solutions, in the context of this
+document *libvirt* refers to: *QEMU with KVM managed by libvirt*.  
+
 ### Why prefer libvirt over providers such as VirtualBox?
 
-KVM is a native virtualisation solution to Linux. This means a significant
-performance boost when compared to other providers at the slight cost of
-portability - if you only run Linux, then this is your solution of choice!  
+As mentioned, KVM is a native virtualisation solution to Linux. This means a
+[significant performance
+boost](https://web.archive.org/web/20210119220104/https://www.phoronix.com/scan.php?page=article&item=virtualbox-60-kvm&num=1)
+when compared to other providers at the slight cost of portability - if you run
+Linux only, then this is your solution of choice!  
 
-The performance boost can be easily seen in
-[tests](https://www.phoronix.com/scan.php?page=article&item=virtualbox-60-kvm&num=1)
-- it achieves near native performances by executing the guest code directly on
-the host CPU. This requires that both the host and guest machine use the same
-architecture of x86, PowerPC or S390.  
+If you have never used libvirt before and just heard about it in this how-to,
+there are several goodies worth mentioning. As an example unrelated to Vagrant:
+Virt-Manager allows you to get a similar GUI experience out of KVM as that of
+e.g. VirtualBox, it is fully Free Software (no worrying about licensing
+shenanigans) and is more modular - in fact, there is a [libvirt VirtualBox
+driver](https://libvirt.org/drvvbox.html) out there.  
 
-Virt-Manager allows you can get a similar GUI experience out of KVM (among
-others) as that of e.g. VirtualBox, it is fully Free Software (no worrying
-about licensing shenanigans) and is more modular - you get several components
-that integrate well with each other rather than a one-size-fits all solution.  
+## Install the plugin
 
-## Building the plugin
+Normally one would invoke a single command: `vagrant plugin install
+vagrant-libvirt` and the plugin would work well out-of-the-box. This is not the
+case for Linux distributions from the Enterprise Linux family and [Upstream is
+aware of that](https://github.com/hashicorp/vagrant/issues/11020), but as of
+today (2021.09.04) it doesn't appear to be resolved.  
 
+Because of that, you'll need to build additional components and use them with
+your Vagrant installation. The following procedure covers all of this and has
+been tested to work well with EuroLinux 8.4.  
 
+There are several references to CentOS in the procedure. The reason is that
+EuroLinux-maintained source RPMs will be provided soon in Q4 and once they're
+available, the procedure will be updated.  
+
+Use these commands:  
 
 ```
 [ "$(command -v vagrant)" ] || \
@@ -72,6 +95,14 @@ vagrant plugin install vagrant-libvirt
 sudo usermod -a -G libvirt $USER
 ```
 
-then log out of your graphical session and log in again.
+Next, log out of your graphical session and log in again. From now on you
+should be able to run Vagrant boxes with libvirt if all requirements have been
+satisfied, e.g. you don't have any other providers enabled (an equivalent of
+deploying this guide on a clean installation).  
 
+## Additional resources
 
+- The [plugin's repository](https://github.com/vagrant-libvirt/vagrant-libvirt)
+- Websites of provider-related projects: [KVM](http://linux-kvm.org/),
+  [libvirt](http://libvirt.org/), [QEMU](http://qemu.org),
+  [Virt-Manager](http://virt-manager.org/)
