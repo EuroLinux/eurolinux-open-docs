@@ -1,4 +1,4 @@
-# Vagrant with libvirt
+# Vagrant with vagrant-libvirt plugin on Enterprise Linux 8
 
 ## Introduction
 
@@ -11,7 +11,7 @@ as described in [Vagrant jumpstart](../jumpstarts/vagrant-jumpstart.md).
 
 - **QEMU** - a generic machine emulator
 - **KVM** - a virtualisation solution that is native to Linux. Used by QEMU to
-  achieve near native performances by executing the guest code directly on
+  achieve near-native performances by executing the guest code directly on
   the host CPU
 - **libvirt** - a management suite for several hypervisors
 
@@ -46,7 +46,8 @@ your Vagrant installation. The following procedure covers all of this and has
 been tested to work well with EuroLinux 8.4.  
 
 There are several references to CentOS in the procedure. The reason is that
-EuroLinux-maintained source RPMs will be provided soon in Q4 and once they're
+EuroLinux-maintained source RPMs will be provided at
+[vault.euro-linux.com](http://vault.euro-linux.com) soon in Q4 and once they're
 available, the procedure will be updated.  
 
 Use these commands:  
@@ -95,10 +96,10 @@ vagrant plugin install vagrant-libvirt
 sudo usermod -a -G libvirt $USER
 ```
 
-Next, log out of your graphical session and log in again. From now on you
-should be able to run Vagrant boxes with libvirt if all requirements have been
-satisfied, e.g. you don't have any other providers enabled (an equivalent of
-deploying this guide on a clean installation).  
+Next, log out from all of your sessions (graphical and text) and log in again.
+From now on you should be able to run Vagrant boxes with libvirt if all
+requirements have been satisfied, e.g. you don't have any other providers
+enabled (an equivalent of deploying this guide on a clean installation).  
 
 ## Additional resources
 
