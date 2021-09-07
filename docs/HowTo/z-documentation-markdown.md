@@ -1,7 +1,7 @@
 # Quick markdown and extensions guide
 
 The first part of this guide is loosely based on [Adam Pritchard markdown-here
-cheetsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 We include it here for contributors as reference and show how different pieces
 will be styled. If you are familiar with markdown, and want to skip to this
 project specific extensions they start with [Admonition](#admonition):
@@ -134,7 +134,7 @@ Sometimes you might add keys combinations. For example:
 
 To use second TY terminal use following key combination ++ctrl+alt+f2++
 
-To make them visable in nice way you should use following syntax:
+To make them visible in nice way you should use following syntax:
 ```
 To use second TY terminal use following key combination ++ctrl+alt+f2++
 ```
