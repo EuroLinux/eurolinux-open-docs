@@ -21,6 +21,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.euro-linux.com/HowTo/vagrant-with-libvirt/</loc>
+         <lastmod>2021-09-07</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.euro-linux.com/HowTo/virtualbox/</loc>
          <lastmod>2021-09-07</lastmod>
          <changefreq>daily</changefreq>
