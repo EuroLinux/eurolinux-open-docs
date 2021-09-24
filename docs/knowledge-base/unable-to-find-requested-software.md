@@ -44,4 +44,4 @@ platform different than EuroLinux.
 ## Resolution
 
 If you would like to request for a certain component availability, please
-[contact us](https://en.euro-linux.com/company/contact/).
+[contact us](https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc).
