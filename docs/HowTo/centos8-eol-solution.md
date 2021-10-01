@@ -44,7 +44,7 @@ sudo yum update -y
 ### Running the migration script
 
 Then download the [latest production-ready
-release](https://github.com/EuroLinux/eurolinux-open-docs/archive/refs/heads/master.zip)
+release](https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip)
 of the project containing the migration script. Unpack the release, visit the
 unpacked directory and run the script - usually this will require
 right-clicking in the current directory, using the 'Open in Terminal' option
@@ -91,4 +91,4 @@ resources section](#additional-resources). Thank you.
 
 - [EuroLinux migration scripts GitHub repository](https://github.com/EuroLinux/eurolinux-migration-scripts)
 - [Latest production-ready
-release of the project](https://github.com/EuroLinux/eurolinux-open-docs/archive/refs/heads/master.zip)
+release of the project](https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip)
