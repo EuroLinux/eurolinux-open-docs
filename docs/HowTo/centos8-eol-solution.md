@@ -41,7 +41,7 @@ command:
 sudo yum update -y
 ```
 
-### Running the script
+### Running the migration script
 
 Then download the [latest production-ready
 release](https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip)
@@ -58,14 +58,13 @@ Refer to the project's README for additional commands.
 
 ### After the switch
 
-Once the support switching operation has finished, it's recommended to reboot
-your system:
+Once the migration has finished, it's recommended to reboot your system:
 
 ```bash
 sudo reboot
 ```
 
-Once the system has rebooted, the support switching process can be considered
+Once the system has rebooted, the migration process can be considered
 complete.  
 In order to quickly verify that it was carried out successfully, we
 can check the distribution description:
