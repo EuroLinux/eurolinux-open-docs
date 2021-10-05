@@ -17,11 +17,11 @@ It is worth mentioning that both CentOS and RHEL and EuroLinux are systems
 built on the same source code, so they provide the same functionality. They
 differ mainly in branding.
 
-The operation of switching support is simple, safe and completely reversible.
-What is very important, it requires neither reinstallation of the system nor
-the applications installed on it. The process consists of switching the
-repository, installing the el-release package and updating the system. After
-the switch, CentOS will still be usable, even in production environments. 
+The operation of switching support is simple, reasonably safe and completely
+reversible.  What is very important, it requires neither reinstallation of the
+system nor the applications installed on it. The process consists of switching
+the repository, installing the el-release package and updating the system.
+After the switch, CentOS will still be usable, even in production environments. 
 
 All resources used in this tutorial can be found in the [additional
 resources section](#additional-resources).
@@ -29,8 +29,8 @@ resources section](#additional-resources).
 ## The solution
 
 A project named *eurolinux-migration-scripts* has been created. It contains
-among others a script that will take care of the support switching operation
-automatically. Here we describe, how to perform the switch successfully.
+among others a script that will take care of the migration automatically. Here
+we describe, how to perform the switch successfully.
 
 ### Preparations
 
