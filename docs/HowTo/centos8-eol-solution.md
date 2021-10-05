@@ -17,11 +17,13 @@ It is worth mentioning that both CentOS and RHEL and EuroLinux are systems
 built on the same source code, so they provide the same functionality. They
 differ mainly in branding.
 
-The operation of switching support is simple, safe and completely reversible.
-What is very important, it requires neither reinstallation of the system nor
-the applications installed on it. The process consists of switching the
-repository, installing the el-release package and updating the system. After
-the switch, CentOS will still be usable, even in production environments. 
+The operation of switching support is simple, reasonably safe and completely
+reversible.  What is very important, it requires neither reinstallation of the
+system nor the applications installed on it. The process consists of switching
+the repository, installing the el-release package, updating the system and
+reinstalling the system packages in-place.
+After the in-place migration, CentOS will still be usable, even in production
+environments. 
 
 All resources used in this tutorial can be found in the [additional
 resources section](#additional-resources).
@@ -29,8 +31,8 @@ resources section](#additional-resources).
 ## The solution
 
 A project named *eurolinux-migration-scripts* has been created. It contains
-among others a script that will take care of the support switching operation
-automatically. Here we describe, how to perform the switch successfully.
+among others a script that will take care of the migration automatically. Here
+we describe, how to perform the switch successfully.
 
 ### Preparations
 
@@ -45,7 +47,7 @@ sudo yum update -y
 
 Then download the [latest production-ready
 release](https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip)
-of the project containing the migration script. Unpack the release, visit the
+of the project containing the script. Unpack the release, visit the
 unpacked directory and run the script - usually this will require
 right-clicking in the current directory, using the 'Open in Terminal' option
 and running this command:
@@ -58,8 +60,7 @@ Refer to the project's README for additional commands.
 
 ### After the switch
 
-Once the support switching operation has finished, it's recommended to reboot
-your system:
+Once the migration has finished, it's recommended to reboot your system:
 
 ```bash
 sudo reboot
@@ -79,16 +80,16 @@ EuroLinux version.
 
 ## Conclusion
 
-As you can see, the migration is quick and seamless. You can switch the
+As you can see, the process is quick and seamless. You can switch the
 repository for RHEL, Oracle Linux, AlmaLinux, and Rocky Linux the same way.
 In each case, the process will look almost identical.
 
-If you have any questions or concerns, please submit them to the migration
-script repository linked in the [additional
-resources section](#additional-resources). Thank you.
+If you have any questions or concerns, please submit them to the repository
+linked in the [additional resources section](#additional-resources). Thank you.
 
 ## Additional resources
 
-- [EuroLinux migration scripts GitHub repository](https://github.com/EuroLinux/eurolinux-migration-scripts)
-- [Latest production-ready
-release of the project](https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip)
+- [EuroLinux support switching script GitHub
+  repository](https://github.com/EuroLinux/eurolinux-migration-scripts)
+- [Latest production-ready release of the
+  project](https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip)
