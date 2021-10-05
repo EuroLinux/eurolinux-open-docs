@@ -20,7 +20,8 @@ differ mainly in branding.
 The operation of switching support is simple, reasonably safe and completely
 reversible.  What is very important, it requires neither reinstallation of the
 system nor the applications installed on it. The process consists of switching
-the repository, installing the el-release package and updating the system.
+the repository, installing the el-release package, updating the system and
+reinstalling the system packages in-place.
 After the in-place migration, CentOS will still be usable, even in production
 environments. 
 
