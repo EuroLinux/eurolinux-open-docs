@@ -41,11 +41,11 @@ command:
 sudo yum update -y
 ```
 
-### Running the migration script
+### Running the script
 
 Then download the [latest production-ready
 release](https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip)
-of the project containing the migration script. Unpack the release, visit the
+of the project containing the script. Unpack the release, visit the
 unpacked directory and run the script - usually this will require
 right-clicking in the current directory, using the 'Open in Terminal' option
 and running this command:
@@ -65,7 +65,7 @@ your system:
 sudo reboot
 ```
 
-Once the system has rebooted, the migration process can be considered
+Once the system has rebooted, the support switching process can be considered
 complete.  
 In order to quickly verify that it was carried out successfully, we
 can check the distribution description:
@@ -79,16 +79,16 @@ EuroLinux version.
 
 ## Conclusion
 
-As you can see, the migration is quick and seamless. You can switch the
+As you can see, the process is quick and seamless. You can switch the
 repository for RHEL, Oracle Linux, AlmaLinux, and Rocky Linux the same way.
 In each case, the process will look almost identical.
 
-If you have any questions or concerns, please submit them to the migration
-script repository linked in the [additional
-resources section](#additional-resources). Thank you.
+If you have any questions or concerns, please submit them to the repository
+linked in the [additional resources section](#additional-resources). Thank you.
 
 ## Additional resources
 
-- [EuroLinux migration scripts GitHub repository](https://github.com/EuroLinux/eurolinux-migration-scripts)
-- [Latest production-ready
-release of the project](https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip)
+- [EuroLinux support switching script GitHub
+  repository](https://github.com/EuroLinux/eurolinux-migration-scripts)
+- [Latest production-ready release of the
+  project](https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip)
