@@ -455,7 +455,7 @@
   
     <li class="md-nav__item">
       <a href="../mirror-eurolinux-locally/" class="md-nav__link">
-        How to set up EuroLinux RPM internal mirror
+        How to set up internal EuroLinux RPM mirror
       </a>
     </li>
   
@@ -778,17 +778,19 @@ will be downloading stable updates. Such a solution is offered by EuroLinux.
 It is worth mentioning that both CentOS and RHEL and EuroLinux are systems
 built on the same source code, so they provide the same functionality. They
 differ mainly in branding.</p>
-<p>The operation of switching support is simple, safe and completely reversible.
-What is very important, it requires neither reinstallation of the system nor
-the applications installed on it. The process consists of switching the
-repository, installing the el-release package and updating the system. After
-the switch, CentOS will still be usable, even in production environments. </p>
+<p>The operation of switching support is simple, reasonably safe and completely
+reversible.  What is very important, it requires neither reinstallation of the
+system nor the applications installed on it. The process consists of switching
+the repository, installing the el-release package, updating the system and
+reinstalling the system packages in-place.
+After the in-place migration, CentOS will still be usable, even in production
+environments. </p>
 <p>All resources used in this tutorial can be found in the <a href="#additional-resources">additional
 resources section</a>.</p>
 <h2 id="the-solution">The solution</h2>
 <p>A project named <em>eurolinux-migration-scripts</em> has been created. It contains
-among others a script that will take care of the support switching operation
-automatically. Here we describe, how to perform the switch successfully.</p>
+among others a script that will take care of the migration automatically. Here
+we describe, how to perform the switch successfully.</p>
 <h3 id="preparations">Preparations</h3>
 <p>It's vital that the system be updated to the newest release. Use the following
 command:</p>
@@ -797,7 +799,7 @@ command:</p>
 <h3 id="running-the-migration-script">Running the migration script</h3>
 <p>Then download the <a href="https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip">latest production-ready
 release</a>
-of the project containing the migration script. Unpack the release, visit the
+of the project containing the script. Unpack the release, visit the
 unpacked directory and run the script - usually this will require
 right-clicking in the current directory, using the 'Open in Terminal' option
 and running this command:</p>
@@ -805,8 +807,7 @@ and running this command:</p>
 </code></pre></div>
 <p>Refer to the project's README for additional commands.</p>
 <h3 id="after-the-switch">After the switch</h3>
-<p>Once the support switching operation has finished, it's recommended to reboot
-your system:</p>
+<p>Once the migration has finished, it's recommended to reboot your system:</p>
 <div class="highlight"><pre><span></span><code>sudo reboot
 </code></pre></div>
 <p>Once the system has rebooted, the migration process can be considered
@@ -818,17 +819,17 @@ can check the distribution description:</p>
 <p>As a result we should get a response about the distribution and latest
 EuroLinux version.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>As you can see, the migration is quick and seamless. You can switch the
+<p>As you can see, the process is quick and seamless. You can switch the
 repository for RHEL, Oracle Linux, AlmaLinux, and Rocky Linux the same way.
 In each case, the process will look almost identical.</p>
-<p>If you have any questions or concerns, please submit them to the migration
-script repository linked in the <a href="#additional-resources">additional
-resources section</a>. Thank you.</p>
+<p>If you have any questions or concerns, please submit them to the repository
+linked in the <a href="#additional-resources">additional resources section</a>. Thank you.</p>
 <h2 id="additional-resources">Additional resources</h2>
 <ul>
-<li><a href="https://github.com/EuroLinux/eurolinux-migration-scripts">EuroLinux migration scripts GitHub repository</a></li>
-<li><a href="https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip">Latest production-ready
-release of the project</a></li>
+<li><a href="https://github.com/EuroLinux/eurolinux-migration-scripts">EuroLinux support switching script GitHub
+  repository</a></li>
+<li><a href="https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/master.zip">Latest production-ready release of the
+  project</a></li>
 </ul>
                 
               

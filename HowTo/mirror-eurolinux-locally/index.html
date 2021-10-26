@@ -18,7 +18,7 @@
     
     
       
-        <title>How to set up EuroLinux RPM internal mirror - EuroLinux Documentation</title>
+        <title>How to set up internal EuroLinux RPM mirror - EuroLinux Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-set-up-eurolinux-rpm-internal-mirror" class="md-skip">
+        <a href="#how-to-set-up-internal-eurolinux-rpm-mirror" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to set up EuroLinux RPM internal mirror
+              How to set up internal EuroLinux RPM mirror
             
           </span>
         </div>
@@ -376,12 +376,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          How to set up EuroLinux RPM internal mirror
+          How to set up internal EuroLinux RPM mirror
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        How to set up EuroLinux RPM internal mirror
+        How to set up internal EuroLinux RPM mirror
       </a>
       
         
@@ -399,30 +399,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#system-requirement" class="md-nav__link">
-    System requirement
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mirroring-eurolinux-7-the-official-way" class="md-nav__link">
-    Mirroring EuroLinux 7 - the official way
+  <a href="#mirroring-eurolinux-8" class="md-nav__link">
+    Mirroring EuroLinux 8
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mirroring-eurolinux-7-unsupported-way" class="md-nav__link">
-    Mirroring EuroLinux 7 unsupported way
+  <a href="#mirroring-eurolinux-7" class="md-nav__link">
+    Mirroring EuroLinux 7
+  </a>
+  
+    <nav class="md-nav" aria-label="Mirroring EuroLinux 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-official-way" class="md-nav__link">
+    The official way
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#eurolinux-8" class="md-nav__link">
-    EuroLinux 8
+        
+          <li class="md-nav__item">
+  <a href="#the-unsupported-way" class="md-nav__link">
+    The unsupported way
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -664,30 +677,43 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#system-requirement" class="md-nav__link">
-    System requirement
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mirroring-eurolinux-7-the-official-way" class="md-nav__link">
-    Mirroring EuroLinux 7 - the official way
+  <a href="#mirroring-eurolinux-8" class="md-nav__link">
+    Mirroring EuroLinux 8
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#mirroring-eurolinux-7-unsupported-way" class="md-nav__link">
-    Mirroring EuroLinux 7 unsupported way
+  <a href="#mirroring-eurolinux-7" class="md-nav__link">
+    Mirroring EuroLinux 7
+  </a>
+  
+    <nav class="md-nav" aria-label="Mirroring EuroLinux 7">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-official-way" class="md-nav__link">
+    The official way
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#eurolinux-8" class="md-nav__link">
-    EuroLinux 8
+        
+          <li class="md-nav__item">
+  <a href="#the-unsupported-way" class="md-nav__link">
+    The unsupported way
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -708,145 +734,35 @@
                   </a>
                 
                 
-                <h1 id="how-to-set-up-eurolinux-rpm-internal-mirror">How to set up EuroLinux RPM internal mirror</h1>
+                <h1 id="how-to-set-up-internal-eurolinux-rpm-mirror">How to set up internal EuroLinux RPM mirror</h1>
 <p>This short how-to instructs how to set up your own <strong>internal</strong> EuroLinux mirror.
 External (publicly available) mirrors should not be set up this way.</p>
-<h2 id="system-requirement">System requirement</h2>
+<h2 id="system-requirements">System requirements</h2>
 <ul>
 <li>Internet connection for sync server is required</li>
 <li>The firewall must allow connection to EuroLinux servers</li>
 <li>For each version of EuroLinux, you need about 80 GB of storage</li>
-<li>You have to install utilities like reposync and createrepo. The following command will work on Enterprise Linux 7 and 8:
+<li>You have to install utilities like reposync and createrepo. The
+  following command will work on an Enterprise Linux 7 and 8:
   <div class="highlight"><pre><span></span><code><span class="c1"># --skip-broken because not all packages might be present</span>
 sudo yum install -y createrepo_c createrepo yum-utils dnf-utils --skip-broken
 </code></pre></div></li>
 </ul>
-<h2 id="mirroring-eurolinux-7-the-official-way">Mirroring EuroLinux 7 - the official way</h2>
-<p><strong>EuroLinux 7 is not open-core</strong>; therefore, only organizations with a proper
-license (EuroMan or Gold Key) can mirror it freely.</p>
-<div class="admonition information">
-<p class="admonition-title">We know</p>
-<p>We are well aware that it is possible to mirror repos even with a single
-license. You can read about that below.</p>
-</div>
-<p>The official way to mirror EuroLinux repositories is the following:</p>
-<ul>
-<li>You need a proper subscription, like EuroMan or Gold Key</li>
-<li>EuroLinux engineer will provide you with SSL certificates that we will name
-  <code>repo.key</code> and <code>repo.crt</code> and CA that we will name <code>ca.crt</code></li>
-</ul>
-<p>With repokeys residing in <code>/etc/yum-mirror-config/</code> directory create the
-following yum.config - example below is for EuroLinux 7 x86_64</p>
-<div class="highlight"><pre><span></span><code><span class="k">[main]</span>
-<span class="na">cachedir</span><span class="o">=</span><span class="s">/var/cache/yum/mirror/$basearch/$releasever</span>
-<span class="na">keepcache</span><span class="o">=</span><span class="s">0</span>
-<span class="na">debuglevel</span><span class="o">=</span><span class="s">2</span>
-<span class="na">logfile</span><span class="o">=</span><span class="s">/var/log/mirror-yum.log</span>
-<span class="na">exactarch</span><span class="o">=</span><span class="s">0</span>
-<span class="na">obsoletes</span><span class="o">=</span><span class="s">0</span>
-<span class="na">gpgcheck</span><span class="o">=</span><span class="s">0</span>
-<span class="na">plugins</span><span class="o">=</span><span class="s">0</span>
-<span class="na">reposdir</span><span class="o">=</span><span class="s">/dev/null</span>
-
-<span class="k">[eurolinux-os-7]</span>
-<span class="na">name</span><span class="o">=</span><span class="s">el7_x86_64_os</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://cdn.euro-linux.com/dist/eurolinux/server/7/x86_64/os/</span>
-<span class="na">sslclientkey</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.key</span>
-<span class="na">sslclientcrt</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.crt</span>
-<span class="na">sslcacert</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/ca.crt</span>
-
-<span class="k">[eurolinux-updates-7]</span>
-<span class="na">name</span><span class="o">=</span><span class="s">el7_x86_64_updates</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://cdn.euro-linux.com/dist/eurolinux/server/7/x86_64/updates/</span>
-<span class="na">sslclientkey</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.key</span>
-<span class="na">sslclientcrt</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.crt</span>
-<span class="na">sslcacert</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/ca.crt</span>
-</code></pre></div>
-<p>After saving this file to <code>/etc/yum-mirror-config/mirror_yum.conf</code> you might download the
-repositories to the <code>/repos</code> directory with the following command.
-<div class="highlight"><pre><span></span><code>reposync -d -m --download-metadata -c /etc/yum-mirror-config/mirror_yum.conf -p /repos
-</code></pre></div></p>
-<p>When the download finishes, the next step is to create repodata and enable
-groups.</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /repos/eurolinux-os-7/<span class="p">;</span> createrepo . -g comps.xml
-<span class="nb">cd</span> /repos/eurolinux-updates-7/<span class="p">;</span> createrepo . -g comps.xml
-</code></pre></div>
-<div class="admonition info erratas">
-<p class="admonition-title">Info</p>
-<p>Enabling updateinfo (erratas information) is a little bit tricky, because
-firstly you have to find the newest updateinfo, unpack it, then invoke
-modifyrepo script. It can be automated with the script below.</p>
-</div>
-<div class="highlight"><pre><span></span><code><span class="nv">REPO_DIR</span><span class="o">=</span>/repos/eurolinux-os-7/
-<span class="nb">unset</span> -v LAST_UI
-<span class="c1"># finding the newest file</span>
-<span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">&quot;</span>/*updateinfo.xml.gz<span class="p">;</span> <span class="k">do</span>
-  <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> -nt <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">LAST_UI</span><span class="o">=</span><span class="nv">$file</span>
-<span class="k">done</span>
-<span class="c1"># unpacking to updateinfo.xml file</span>
-sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
-<span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
-/usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
-
-<span class="nv">REPO_DIR</span><span class="o">=</span>/repos/eurolinux-updates-7/
-<span class="nb">unset</span> -v LAST_UI
-<span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">&quot;</span>/*updateinfo.xml.gz<span class="p">;</span> <span class="k">do</span>
-  <span class="o">[[</span> <span class="nv">$file</span> -nt <span class="nv">$LAST_UI</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">LAST_UI</span><span class="o">=</span><span class="nv">$file</span>
-<span class="k">done</span>
-sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
-<span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
-/usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
-</code></pre></div>
-<p>This short manual concludes mirroring EuroLinux locally.</p>
-<h2 id="mirroring-eurolinux-7-unsupported-way">Mirroring EuroLinux 7 <strong>unsupported way</strong></h2>
-<p>There is also the possibility to mirror EuroLinux repositories even with a
-single or even test subscription.</p>
-<div class="admonition warning">
-<p class="admonition-title">True Product – Real Support – Fair Price</p>
-<p>We are faithful to our values. We also know that it's always possible to
-cheat and not play fair. Please be aware that during support inqury, we
-might check if your system is registered and supported. To this day, we
-always had pleasure to work with honest companies - please don't ruin that.</p>
-</div>
-<div class="admonition danger">
-<p class="admonition-title">Mirroring other distros</p>
-<p>This instruction allows cloning other distros, including paid ones. If you
-want to mirror paid Linux distribution, note that this might breach the
-license/license agreement and endanger your organization.</p>
-</div>
-<p>After this short warning, you can mirror EuroLinux or other Enterprise Linux
-repositories with the following step:</p>
-<ul>
-<li>Register your system with <code>rhn_register</code> command for EuroLinux or another way
-  to mirror another system repositories.</li>
-</ul>
-<p>Then run the reposync with proper options (example for EuroLinux 7):</p>
-<div class="highlight"><pre><span></span><code>reposync -d -m --download-metadata --plugins -r el-server-7-x86_64 -p /repos/
-<span class="c1"># recreating repodata and updateinfo</span>
-<span class="nv">REPO_DIR</span><span class="o">=</span>/repos/el-server-7-x86_64/
-<span class="nb">cd</span> /repos/el-server-7-x86_64/<span class="p">;</span> createrepo . -g comps.xml
-<span class="nb">unset</span> -v LAST_UI
-<span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">&quot;</span>/*updateinfo.xml.gz<span class="p">;</span> <span class="k">do</span>
-  <span class="o">[[</span> <span class="nv">$file</span> -nt <span class="nv">$LAST_UI</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">LAST_UI</span><span class="o">=</span><span class="nv">$file</span>
-<span class="k">done</span>
-sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
-<span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
-/usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
-</code></pre></div>
-<h2 id="eurolinux-8">EuroLinux 8</h2>
-<div class="admonition info">
-<p class="admonition-title">Use Enterprise Linux 8</p>
-<p>The instructions below work on Enterprise Linux 8. Because EuroLinux 8 has
-modular repositories and it is <strong>not supported</strong> to use <code>reposync</code> on the
-older system releases.</p>
-</div>
-<p>Making a local mirror for EuroLinux 8 is much simpler because:</p>
+<h2 id="mirroring-eurolinux-8">Mirroring EuroLinux 8</h2>
+<p>Making a local mirror for EuroLinux 8 is simple because:</p>
 <ul>
 <li>repositories are open</li>
 <li>reposync can pull repository metadata, erratas, and modules files
   automatically.</li>
 </ul>
-<p>First - let's create <code>/etc/yum-mirror-config/mirror_yum.conf</code></p>
+<div class="admonition info">
+<p class="admonition-title">Use Enterprise Linux 8</p>
+<p>These instructions have been tested to work properly on Enterprise
+Linux 8. While everything may work well, it's not recommended to use
+other versions.</p>
+</div>
+<p>First, let's create the file <code>/etc/yum-mirror-config/mirror_yum.conf</code>
+with the contents:</p>
 <div class="highlight"><pre><span></span><code><span class="k">[main]</span>
 <span class="na">cachedir</span><span class="o">=</span><span class="s">/var/cache/yum/mirror/$basearch/$releasever</span>
 <span class="na">keepcache</span><span class="o">=</span><span class="s">0</span>
@@ -881,14 +797,127 @@ older system releases.</p>
 <span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8</span>
 <span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">1</span>
 </code></pre></div>
-<p>Then you can invoke the <code>reposync</code> command with the following arguments:
-<div class="highlight"><pre><span></span><code>reposync --downloadcomps --download-metadata  -c /etc/yum-mirror-config/mirror_yum.conf  -p /repos
-</code></pre></div></p>
-<div class="admonition note">
-<p class="admonition-title">Mirror using Enterprise Linux 8</p>
-<p>If you use Enterprise Linux 8 and mirror Enterprise Linux 7 repositories,
-you don't have to rebuild repositories metadata and updateinfo files.</p>
+<p>Then invoke the command <code>reposync</code> with the following arguments:</p>
+<div class="highlight"><pre><span></span><code>reposync --downloadcomps --download-metadata -c /etc/yum-mirror-config/mirror_yum.conf -p /repos
+</code></pre></div>
+<h2 id="mirroring-eurolinux-7">Mirroring EuroLinux 7</h2>
+<div class="admonition info">
+<p class="admonition-title">Use Enterprise Linux 7</p>
+<p>These instructions have been tested to work properly on Enterprise
+Linux 7. While everything may work well, it's not recommended to use
+other versions.</p>
 </div>
+<h3 id="the-official-way">The official way</h3>
+<p><strong>EuroLinux 7 is not open-core</strong>; therefore, only organizations with a proper
+license (EuroMan or Golden Key) can mirror it freely.</p>
+<div class="admonition information">
+<p class="admonition-title">We know</p>
+<p>We are well aware that it is possible to mirror repos even with a single
+license. You can read about that below.</p>
+</div>
+<p>The official way to mirror EuroLinux repositories is the following:</p>
+<ul>
+<li>You need a proper subscription, like EuroMan or Golden Key</li>
+<li>EuroLinux engineer will provide you with SSL certificates that we will name
+  <code>repo.key</code> and <code>repo.crt</code> and CA that we will name <code>ca.crt</code></li>
+</ul>
+<p>Create the directory <code>/etc/yum-mirror-config/</code>.
+With the repokeys residing in that directory, create the file
+<code>/etc/yum-mirror-config/mirror_yum.conf</code> with the contents:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[main]</span>
+<span class="na">cachedir</span><span class="o">=</span><span class="s">/var/cache/yum/mirror/$basearch/$releasever</span>
+<span class="na">keepcache</span><span class="o">=</span><span class="s">0</span>
+<span class="na">debuglevel</span><span class="o">=</span><span class="s">2</span>
+<span class="na">logfile</span><span class="o">=</span><span class="s">/var/log/mirror-yum.log</span>
+<span class="na">exactarch</span><span class="o">=</span><span class="s">0</span>
+<span class="na">obsoletes</span><span class="o">=</span><span class="s">0</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">0</span>
+<span class="na">plugins</span><span class="o">=</span><span class="s">0</span>
+<span class="na">reposdir</span><span class="o">=</span><span class="s">/dev/null</span>
+
+<span class="k">[eurolinux-os-7]</span>
+<span class="na">name</span><span class="o">=</span><span class="s">el7_x86_64_os</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://cdn.euro-linux.com/dist/eurolinux/server/7/x86_64/os/</span>
+<span class="na">sslclientkey</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.key</span>
+<span class="na">sslclientcrt</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.crt</span>
+<span class="na">sslcacert</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/ca.crt</span>
+
+<span class="k">[eurolinux-updates-7]</span>
+<span class="na">name</span><span class="o">=</span><span class="s">el7_x86_64_updates</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://cdn.euro-linux.com/dist/eurolinux/server/7/x86_64/updates/</span>
+<span class="na">sslclientkey</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.key</span>
+<span class="na">sslclientcrt</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/repo.crt</span>
+<span class="na">sslcacert</span><span class="o">=</span><span class="s">/etc/yum-mirror-config/ca.crt</span>
+</code></pre></div>
+<p>Then invoke the command <code>reposync</code> with the following arguments:</p>
+<div class="highlight"><pre><span></span><code>reposync -d -m --download-metadata -c /etc/yum-mirror-config/mirror_yum.conf -p /repos
+</code></pre></div>
+<p>When the download finishes, the next step is to create repodata and enable
+groups.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> /repos/eurolinux-os-7/<span class="p">;</span> createrepo . -g comps.xml
+<span class="nb">cd</span> /repos/eurolinux-updates-7/<span class="p">;</span> createrepo . -g comps.xml
+</code></pre></div>
+<div class="admonition info erratas">
+<p class="admonition-title">Info</p>
+<p>Enabling updateinfo (erratas information) is a little bit tricky, because
+firstly you have to find the newest updateinfo, unpack it, then invoke
+modifyrepo script. It can be automated with the script below.</p>
+</div>
+<div class="highlight"><pre><span></span><code><span class="nv">REPO_DIR</span><span class="o">=</span>/repos/eurolinux-os-7/
+<span class="nb">unset</span> -v LAST_UI
+<span class="c1"># finding the newest file</span>
+<span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">&quot;</span>/*updateinfo.xml.gz<span class="p">;</span> <span class="k">do</span>
+  <span class="o">[[</span> <span class="s2">&quot;</span><span class="nv">$file</span><span class="s2">&quot;</span> -nt <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">LAST_UI</span><span class="o">=</span><span class="nv">$file</span>
+<span class="k">done</span>
+<span class="c1"># unpacking to updateinfo.xml file</span>
+sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
+<span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
+/usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
+
+<span class="nv">REPO_DIR</span><span class="o">=</span>/repos/eurolinux-updates-7/
+<span class="nb">unset</span> -v LAST_UI
+<span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">&quot;</span>/*updateinfo.xml.gz<span class="p">;</span> <span class="k">do</span>
+  <span class="o">[[</span> <span class="nv">$file</span> -nt <span class="nv">$LAST_UI</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">LAST_UI</span><span class="o">=</span><span class="nv">$file</span>
+<span class="k">done</span>
+sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
+<span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
+/usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
+</code></pre></div>
+<h3 id="the-unsupported-way">The unsupported way</h3>
+<p>There is also the possibility to mirror EuroLinux repositories even with a
+single or even test subscription.</p>
+<div class="admonition warning">
+<p class="admonition-title">True Product – Real Support – Fair Price</p>
+<p>We are faithful to our values. We also know that it's always possible to
+cheat and not play fair. Please be aware that during support inqury, we
+might check if your system is registered and supported. To this day, we
+always had pleasure to work with honest companies - please don't ruin that.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Mirroring other distros</p>
+<p>This instruction allows cloning other distros, including paid ones. If you
+want to mirror paid Linux distribution, note that this might breach the
+license/license agreement and endanger your organization.</p>
+</div>
+<p>After this short warning, you can mirror EuroLinux or other Enterprise Linux
+repositories with the following step:</p>
+<ul>
+<li>Register your system with <code>rhn_register</code> command for EuroLinux or another way
+  to mirror another system repositories.</li>
+</ul>
+<p>Then run the following snippet:</p>
+<div class="highlight"><pre><span></span><code>reposync -d -m --download-metadata --plugins -r el-server-7-x86_64 -p /repos/
+<span class="c1"># recreating repodata and updateinfo</span>
+<span class="nv">REPO_DIR</span><span class="o">=</span>/repos/el-server-7-x86_64/
+<span class="nb">cd</span> /repos/el-server-7-x86_64/<span class="p">;</span> createrepo . -g comps.xml
+<span class="nb">unset</span> -v LAST_UI
+<span class="k">for</span> file <span class="k">in</span> <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">&quot;</span>/*updateinfo.xml.gz<span class="p">;</span> <span class="k">do</span>
+  <span class="o">[[</span> <span class="nv">$file</span> -nt <span class="nv">$LAST_UI</span> <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="nv">LAST_UI</span><span class="o">=</span><span class="nv">$file</span>
+<span class="k">done</span>
+sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
+<span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
+/usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
+</code></pre></div>
                 
               
               
