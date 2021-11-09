@@ -2,4 +2,3 @@
 
 - Contributing Guide
 - Containers Jumps Starts
-- Vagrant Jump Start
