@@ -30,10 +30,31 @@ Documentation is organized in the following manner:
 - Release Notes 
  
 ## Contributors guide
-### How to contribute
-TODO
- Step - by -step instruction (make fork, PR etc)
 
+We love you input! We love transparent and easy to contribute projects that why
+we choose GitHub. You can contribute to this project with:
+
+- Proposing a new topics that should be described
+- Discussing the current state of the docs
+- Reporting the bug
+- Submitting a fix
+
+### We Use Github With Github Flow, All Chnages Are Made Through Pull Requests 
+
+Pull requests are the best and well established way to propose changes. The
+GitHub Flow that allows us to provide reviews and discussion about documentation/code
+is described in details [here](https://guides.github.com/introduction/flow/index.html).
+
+To make contribution about topics you can use our specialy crafted for You
+templates: [EuroLinux Open Docs issues with templates!](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose)
+
+If you want to contribute with code (we keep documentation as code) do the following:
+
+1. Fork the repository and crate your own branch from master.
+2. It would be great if you could test your changes with mkdocs (described in
+   details in [Setup environment locally](###Setup environment locally))
+3. Write/Apply your changes and commit to your branch.
+4. Issue that pull request!
 
 ### Tools
 We are using `mkdocs` with `mkdocs-material` to build and style our
