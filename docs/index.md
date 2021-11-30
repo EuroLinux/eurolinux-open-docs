@@ -29,34 +29,43 @@ Documentation is organized in the following manner:
 - Erratas - EuroLinux erratas in the form of the web pages
 - Release Notes 
  
-## Contributors guide
+## How to contribute
 
-We love you input! We love transparent and easy to contribute projects that why
-we choose GitHub. You can contribute to this project with:
+We love your input! We value transparent and easy to contribute projects that
+why we choose GitHub. You can contribute to this project with:
 
-- Proposing a new topics that should be described
+- Proposing a new topic that should be described
 - Discussing the current state of the docs
 - Reporting the bug
 - Submitting a fix
 
-### We Use Github With Github Flow, All Chnages Are Made Through Pull Requests 
+**We Use Github with Github Flow. All changes are made through pull requests.** 
 
-Pull requests are the best and well established way to propose changes. The
+Pull requests are the best and well-established way to propose changes. The
 GitHub Flow that allows us to provide reviews and discussion about documentation/code
-is described in details [here](https://guides.github.com/introduction/flow/index.html).
+is described in detail [here](https://guides.github.com/introduction/flow/index.html).
 
-To make contribution about topics you can use our specialy crafted for You
-templates: [EuroLinux Open Docs issues with templates!](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose)
+Use our specially crafted issue templates: [EuroLinux Open Docs issue from a
+template](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose) to
+contribute a topic you would like to see.
 
-If you want to contribute with code (we keep documentation as code) do the following:
+If you want to contribute with code (we keep documentation as code), do the
+following:
 
-1. Fork the repository and crate your own branch from master.
+1. Fork the repository and create your own branch from master.
 2. It would be great if you could test your changes with mkdocs (described in
-   details in [Setup environment locally](###Setup environment locally))
+   detail in [Setup environment locally](#setup-environment-locally))
 3. Write/Apply your changes and commit to your branch.
-4. Issue that pull request!
+4. Create a pull request!
 
-### Tools
+### GitHub Labs
+
+If you are new to Git VCS (Version Control System) or GitHub, you can visit
+[GitHub Learning Lab](https://lab.github.com/), especially [First Day on GitHub
+course](https://lab.github.com/githubtraining/first-day-on-github).  GitHub
+courses are free, interactive and put stress on practical aspects.
+
+## Tools
 We are using `mkdocs` with `mkdocs-material` to build and style our
 documentation.
 
@@ -64,7 +73,7 @@ documentation.
 - [Material for MkDocs site](https://squidfunk.github.io/mkdocs-material/)
 
 
-### Setup environment locally
+## Setup environment locally
 
 Because MkDocs is Python based, you need at least these installed to run this
 documentation locally:
@@ -113,7 +122,7 @@ It will build documentation and save it into `site` directory
     directory is not gitignored
 
 
-### Markdown cheat sheet for this project
+## Markdown cheat sheet for this project
 We created simple cheat sheet for MkDocs markdown syntax with extensions
 enabled in this project. It can be found
 [here](HowTo/z-documentation-markdown.md).
