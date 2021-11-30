@@ -27,19 +27,19 @@ Documentation is organized in the following manner:
 - JumpStarts - Installation guides with extras
 - HowTo - How To guides on various topics
 - Erratas - EuroLinux erratas in the form of the web pages
-- Release Notes 
- 
+- Release Notes
+
 ## How to contribute
 
-We love your input! We value transparent and easy to contribute projects that
+We love your input! We value transparent and easy to contribute projects that's
 why we choose GitHub. You can contribute to this project with:
 
 - Proposing a new topic that should be described
 - Discussing the current state of the docs
-- Reporting the bug
+- Reporting a bug
 - Submitting a fix
 
-**We Use Github with Github Flow. All changes are made through pull requests.** 
+**We Use GitHub with GitHub Flow. All changes are made through pull requests.**
 
 Pull requests are the best and well-established way to propose changes. The
 GitHub Flow that allows us to provide reviews and discussion about documentation/code
