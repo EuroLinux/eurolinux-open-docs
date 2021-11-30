@@ -9,7 +9,7 @@ This is EuroLinux community-driven documentation.
 You can:
 
 - star the repository to show your support
-- contribute via a Pull Request - see [Contribution Guide](#contributors-guide)
+- contribute via a Pull Request - see [How to contribute](#how-to-contribute)
 - create requests for a particular topic via [Issue Creation on
   GitHub](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose)
 
