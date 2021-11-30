@@ -31,7 +31,7 @@ Documentation is organized in the following manner:
 
 ## How to contribute
 
-We love your input! We value transparent and easy to contribute projects that's
+We love your input! We value transparent and easy to contribute projects, that's
 why we choose GitHub. You can contribute to this project with:
 
 - Proposing a new topic that should be described
