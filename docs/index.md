@@ -9,7 +9,7 @@ This is EuroLinux community-driven documentation.
 You can:
 
 - star the repository to show your support
-- contribute via a Pull Request - see [Contribution Guide](#contributors-guide)
+- contribute via a Pull Request - see [How to contribute](#how-to-contribute)
 - create requests for a particular topic via [Issue Creation on
   GitHub](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose)
 
@@ -43,7 +43,7 @@ why we choose GitHub. You can contribute to this project with:
 
 Pull requests are the best and well-established way to propose changes. The
 GitHub Flow that allows us to provide reviews and discussion about documentation/code
-is described in detail [here](https://guides.github.com/introduction/flow/index.html).
+is described in detail [here](https://docs.github.com/en/get-started/quickstart/github-flow).
 
 Use our specially crafted issue templates: [EuroLinux Open Docs issue from a
 template](https://github.com/EuroLinux/eurolinux-open-docs/issues/new/choose) to
