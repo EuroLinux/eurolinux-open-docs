@@ -37,7 +37,7 @@ docker run -rm -ti eurolinux/eurolinux-8
 
 Inside the container, you can check the system version
 ```
-bash-4.4# cat /etc/el-release 
+bash-4.4# cat /etc/el-release
 EuroLinux release 8.5 (Tirana)
 ```
 
@@ -83,5 +83,5 @@ find the desired tag. Example for EuroLinux 8:
 ## Request for Change/Comment and Bug report repository
 
 You can request a change, leave a comment or report a bug in this [EuroLinux
-containers RFC](https://github.com/EuroLinux/containers-rfc) repository.:w
+containers RFC](https://github.com/EuroLinux/containers-rfc) repository.
 
