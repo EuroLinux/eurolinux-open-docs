@@ -4,7 +4,7 @@
 
 This guide covers the installation of libvirt and related tools along with the
 Vagrant plugin that allows using libvirt as a provider. This has been tested on
-a clean installation of EuroLinux 8.4 - only Vagrant has been installed already
+a clean installation of EuroLinux 8.5 - only Vagrant has been installed already
 as described in [Vagrant jumpstart](../jumpstarts/vagrant-jumpstart.md).  
 
 ### Terminology
@@ -39,16 +39,11 @@ Normally one would invoke a single command: `vagrant plugin install
 vagrant-libvirt` and the plugin would work well out-of-the-box. This is not the
 case for Linux distributions from the Enterprise Linux family and [Upstream is
 aware of that](https://github.com/hashicorp/vagrant/issues/11020), but as of
-today (2021.09.04) it doesn't appear to be resolved.  
+today (2021.12.21) it doesn't appear to be resolved.  
 
 Because of that, you'll need to build additional components and use them with
 your Vagrant installation. The following procedure covers all of this and has
-been tested to work well with EuroLinux 8.4.  
-
-There are several references to CentOS in the procedure. The reason is that
-EuroLinux-maintained source RPMs will be provided at
-[vault.euro-linux.com](http://vault.euro-linux.com) soon in Q4 and once they're
-available, the procedure will be updated.  
+been tested to work well with EuroLinux 8.5.  
 
 Use these commands:  
 
@@ -60,39 +55,30 @@ Use these commands:
 sudo dnf groupinstall "Development Tools" "Virtualization Host" -y
 sudo dnf install cmake libvirt-devel ruby-devel -y
 
-git clone https://git.centos.org/centos-git-common
-export PATH=$(readlink -f ./centos-git-common):$PATH
-
-git clone https://git.centos.org/rpms/krb5
+mkdir krb5
 cd krb5
-git checkout imports/c8s/krb5-1.18.2-8.el8
-into_srpm.sh -d c8s
-cd SRPMS
-rpm2cpio krb5-1.18.2-8c8s.src.rpm | cpio -imdV
-tar xf krb5-1.18.2.tar.gz
-cd krb5-1.18.2/src/
+wget https://vault.cdn.euro-linux.com/sources/eurolinux/8/baseos/x86_64/Packages/k/krb5-1.18.2-8.el8.src.rpm
+rpm2cpio krb5*.src.rpm | cpio -idmv
+tar xf krb5*.tar.gz
+cd krb5*/src
 ./configure
 make
 sudo cp -P lib/crypto/libk5crypto.* /opt/vagrant/embedded/lib64/
+cd
 
-cd ../../../../
-
-git clone https://git.centos.org/rpms/libssh
+mkdir libssh
 cd libssh
-git checkout imports/c8s/libssh-0.9.4-1.el8
-into_srpm.sh -d c8s
-cd SRPMS
-rpm2cpio libssh-0.9.4-1c8s.src.rpm | cpio -imdV
-tar xf libssh-0.9.4.tar.xz
+wget https://vault.cdn.euro-linux.com/sources/eurolinux/8/baseos/x86_64/Packages/l/libssh-0.9.4-3.el8.src.rpm
+rpm2cpio libssh*.src.rpm | cpio -idmv
+tar xf libssh*.tar.xz
 mkdir build
 cd build
-cmake ../libssh-0.9.4 -DOPENSSL_ROOT_DIR=/opt/vagrant/embedded/
+cmake ../libssh-* -DOPENSSL_ROOT_DIR=/opt/vagrant/embedded/
 make
 sudo cp lib/libssh* /opt/vagrant/embedded/lib64
+cd
 
-cd ../../../
-
-vagrant plugin install vagrant-libvirt
+vagrant plugin install vagrant-libvirt && rm -rf krb5 libssh
 sudo usermod -a -G libvirt $USER
 ```
 
