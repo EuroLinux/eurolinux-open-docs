@@ -7,6 +7,7 @@ How to set up your VirtualBox installation.
 ### Use cases
 
 Consider the following examples:
+
 - You use software that doesn't work on your EuroLinux 8 installation.
 - You want to try out some potentially dangerous actions and don't want to
   endanger your machine.
