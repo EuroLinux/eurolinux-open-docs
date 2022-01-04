@@ -4,10 +4,10 @@
 
 This how-to provides a solution to the problem of CentOS 8 running out of
 support.  
-With the end of 2021, CentOS will end its life in its current form
-and will start functioning as CentOS Stream, a development branch for Red Hat®
-Enterprise Linux®. As a result, it will stop receiving proven, stable updates
-and its use, especially in production environments, will become risky. This is
+With the end of 2021, CentOS ended its life in its stable form
+and started functioning as CentOS Stream, a development branch for Red Hat®
+Enterprise Linux®. As a result, it stopped receiving proven, stable updates
+and its use, especially in production environments, became risky. This is
 a very serious problem for many companies and individuals around the world. So
 there was an urgent need to find a new source of updates for CentOS in order
 to keep it in the infrastructure. A complete solution to this problem is
