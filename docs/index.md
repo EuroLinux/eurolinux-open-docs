@@ -26,7 +26,6 @@ Documentation is organized in the following manner:
 
 - JumpStarts - Installation guides with extras
 - HowTo - How To guides on various topics
-- Erratas - EuroLinux erratas in the form of the web pages
 - Release Notes
 
 ## How to contribute
