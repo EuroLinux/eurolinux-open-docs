@@ -73,7 +73,7 @@ rpm2cpio libssh*.src.rpm | cpio -idmv
 tar xf libssh*.tar.xz
 mkdir build
 cd build
-cmake ../libssh-* -DOPENSSL_ROOT_DIR=/opt/vagrant/embedded/
+cmake ../libssh-*/ -DOPENSSL_ROOT_DIR=/opt/vagrant/embedded/
 make
 sudo cp lib/libssh* /opt/vagrant/embedded/lib64
 cd
