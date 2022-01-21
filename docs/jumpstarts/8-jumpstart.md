@@ -22,6 +22,16 @@ CPU).
     It might be impossible to install EuroLinux on a system that does not meet
     recommended requirements.
 
+### aarch64 (64 bit ARM architecture)
+
+Minimal and recommended requirements are following:
+
+| Resource | Absolute minimal requirements for cloud deployment |  Minimal |  Recommended |
+|----------|--------|------|---|
+| Logical CPU | 1 | 1 | 1 |
+| RAM | 1 GB or 512MB with swap space |  2 GB  | 2 GB per logical CPU |
+| Storage | 5GB | 10GB | 20GB |
+
 #### About absolute minimums for cloud deployment
 
 During our internal testing, we were able to boot and use very basic and
