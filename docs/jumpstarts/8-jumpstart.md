@@ -63,7 +63,7 @@ supported by EuroLinux.
 ### Secure boot
 
 At the moment, EuroLinux does not support secure boot. The full secure boot
-support is planned at the end of Q3/beginning of Q4.
+support is planned at the end of Q1/beginning of Q2 2022.
 
 ## How to install EuroLinux 8 from ISO
 
