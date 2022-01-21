@@ -26,11 +26,11 @@ CPU).
 
 Minimal and recommended requirements are following:
 
-| Resource |  Minimal |  Recommended |
-|----------|------|---|
-| Logical CPU | 1 | 1 |
-| RAM  |  2 GB  | 3 GB per logical CPU |
-| Storage | 10GB | 20GB |
+| Resource | Absolute minimal requirements for cloud deployment |  Minimal |  Recommended |
+|----------|--------|------|---|
+| Logical CPU | 1 | 1 | 1 |
+| RAM | 1 GB or 512MB with swap space |  2 GB  | 2 GB per logical CPU |
+| Storage | 5GB | 10GB | 20GB |
 
 #### About absolute minimums for cloud deployment
 
