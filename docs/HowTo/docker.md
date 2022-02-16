@@ -34,6 +34,7 @@ containerization](https://en.euro-linux.com/blog/the-basics-of-containerization/
 The following operating systems and architectures are covered by this guide:
 
 - EuroLinux 8.5 on the x86_64 architecture.
+- EuroLinux 7.9 on the x86_64 architecture.
 
 Make sure the containers you want to run are of the same architecture as your
 machine.
@@ -42,6 +43,8 @@ If you need support with installation on the EuroLinux releases this guide does
 not cover, please create an appropriate ticket.
 
 ## Installation
+
+### EuroLinux 8.5
 
 The following steps are based on [Docker, Inc. official guide as of
 2022.02.01](https://web.archive.org/web/20220201054013/https://docs.docker.com/engine/install/centos/).
@@ -57,6 +60,24 @@ sudo yum remove -y docker docker-client docker-client-latest docker-common docke
 which yum-config-manager || sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
 sudo yum install -y docker-ce docker-ce-cli containerd.io
+sudo systemctl enable docker --now
+```
+
+### EuroLinux 7.9
+
+EuroLinux Ltd. provides their own builds of Docker for EuroLinux 7.
+
+Please prepare your EuroMan credentials and enable the
+`el-server-7-extras-x86_64` channel first, like so:
+
+```
+sudo rhn-channel -u "$el_euroman_user" -p "$el_euroman_password" -c el-server-7-extras-x86_64 -a
+```
+
+Then you are ready to install Docker:
+
+```
+sudo yum install -y docker
 sudo systemctl enable docker --now
 ```
 
