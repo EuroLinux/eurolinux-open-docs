@@ -33,7 +33,7 @@ containerization](https://en.euro-linux.com/blog/the-basics-of-containerization/
 
 The following operating systems and architectures are covered by this guide:
 
-- EuroLinux 8 on the x86_64 architecture.
+- EuroLinux 8 on the x86_64 and aarch64 architecture.
 - EuroLinux 7 on the x86_64 architecture.
 
 Make sure the containers you want to run are of the same architecture as your
@@ -55,11 +55,14 @@ The following snippet installs Docker on EuroLinux 8.5. Other releases may work
 as well, but have not been tested. Once a new EuroLinux release is out, this
 guide will be updated.
 
+Please note that this operation will replace **runc** with **containerd.io**
+and remove both **podman** and **buildah**.
+
 ```
 sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
 which yum-config-manager || sudo yum install -y yum-utils
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
-sudo yum install -y docker-ce docker-ce-cli containerd.io
+sudo yum install -y docker-ce docker-ce-cli containerd.io --allowerasing
 sudo systemctl enable docker --now
 ```
 
