@@ -55,8 +55,9 @@ The following snippet installs Docker on EuroLinux 8.5. Other releases may work
 as well, but have not been tested. Once a new EuroLinux release is out, this
 guide will be updated.
 
-Please note that this operation will replace **runc** with **containerd.io**
-and remove both **podman** and **buildah**.
+!!! danger "Docker installation removes podman and buildah"
+    Please note that this operation will replace **runc** with **containerd.io**
+    and remove both **podman** and **buildah**.
 
 ```
 sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
