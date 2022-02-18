@@ -11,14 +11,14 @@
         <meta name="author" content="EuroLinux Community">
       
       
-        <link rel="canonical" href="https://docs.euro-linux.com/HowTo/install-epel-on-eurolinux/">
+        <link rel="canonical" href="https://docs.euro-linux.com/HowTo/docker/">
       
       <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.1.10">
     
     
       
-        <title>How to Install and Enable EPEL repository on EuroLinux 8 - EuroLinux Documentation</title>
+        <title>Docker - EuroLinux Documentation</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-install-and-enable-epel-repository-on-eurolinux-8" class="md-skip">
+        <a href="#docker" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              How to Install and Enable EPEL repository on EuroLinux 8
+              Docker
             
           </span>
         </div>
@@ -352,18 +352,6 @@
             
   
   
-  
-    <li class="md-nav__item">
-      <a href="../ha-rs-enable-repository/" class="md-nav__link">
-        How to install High Availability and Resilient Storage in EuroLinux 8
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
     
   
   
@@ -376,12 +364,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          How to Install and Enable EPEL repository on EuroLinux 8
+          Docker
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        How to Install and Enable EPEL repository on EuroLinux 8
+        Docker
       </a>
       
         
@@ -399,8 +387,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installing-epel-on-eurolinux" class="md-nav__link">
-    Installing EPEL on EuroLinux
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-docker-containers-over-virtual-machines" class="md-nav__link">
+    Why use Docker containers over virtual machines?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eurolinux-8" class="md-nav__link">
+    EuroLinux 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eurolinux-7" class="md-nav__link">
+    EuroLinux 7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    What's next?
   </a>
   
 </li>
@@ -409,6 +458,30 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ha-rs-enable-repository/" class="md-nav__link">
+        How to install High Availability and Resilient Storage in EuroLinux 8
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../install-epel-on-eurolinux/" class="md-nav__link">
+        How to Install and Enable EPEL repository on EuroLinux 8
+      </a>
     </li>
   
 
@@ -691,8 +764,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#installing-epel-on-eurolinux" class="md-nav__link">
-    Installing EPEL on EuroLinux
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduction">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#use-cases" class="md-nav__link">
+    Use cases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-use-docker-containers-over-virtual-machines" class="md-nav__link">
+    Why use Docker containers over virtual machines?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-requirements" class="md-nav__link">
+    System requirements
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#eurolinux-8" class="md-nav__link">
+    EuroLinux 8
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#eurolinux-7" class="md-nav__link">
+    EuroLinux 7
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    What's next?
   </a>
   
 </li>
@@ -709,38 +843,82 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/EuroLinux/eurolinux-open-docs/edit/master/docs/HowTo/install-epel-on-eurolinux.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/EuroLinux/eurolinux-open-docs/edit/master/docs/HowTo/docker.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="how-to-install-and-enable-epel-repository-on-eurolinux-8">How to Install and Enable EPEL repository on EuroLinux 8</h1>
-<p>EPEL (Extra Packages for Enterprise Linux) repository is one of the most
-popular third-party repositories for the Enterprise Linux family. From the 4th
-November EuroLinux team included the original <code>epel-release</code> package from EPEL in
-the BaseOS repo. It was the most voted <strong>small quality of life change</strong> during our
-first community meeting. The package is re-signed with a EuroLinux GPG key, so
-there is no need to accept an external key to install this particular package.</p>
-<p>The package version will be checked and updated if necessary <strong>during minor
-releases</strong>.</p>
-<div class="admonition info">
-<p class="admonition-title">EPEL is an external repository that is community supported</p>
-<p>As a company, we cannot provide proper care in terms of security, quality,
-support and lifecycle standards on a third-party repository. Nevertheless, the
-EPEL repository has a great history of community support.</p>
+                <h1 id="docker">Docker</h1>
+<p>How to set up your Docker Community Edition installation.</p>
+<h2 id="introduction">Introduction</h2>
+<h3 id="use-cases">Use cases</h3>
+<p>Consider the following examples:</p>
+<ul>
+<li>You want a standardized runtime environment across production, QA and
+  developer scenarios.</li>
+<li>You want all the runtime environment's specification in a single file, what
+  is easy to manage through version control systems.</li>
+<li>You want the environment to be reproducible. After all, it's just a matter of
+  building an image from the specification and once it's done it is already
+self-documented on what steps were taken to cook the final image.</li>
+<li>You prefer a layered architecture and the ability to cache artifacts across
+  several images and backup &amp; restore the images easily.</li>
+</ul>
+<h3 id="why-use-docker-containers-over-virtual-machines">Why use Docker containers over virtual machines?</h3>
+<p>In short: Docker containers utilize Linux's capabilities such as cgroups and
+namespaces to create an isolated environment and do not virtualize hardware.
+Therefore, they are way more lightweight than virtual machines and can be
+brought up in a large scale in a blink of an eye rather than waiting for a
+single virtual machine to boot.</p>
+<p>For more information, take a look at our blog entry on <a href="https://en.euro-linux.com/blog/the-basics-of-containerization/">the basics of
+containerization</a>.</p>
+<h2 id="system-requirements">System requirements</h2>
+<p>The following operating systems and architectures are covered by this guide:</p>
+<ul>
+<li>EuroLinux 8 on the x86_64 and aarch64 architecture.</li>
+<li>EuroLinux 7 on the x86_64 architecture.</li>
+</ul>
+<p>Make sure the containers you want to run are of the same architecture as your
+machine.</p>
+<p>If you need support with installation on the EuroLinux releases this guide does
+not cover, please create an appropriate ticket.</p>
+<h2 id="installation">Installation</h2>
+<h3 id="eurolinux-8">EuroLinux 8</h3>
+<p>The following steps are based on <a href="https://web.archive.org/web/20220201054013/https://docs.docker.com/engine/install/centos/">Docker, Inc. official guide as of
+2022.02.01</a>.
+We will just use the commands provided as snippets for a quick way of copying
+&amp; pasting one snippet for a successful installation.</p>
+<p>The following snippet installs Docker on EuroLinux 8.5. Other releases may work
+as well, but have not been tested. Once a new EuroLinux release is out, this
+guide will be updated.</p>
+<div class="admonition danger">
+<p class="admonition-title">Docker installation removes podman and buildah</p>
+<p>Please note that this operation will replace <strong>runc</strong> with <strong>containerd.io</strong>
+and remove both <strong>podman</strong> and <strong>buildah</strong>.</p>
 </div>
-<h2 id="installing-epel-on-eurolinux">Installing EPEL on EuroLinux</h2>
-<p>Installing EPEL on EuroLinux 8 and EuroLinux 7 is as simple as:</p>
-<div class="highlight"><pre><span></span><code>sudo yum install -y epel-release
+<div class="highlight"><pre><span></span><code>sudo yum remove -y docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+which yum-config-manager || sudo yum install -y yum-utils
+sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+sudo yum install -y docker-ce docker-ce-cli containerd.io --allowerasing
+sudo systemctl enable docker --now
 </code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">EPEL is enabled by default</p>
-<p>The base EPEL repository is enabled by default for modular (EuroLinux 8)
-and non-modular packages. You can enable debuginfo and source packages in
-respective <code>/etc/yum.repos.d/epel*.repo</code> file.</p>
-</div>
-<p>From this moment, you can install and then use all EPEL goodies like <code>htop</code>, <code>wine</code> or
-<code>createrepo</code>.</p>
+<h3 id="eurolinux-7">EuroLinux 7</h3>
+<p>EuroLinux provides their own builds of Docker for EuroLinux 7.</p>
+<p>Please prepare your EuroMan credentials and enable the
+<code>el-server-7-extras-x86_64</code> channel first, like so:</p>
+<div class="highlight"><pre><span></span><code>sudo rhn-channel -u &quot;$el_euroman_user&quot; -p &quot;$el_euroman_password&quot; -c el-server-7-extras-x86_64 -a
+</code></pre></div>
+<p>Then you are ready to install Docker:</p>
+<div class="highlight"><pre><span></span><code>sudo yum install -y docker
+sudo systemctl enable docker --now
+</code></pre></div>
+<h2 id="whats-next">What's next?</h2>
+<p><a href="https://hub.docker.com/u/eurolinux">EuroLinux provides several Docker images for you to
+use</a>. They are publicly available and free
+of charge. Take a look at our entry <a href="https://en.euro-linux.com/blog/eurolinux-docker-images-are-now-available/"><em>EuroLinux docker images are now
+available</em></a>
+for more information. Additionally, <a href="../../jumpstarts/container-jumpstart/">we provide a quick guide for having the
+images up and running in no time</a>.</p>
                 
               
               
@@ -760,7 +938,7 @@ respective <code>/etc/yum.repos.d/epel*.repo</code> file.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../ha-rs-enable-repository/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to install High Availability and Resilient Storage in EuroLinux 8" rel="prev">
+        <a href="../create-iso-with-repositories/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to create ISO file with EuroLinux repositories" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -769,20 +947,20 @@ respective <code>/etc/yum.repos.d/epel*.repo</code> file.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              How to install High Availability and Resilient Storage in EuroLinux 8
+              How to create ISO file with EuroLinux repositories
             </div>
           </div>
         </a>
       
       
         
-        <a href="../mirror-eurolinux-locally/" class="md-footer__link md-footer__link--next" aria-label="Next: How to set up internal EuroLinux RPM mirror" rel="next">
+        <a href="../ha-rs-enable-repository/" class="md-footer__link md-footer__link--next" aria-label="Next: How to install High Availability and Resilient Storage in EuroLinux 8" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              How to set up internal EuroLinux RPM mirror
+              How to install High Availability and Resilient Storage in EuroLinux 8
             </div>
           </div>
           <div class="md-footer__button md-icon">
