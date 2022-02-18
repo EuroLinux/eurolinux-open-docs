@@ -122,7 +122,7 @@ available in the Open Core model.
 | Feature | EuroLinux 6  | EuroLinux 7 | EuroLinux 8 | EuroLinux 9 |
 |---|---|---|---|---|
 | Base Linux Kernel version | 2.6.34 | 3.10 | 4.18 | 5.14 |
-| Package Management | RPM/YUM | RPM/Yum | RPM/Dnf, Flatpack| RPM/Dnf, Flatpack|
+| Package Management | RPM/Yum | RPM/Yum | RPM/Dnf, Flatpak| RPM/Dnf, Flatpak|
 | System Init | Upstart | systemd | systemd | systemd |
 | Base GNU C Library (glibc) Version | 2.12 | 2.17 | 2.28 | 2.34 |
 | Base (First) GCC version | 4.4.7 | 4.8.5 | 8.2.1 (updated in newer versions) | 11.2.1 (might be updated in the future)|
