@@ -1,27 +1,28 @@
 # EuroLinux Linux distribution capabilities and limits
 
-This document has technology capabilities and limits for EuroLinux 6, 7, 8.
-Some are theoretical, as they are connected with source code/projects used in
-the system. Minimal limits represent limits for systems that support is
-generally available by EuroLinux company. Our dedicated solutions like:
+This document describes the technology capabilities and limits for EuroLinux 6,
+7, 8. Some are theoretical, as they are connected with source code/projects
+used in the system. Minimal limits represent limits for the systems which
+support is generally available by the EuroLinux company. Our dedicated
+solutions like:
 
 - system rebuilds with Gaia build stack
 - EuroLinux container images
 - EuroLinux cloud images
-- EuroLinux for edge computing 
+- EuroLinux for edge computing
 - EuroLinux ARM 64 for IoT
-- containers running on the EuroLinux container platform on any other
-  Kubernetes based platform
+- containers running on the EuroLinux container platform or any other
+  Kubernetes-based platform
 
 might run and be supported on the less resources than described in this document.
 
 The theoretical limit (connected with a version of the software used) is marked
 as `(LIMIT)`, when limit supported and tested by upstream is provided as
-default for EuroLinux. TBA means - To Be Announced.
+default for EuroLinux. **TBA** means - **To Be Announced**.
 
 ## Minimum logical CPU
 
-All systems, physical or virtual, require a minimum 1 logical (physical or
+All systems, physical or virtual, require at minimum 1 logical (physical or
 virtual) CPU core.
 
 ## Maximum logical CPU
@@ -35,12 +36,12 @@ virtual) CPU core.
 <!-- | POWER  | X | X | TBA  | TBA  | -->
 
 
-## Minimum memory 
+## Minimum memory
 
 These requirements are only for systems supported as VMs or Physical hosts. In
 most cases, it's possible to run a system without complications on less memory.
-The minimum requirements are in place because it might not be possible to
-support systems with less memory.
+The minimum requirements have been provided below because it might not be
+possible to support systems with less memory.
 
 
 | Architecture | EuroLinux 6  | EuroLinux 7 | EuroLinux 8 | EuroLinux 9 |
@@ -76,7 +77,7 @@ Ext3 is mostly a legacy filesystem. Please use Ext4 or XFS.
 | Maximum File Size  | 2TiB | 2TiB | 2TiB | 2TiB |
 | Maximum Filesystem Size | 16TiB | 16TiB | 16TiB | 16TiB |
 | Maximum Subdirectories or files in directory | 32000 | 32000  |  32000  |  32000  |
-| Maximum symlink depth | 8 | 8 | 8 | 8 | 
+| Maximum symlink depth | 8 | 8 | 8 | 8 |
 
 
 ### Ext4
@@ -88,7 +89,7 @@ Ext4 is the default filesystem for EuroLinux 6.
 | Maximum File Size  | 16TiB | 16TiB | 16TiB | 16TiB |
 | Maximum Filesystem Size | 1EiB | 1EiB | 1EiB | 1EiB |
 | Maximum Subdirectories or files in directory | 65000/unlimited with `dir_nlink` option | 65000/unlimited with `dir_nlink` option |  65000/unlimited with `dir_nlink` option  | 65000/unlimited with `dir_nlink` option  |
-| Maximum symlink depth | 8 | 8 | 8 | 8 | 
+| Maximum symlink depth | 8 | 8 | 8 | 8 |
 
 ### XFS
 
@@ -99,14 +100,14 @@ XFS is the default filesystem for in EuroLinux 7, 8 and 9.
 | Maximum File Size  | 8EiB | 8EiB | 8EiB | 8EiB |
 | Maximum Filesystem Size | 16EiB | 16EiB | 1PiB | 1PiB |
 | Maximum Subdirectories or files in directory | unlimited | unlimited | unlimited | unlimited |
-| Maximum symlink depth | 8 | 8 | 8 | 8 | 
+| Maximum symlink depth | 8 | 8 | 8 | 8 |
 
 
 ### GFS2
 
 Global Filesystem 2 is part of EuroLinux Resilient Storage and High
 Availability add-ons that are freely available with subscription or free
-available in the open core model.
+available in the Open Core model.
 
 | Feature | EuroLinux 6  | EuroLinux 7 | EuroLinux 8 | EuroLinux 9 |
 |---|---|---|---|---|
@@ -116,7 +117,7 @@ available in the open core model.
 | Maximum symlink depth | unlimited | unlimited | unlimited | unlimited |
 
 
-### Kernel and the most important components versions 
+### Kernel and the most important components versions
 
 | Feature | EuroLinux 6  | EuroLinux 7 | EuroLinux 8 | EuroLinux 9 |
 |---|---|---|---|---|
