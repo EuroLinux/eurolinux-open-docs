@@ -66,6 +66,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://docs.euro-linux.com/knowledge-base/eurolinux-capabilities-and-limits/</loc>
+         <lastmod>2022-02-18</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://docs.euro-linux.com/knowledge-base/unable-to-find-requested-software/</loc>
          <lastmod>2022-02-18</lastmod>
          <changefreq>daily</changefreq>
