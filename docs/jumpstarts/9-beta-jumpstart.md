@@ -12,7 +12,7 @@ Minimal and recommended requirements are following:
 | Resource | Absolute minimal requirements for cloud deployment |  Minimal |  Recommended |
 |----------|--------|------|---|
 | Logical CPU | 1 | 1 | 1 |
-| RAM  | 768MB or 512MB with swap space|  1 GB  | 1.5 GB per logical CPU |
+| RAM  | 1 GiB or 768 MiB with swap space|  2 GiB  | 1.5 GiB per logical CPU |
 | Storage | 5 GB (excluding swap)| 10GB | 20GB |
 
 Logical CPU means Physical CPU (including Hyper-Threading) or vCPU (virtual
@@ -25,9 +25,9 @@ CPU).
 #### About absolute minimums for cloud deployment
 
 During our internal testing, we were able to boot and use very basic and
-already installed services on Virtual Machine with only 256 MB of RAM. However,
-without additional memory or at least swap space available, things like
-updating the system will result in actions of Kernel Out of Memory (OOM)
+already installed services on Virtual Machine with only 340 MiB of RAM.
+However, without additional memory or at least swap space available, things
+like updating the system will result in actions of Kernel Out of Memory (OOM)
 Killer.
 
 
@@ -44,11 +44,11 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provider "virtualbox" do |vb|
-    vb.memory = "256"
+    vb.memory = "340"
     vb.cpus = 1
   end
   config.vm.provider "libvirt" do |vb|
-    vb.memory = "256"
+    vb.memory = "340"
     vb.cpus = 1
   end
 end
