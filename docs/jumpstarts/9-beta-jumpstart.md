@@ -163,11 +163,11 @@ will automatically download newer version of the packages.
 
 EuroLinux 9 Beta repositories:
 
-- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/certify-BaseOS/os`  
+- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/certify-beta-BaseOS/os`  
   Name: BaseOS
-- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/certify-AppStream/os`  
+- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/certify-beta-AppStream/os`  
   Name: AppStream
-- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/certify-PowerTools/os`  
+- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/certify-beta-PowerTools/os`  
   Name: PowerTools
 
 !!! Warning "Limited support."
