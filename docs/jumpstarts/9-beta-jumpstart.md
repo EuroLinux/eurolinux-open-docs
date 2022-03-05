@@ -32,7 +32,8 @@ Killer.
 
 
 You can try it yourself with [EuroLinux Vagrant
-boxes](https://app.vagrantup.com/eurolinux-vagrant) and following Vagrantfile:
+boxes](https://app.vagrantup.com/eurolinux-vagrant) and the following
+Vagrantfile:
 
 ```ruby
 Vagrant.configure("2") do |config|
@@ -126,12 +127,12 @@ install the system.
 First, you have to choose the language that will be used during installation:  
 *Hint: since the Anaconda installer on EuroLinux 9 activates a network
 connection automatically if applicable, it also determines the default language
-based on the localisation - in this case you can see that Polish has been
-automatically chosen.*
+by the automatic location detection feature - in this case you can see that
+Polish has been automatically chosen.*
 ![Installation 3](../assets/9-beta-jumpstart/g-inst-3.png)
 
-Since this is a Beta release, we need to confirm that we are aware of this fact
-and that this release should not be used in production.
+Since this is a Beta release, we might need to confirm that we are aware of
+this fact and that this release should not be used in production.
 
 ![Pre-release software](../assets/9-beta-jumpstart/pre-release-software.png)
 
