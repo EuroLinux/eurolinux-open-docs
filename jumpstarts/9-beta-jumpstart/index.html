@@ -1204,7 +1204,8 @@ However, without additional memory or at least swap space available, things
 like updating the system will result in actions of Kernel Out of Memory (OOM)
 Killer.</p>
 <p>You can try it yourself with <a href="https://app.vagrantup.com/eurolinux-vagrant">EuroLinux Vagrant
-boxes</a> and following Vagrantfile:</p>
+boxes</a> and the following
+Vagrantfile:</p>
 <div class="highlight"><pre><span></span><code><span class="no">Vagrant</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="s2">&quot;2&quot;</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">config</span><span class="o">|</span>
   <span class="n">config</span><span class="o">.</span><span class="n">vm</span><span class="o">.</span><span class="n">box</span> <span class="o">=</span> <span class="s2">&quot;eurolinux-vagrant/eurolinux-9&quot;</span>
 
@@ -1277,11 +1278,11 @@ install the system. </p>
 <p>First, you have to choose the language that will be used during installation:<br />
 <em>Hint: since the Anaconda installer on EuroLinux 9 activates a network
 connection automatically if applicable, it also determines the default language
-based on the localisation - in this case you can see that Polish has been
-automatically chosen.</em>
+by the automatic location detection feature - in this case you can see that
+Polish has been automatically chosen.</em>
 <img alt="Installation 3" src="../../assets/9-beta-jumpstart/g-inst-3.png" /></p>
-<p>Since this is a Beta release, we need to confirm that we are aware of this fact
-and that this release should not be used in production.</p>
+<p>Since this is a Beta release, we might need to confirm that we are aware of
+this fact and that this release should not be used in production.</p>
 <p><img alt="Pre-release software" src="../../assets/9-beta-jumpstart/pre-release-software.png" /></p>
 <p>After configuring the installer language you should see a menu similar to:</p>
 <p><img alt="Installation 2" src="../../assets/9-beta-jumpstart/g-inst-4.png" /></p>
