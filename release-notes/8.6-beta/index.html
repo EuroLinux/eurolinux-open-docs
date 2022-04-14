@@ -1127,7 +1127,9 @@ this repository includes more than 2500 packages for each buildroot.</p>
 <li>There is ambiguity when it comes to SCAP profiles naming that will be resolved for
   8.6 GA <a href="https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc/issues/2">GitHub Bug Report</a></li>
 <li>After installation, the first kernel might report EuroLinux 8.5 -&gt; updated
-  kernel should report 8.6 beta. </li>
+  kernel should report 8.6 beta.</li>
+<li>evolution-mapi was wrongly linked against older samba. The solution is <code>yum reinstall -y evolution-mapi</code> as we updated the package in-place</li>
+<li>dhcp-client was wrongly linked against older bind-export-libs. The solution is <code>yum reinstall -y dhcp-client</code> as we updated the package in-place</li>
 </ul>
 <h2 id="additional-resources">Additional resources</h2>
 <ul>
