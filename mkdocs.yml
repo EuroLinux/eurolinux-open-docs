@@ -17,6 +17,8 @@ theme:
   language: en
   features:
     - navigation.tabs
+    - toc.integrate
+
   icon:
     repo: fontawesome/brands/github
 
@@ -30,6 +32,8 @@ extra:
       link: https://www.linkedin.com/company/eurolinux 
     - icon: fontawesome/brands/twitter
       link: https://twitter.com/Euro_Linux
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   - admonition
