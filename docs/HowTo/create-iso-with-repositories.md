@@ -17,7 +17,7 @@ sudo yum install -y genisoimage
 In the example below, we create ISO from the repositories saved in `/repos`
 directory the output is saved to `/var/eurolinux-repos.iso`.
 ```
-mkisofs -R -J -o /var/eurolinux-repos.iso /repos/
+sudo mkisofs -R -J -o /var/eurolinux-repos.iso /repos/
 ```
 
 This file could be:
@@ -37,7 +37,7 @@ sudo mount -o loop /PATH/TO/ISO /MOUNT/PATH
 example:
 
 ```bash
-mount -o loop /var/eurolinux-repos.iso /mnt
+sudo mount -o loop /var/eurolinux-repos.iso /mnt/mirror
 ```
 
 ## Mounting ISO from virtual cd-rom device
@@ -52,20 +52,21 @@ sudo mount /dev/DEVICE /MOUNT/PATH
 The following example has ISO mounted as CD-ROM device `/dev/sr0`:
 
 ```bash
-sudo mount /dev/sr0 /mnt
+sudo mount /dev/sr0 /mnt/mirror
 ```
 
 ## Using locally mounted ISO with RPM repositories
 
-To use repositories that ISO file provides create proper `.repo` file that
-resides inside `/etc/yum.repos.d/` directory. Example
-`/etc/yum.repos.d/local-iso.repo` file for EuroLinux 7 and iso attached to
-`/mnt` directory.
+To use the repositories, that the ISO file provides, create a proper `.repo`
+file that resides inside `/etc/yum.repos.d/` directory.
+
+Here is an example `/etc/yum.repos.d/local-iso.repo` file for EuroLinux 7 and
+the ISO image attached to `/mnt/mirror` directory.
 
 ```ini
 [base]
 name = EuroLinux 7 x86_64 Base
-baseurl=file:///mnt/eurolinux-os-7/
+baseurl=file:///mnt/mirror/eurolinux-os-7/
 enabled=1
 # Disabled gpgcheck, enable if el-release is already installed on your system
 gpgcheck=0
@@ -73,7 +74,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux7
 
 [updates]
 name = EuroLinux 7 x86_64 Updates
-baseurl=file:///mnt/eurolinux-updates-7/
+baseurl=file:///mnt/mirror/eurolinux-updates-7/
 enabled=1
 # Disabled gpgcheck, enable if el-release is already installed on your system
 gpgcheck=0
