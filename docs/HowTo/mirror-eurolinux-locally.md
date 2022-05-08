@@ -179,17 +179,17 @@ single or even test subscription.
     always had pleasure to work with honest companies - please don't ruin that.
 
 !!! danger "Mirroring other distros"
-    This instruction allows cloning other distros, including paid ones. If you
+    The instruction allows cloning other distros, including paid ones. If you
     want to mirror paid Linux distribution, note that this might breach the
-    license/license agreement and endanger your organization.
+    license/license agreement.
 
-After this short warning, you can mirror EuroLinux or other Enterprise Linux
-repositories with the following step:
+You can mirror EuroLinux or other Enterprise Linux repositories with the
+following step:
 
 - Register your system with `rhn_register` command for EuroLinux or another way
   to mirror another system repositories.
 
-Then run the following snippet:
+Then run the following snippet as root:
 
 ```bash
 reposync -d -m --download-metadata --plugins -r el-server-7-x86_64 -p /repos/
