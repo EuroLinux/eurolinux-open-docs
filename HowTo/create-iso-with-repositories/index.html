@@ -778,7 +778,7 @@ package. You can install it with the following command:</p>
 <h2 id="creating-iso-with-repositories">Creating ISO with repositories</h2>
 <p>In the example below, we create ISO from the repositories saved in <code>/repos</code>
 directory the output is saved to <code>/var/eurolinux-repos.iso</code>.
-<div class="highlight"><pre><span></span><code>mkisofs -R -J -o /var/eurolinux-repos.iso /repos/
+<div class="highlight"><pre><span></span><code>sudo mkisofs -R -J -o /var/eurolinux-repos.iso /repos/
 </code></pre></div></p>
 <p>This file could be:</p>
 <ul>
@@ -791,23 +791,23 @@ directory the output is saved to <code>/var/eurolinux-repos.iso</code>.
 <div class="highlight"><pre><span></span><code>sudo mount -o loop /PATH/TO/ISO /MOUNT/PATH
 </code></pre></div>
 <p>example:</p>
-<div class="highlight"><pre><span></span><code>mount -o loop /var/eurolinux-repos.iso /mnt
+<div class="highlight"><pre><span></span><code>sudo mount -o loop /var/eurolinux-repos.iso /mnt/mirror
 </code></pre></div>
 <h2 id="mounting-iso-from-virtual-cd-rom-device">Mounting ISO from virtual cd-rom device</h2>
 <p>Mounting CD-ROM device is as simple as:</p>
 <div class="highlight"><pre><span></span><code>sudo mount /dev/DEVICE /MOUNT/PATH
 </code></pre></div>
 <p>The following example has ISO mounted as CD-ROM device <code>/dev/sr0</code>:</p>
-<div class="highlight"><pre><span></span><code>sudo mount /dev/sr0 /mnt
+<div class="highlight"><pre><span></span><code>sudo mount /dev/sr0 /mnt/mirror
 </code></pre></div>
 <h2 id="using-locally-mounted-iso-with-rpm-repositories">Using locally mounted ISO with RPM repositories</h2>
-<p>To use repositories that ISO file provides create proper <code>.repo</code> file that
-resides inside <code>/etc/yum.repos.d/</code> directory. Example
-<code>/etc/yum.repos.d/local-iso.repo</code> file for EuroLinux 7 and iso attached to
-<code>/mnt</code> directory.</p>
+<p>To use the repositories, that the ISO file provides, create a proper <code>.repo</code>
+file that resides inside <code>/etc/yum.repos.d/</code> directory.</p>
+<p>Here is an example <code>/etc/yum.repos.d/local-iso.repo</code> file for EuroLinux 7 and
+the ISO image attached to <code>/mnt/mirror</code> directory.</p>
 <div class="highlight"><pre><span></span><code><span class="k">[base]</span>
 <span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux 7 x86_64 Base</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">file:///mnt/eurolinux-os-7/</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">file:///mnt/mirror/eurolinux-os-7/</span>
 <span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
 <span class="c1"># Disabled gpgcheck, enable if el-release is already installed on your system</span>
 <span class="na">gpgcheck</span><span class="o">=</span><span class="s">0</span>
@@ -815,7 +815,7 @@ resides inside <code>/etc/yum.repos.d/</code> directory. Example
 
 <span class="k">[updates]</span>
 <span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux 7 x86_64 Updates</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">file:///mnt/eurolinux-updates-7/</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">file:///mnt/mirror/eurolinux-updates-7/</span>
 <span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
 <span class="c1"># Disabled gpgcheck, enable if el-release is already installed on your system</span>
 <span class="na">gpgcheck</span><span class="o">=</span><span class="s">0</span>

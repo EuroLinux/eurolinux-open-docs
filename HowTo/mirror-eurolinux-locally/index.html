@@ -941,17 +941,17 @@ always had pleasure to work with honest companies - please don't ruin that.</p>
 </div>
 <div class="admonition danger">
 <p class="admonition-title">Mirroring other distros</p>
-<p>This instruction allows cloning other distros, including paid ones. If you
+<p>The instruction allows cloning other distros, including paid ones. If you
 want to mirror paid Linux distribution, note that this might breach the
-license/license agreement and endanger your organization.</p>
+license/license agreement.</p>
 </div>
-<p>After this short warning, you can mirror EuroLinux or other Enterprise Linux
-repositories with the following step:</p>
+<p>You can mirror EuroLinux or other Enterprise Linux repositories with the
+following step:</p>
 <ul>
 <li>Register your system with <code>rhn_register</code> command for EuroLinux or another way
   to mirror another system repositories.</li>
 </ul>
-<p>Then run the following snippet:</p>
+<p>Then run the following snippet as root:</p>
 <div class="highlight"><pre><span></span><code>reposync -d -m --download-metadata --plugins -r el-server-7-x86_64 -p /repos/
 <span class="c1"># recreating repodata and updateinfo</span>
 <span class="nv">REPO_DIR</span><span class="o">=</span>/repos/el-server-7-x86_64/
