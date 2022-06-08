@@ -51,7 +51,7 @@ The following steps are based on [Docker, Inc. official guide as of
 We will just use the commands provided as snippets for a quick way of copying
 & pasting one snippet for a successful installation.
 
-The following snippet installs Docker on EuroLinux 8.5. Other releases may work
+The following snippet installs Docker on EuroLinux 8.6. Other releases may work
 as well, but have not been tested. Once a new EuroLinux release is out, this
 guide will be updated.
 
