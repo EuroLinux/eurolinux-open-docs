@@ -31,8 +31,8 @@ virtual) CPU core.
 
 | Architecture | EuroLinux 6  | EuroLinux 7 | EuroLinux 8 | EuroLinux 9 |
 |---|---|---|---|---|
-| x86_64  | 448 (4096)  |  768 (5120) | 768 (8192)  | TBA |
-| ARM64  | X  | X  | 256  | TBA  |
+| x86_64  | 448 (4096)  |  768 (5120) | 768 (8192)  | 1792 (8192) |
+| ARM64  | X  | X  | 256  | 512 (4096)  |
 <!-- | POWER  | X | X | TBA  | TBA  | -->
 
 
@@ -46,7 +46,7 @@ possible to support systems with less memory.
 
 | Architecture | EuroLinux 6  | EuroLinux 7 | EuroLinux 8 | EuroLinux 9 |
 |---|---|---|---|---|
-| x86_64  | Minimum 1 GiB, 1 GiB per logical core is recommended |  Minimum 1 GiB, 1 GiB per logical core is recommended  |  Minimum 1 GiB, 1.5 GiB per logical core is recommended  | minimum 2 GiB, 1.5 GiB per logical core is recommended|
+| x86_64  | Minimum 1 GiB, 1 GiB per logical core is recommended |  Minimum 1 GiB, 1 GiB per logical core is recommended  |  Minimum 1 GiB, 1.5 GiB per logical core is recommended  | Minimum 1.5 GiB, 1.5 GiB per logical core is recommended |
 | ARM64  | X  | X  | 2GiB | 2GiB |
 <!-- | POWER  | X | X | TBA  | TBA  | -->
 
@@ -54,8 +54,8 @@ possible to support systems with less memory.
 
 | Architecture | EuroLinux 6  | EuroLinux 7 | EuroLinux 8 | EuroLinux 9 |
 |---|---|---|---|---|
-| x86_64  | 12TB (64TB) | 12TB (64TB) | 24TB (64TB) | TBA |
-| ARM64  | X  | X  | 1.5TB (256TB) | TBA |
+| x86_64  | 12TB (64TB) | 12TB (64TB) | 24TB (64TB) | 48TB (64TB) |
+| ARM64  | X  | X  | 1.5TB (256TB) | 1.5TB (256TB) |
 <!-- | POWER  | X | X | TBA  | TBA  | -->
 
 ## Minimum required disk space
@@ -122,11 +122,11 @@ available in the Open Core model.
 | Feature | EuroLinux 6  | EuroLinux 7 | EuroLinux 8 | EuroLinux 9 |
 |---|---|---|---|---|
 | Base Linux Kernel version | 2.6.34 | 3.10 | 4.18 | 5.14 |
-| Package Management | RPM/Yum | RPM/Yum | RPM/Dnf, Flatpak| RPM/Dnf, Flatpak|
+| Package Management | RPM/Yum | RPM/Yum | RPM/Dnf, Flatpak| RPM/Dnf, Flatpak |
 | System Init | Upstart | systemd | systemd | systemd |
 | Base GNU C Library (glibc) Version | 2.12 | 2.17 | 2.28 | 2.34 |
 | Base (First) GCC version | 4.4.7 | 4.8.5 | 8.2.1 (updated in newer versions) | 11.2.1 (might be updated in the future)|
-| Base (First) LLVM version | X | X | 7.0.1 (updated in newer versions)| 13.0.0 (might be updated in the future)|
+| Base (First) LLVM version | X | X | 7.0.1 (updated in newer versions)| 13.0.0 (might be updated in the future) |
 | Default Desktop | Gnome 2 | Gnome 3 | Gnome 3 |  Gnome 40 |
 | Office Suite | LibreOffice | LibreOffice | LibreOffice | LibreOffice |
 | Default Web Browser | Firefox | Firefox | Firefox | Firefox |
