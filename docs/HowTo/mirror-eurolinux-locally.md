@@ -17,7 +17,7 @@ External (publicly available) mirrors should not be set up this way.
 
 ## Mirroring EuroLinux 9
 
-Making a local mirror for EuroLinux 9 is simple because:
+Making a local mirrors for EuroLinux 8 and EuroLinux 9 is simple because:
 
 - repositories are open
 - reposync can pull repository metadata, erratas, and modules files
@@ -79,7 +79,7 @@ reposync --downloadcomps --download-metadata -c /etc/yum-mirror-config/mirror_yu
 
 ## Mirroring EuroLinux 8
 
-Making a local mirror for EuroLinux 8 is simple because:
+Making a local mirror for EuroLinux 8 and EuroLinux 9 is simple because:
 
 - repositories are open
 - reposync can pull repository metadata, erratas, and modules files
