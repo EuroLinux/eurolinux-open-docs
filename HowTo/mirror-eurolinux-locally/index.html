@@ -443,6 +443,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mirroring-eurolinux-9" class="md-nav__link">
+    Mirroring EuroLinux 9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#mirroring-eurolinux-8" class="md-nav__link">
     Mirroring EuroLinux 8
   </a>
@@ -835,12 +842,66 @@ External (publicly available) mirrors should not be set up this way.</p>
 <li>For each version of EuroLinux, you need about 80 GB of storage</li>
 <li>You have to install utilities like reposync and createrepo. The
   following command will work on an Enterprise Linux 7 and 8:
-  <div class="highlight"><pre><span></span><code><span class="c1"># --skip-broken because not all packages might be present</span>
+  <div class="highlight"><pre><span></span><code><span class="c1"># --skip-broken because depending on the version not all packages might be present</span>
 sudo yum install -y createrepo_c createrepo yum-utils dnf-utils --skip-broken
 </code></pre></div></li>
 </ul>
+<h2 id="mirroring-eurolinux-9">Mirroring EuroLinux 9</h2>
+<p>Making a local mirrors for EuroLinux 8 and EuroLinux 9 is simple because:</p>
+<ul>
+<li>repositories are open</li>
+<li>reposync can pull repository metadata, erratas, and modules files
+  automatically.</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Use Enterprise Linux 9</p>
+<p>These instructions have been tested to work properly on Enterprise
+Linux 9 and Enterprise Linux 8.</p>
+</div>
+<p>First, let's create the directory where mirroring configuration will reside:
+<div class="highlight"><pre><span></span><code>sudo mkdir -p /etc/yum-mirror-config
+</code></pre></div></p>
+<p>Then, let's create configuration file for EuroLinux 9 mirroring
+<code>/etc/yum-mirror-config/mirror_yum_el9.conf</code> with the contents:</p>
+<div class="highlight"><pre><span></span><code><span class="k">[main]</span>
+<span class="na">cachedir</span><span class="o">=</span><span class="s">/var/cache/yum/mirror/$basearch/$releasever</span>
+<span class="na">keepcache</span><span class="o">=</span><span class="s">0</span>
+<span class="na">debuglevel</span><span class="o">=</span><span class="s">2</span>
+<span class="na">logfile</span><span class="o">=</span><span class="s">/var/log/mirror-yum-el9.log</span>
+<span class="na">plugins</span><span class="o">=</span><span class="s">1</span>
+<span class="na">exactarch</span><span class="o">=</span><span class="s">0</span>
+<span class="na">obsoletes</span><span class="o">=</span><span class="s">0</span>
+<span class="na">reposdir</span><span class="o">=</span><span class="s">/dev/null</span>
+
+<span class="k">[baseos]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux BaseOS</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/BaseOS/os</span>
+<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux9</span>
+<span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">1</span>
+
+<span class="k">[appstream]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux AppStream</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/AppStream/os</span>
+<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux9</span>
+<span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">1</span>
+
+<span class="k">[crb]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux CRB</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/CRB/os</span>
+<span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
+<span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux9</span>
+<span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">1</span>
+</code></pre></div>
+<p>Then invoke the command <code>reposync</code> with the following arguments:</p>
+<div class="highlight"><pre><span></span><code>reposync --downloadcomps --download-metadata -c /etc/yum-mirror-config/mirror_yum_el9.conf -p /repos
+</code></pre></div>
 <h2 id="mirroring-eurolinux-8">Mirroring EuroLinux 8</h2>
-<p>Making a local mirror for EuroLinux 8 is simple because:</p>
+<p>Making a local mirror for EuroLinux 8 and EuroLinux 9 is simple because:</p>
 <ul>
 <li>repositories are open</li>
 <li>reposync can pull repository metadata, erratas, and modules files
@@ -864,25 +925,25 @@ with the contents:</p>
 <span class="na">obsoletes</span><span class="o">=</span><span class="s">0</span>
 <span class="na">reposdir</span><span class="o">=</span><span class="s">/dev/null</span>
 
-<span class="k">[certify-baseos]</span>
-<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux certify BaseOS</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-BaseOS/os</span>
+<span class="k">[baseos]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux BaseOS</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/BaseOS/os</span>
 <span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
 <span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
 <span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8</span>
 <span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">1</span>
 
-<span class="k">[certify-appstream]</span>
-<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux certify AppStream</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-AppStream/os</span>
+<span class="k">[appstream]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux AppStream</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/AppStream/os</span>
 <span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
 <span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
 <span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8</span>
 <span class="na">skip_if_unavailable</span><span class="o">=</span><span class="s">1</span>
 
-<span class="k">[certify-powertools]</span>
-<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux certify PowerTools</span>
-<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-PowerTools/os</span>
+<span class="k">[powertools]</span>
+<span class="na">name</span> <span class="o">=</span> <span class="s">EuroLinux PowerTools</span>
+<span class="na">baseurl</span><span class="o">=</span><span class="s">https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/PowerTools/os</span>
 <span class="na">enabled</span><span class="o">=</span><span class="s">1</span>
 <span class="na">gpgcheck</span><span class="o">=</span><span class="s">1</span>
 <span class="na">gpgkey</span><span class="o">=</span><span class="s">file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8</span>
