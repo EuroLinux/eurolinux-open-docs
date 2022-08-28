@@ -162,22 +162,30 @@ section, you might add additional EuroLinux repositories and/or other
 repositories. If you add EuroLinux repositories, the installer will
 automatically download newer version of the packages.
 
+!!! info "'certify-' prefix"
+    Since EuroLinux 8.6 the 'certify-' prefixes in repo URLs and names are no
+    longer used. These names and URLs were used before we started distributing
+    our system in the open core model. These URLs are and will be kept as the
+    symbolic link for backward compatibility. They can be used in some older
+    parts of the documentation.
+
+
 EuroLinux 8 repositories:
 
-- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-BaseOS/os`  
+- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/BaseOS/os`  
   Name: BaseOSProd
-- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-AppStream/os`  
+- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/AppStream/os`  
   Name: AppStreamProd
-- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-PowerTools/os`  
+- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/PowerTools/os`  
   Name: PowerToolsProd
 
 For EuroLinux 8 beta:
 
-- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-beta-BaseOS/os`  
+- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/beta-BaseOS/os`  
   Name: BaseOSBeta
-- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-beta-AppStream/os`  
+- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/beta-AppStream/os`  
   Name: AppStreamBeta
-- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-beta-PowerTools/os`  
+- URL: `https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/beta-PowerTools/os`  
   Name: PowerToolsBeta
 
 !!! Warning "Limited support."

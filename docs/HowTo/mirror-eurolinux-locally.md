@@ -11,13 +11,75 @@ External (publicly available) mirrors should not be set up this way.
 - You have to install utilities like reposync and createrepo. The
   following command will work on an Enterprise Linux 7 and 8:
   ```bash
-  # --skip-broken because not all packages might be present
+  # --skip-broken because depending on the version not all packages might be present
   sudo yum install -y createrepo_c createrepo yum-utils dnf-utils --skip-broken
   ```
 
+## Mirroring EuroLinux 9
+
+Making a local mirrors for EuroLinux 8 and EuroLinux 9 is simple because:
+
+- repositories are open
+- reposync can pull repository metadata, erratas, and modules files
+  automatically.
+
+!!! info "Use Enterprise Linux 9"
+    These instructions have been tested to work properly on Enterprise
+    Linux 9 and Enterprise Linux 8.
+
+First, let's create the directory where mirroring configuration will reside:
+```
+sudo mkdir -p /etc/yum-mirror-config
+```
+
+Then, let's create configuration file for EuroLinux 9 mirroring
+`/etc/yum-mirror-config/mirror_yum_el9.conf` with the contents:
+
+```ini
+[main]
+cachedir=/var/cache/yum/mirror/$basearch/$releasever
+keepcache=0
+debuglevel=2
+logfile=/var/log/mirror-yum-el9.log
+plugins=1
+exactarch=0
+obsoletes=0
+reposdir=/dev/null
+
+[baseos]
+name = EuroLinux BaseOS
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/BaseOS/os
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux9
+skip_if_unavailable=1
+
+[appstream]
+name = EuroLinux AppStream
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/AppStream/os
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux9
+skip_if_unavailable=1
+
+[crb]
+name = EuroLinux CRB
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/9/$basearch/CRB/os
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux9
+skip_if_unavailable=1
+```
+
+Then invoke the command `reposync` with the following arguments:
+
+```
+reposync --downloadcomps --download-metadata -c /etc/yum-mirror-config/mirror_yum_el9.conf -p /repos
+```
+
 ## Mirroring EuroLinux 8
 
-Making a local mirror for EuroLinux 8 is simple because:
+Making a local mirror for EuroLinux 8 and EuroLinux 9 is simple because:
 
 - repositories are open
 - reposync can pull repository metadata, erratas, and modules files
@@ -42,25 +104,25 @@ exactarch=0
 obsoletes=0
 reposdir=/dev/null
 
-[certify-baseos]
-name = EuroLinux certify BaseOS
-baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-BaseOS/os
+[baseos]
+name = EuroLinux BaseOS
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/BaseOS/os
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8
 skip_if_unavailable=1
 
-[certify-appstream]
-name = EuroLinux certify AppStream
-baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-AppStream/os
+[appstream]
+name = EuroLinux AppStream
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/AppStream/os
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8
 skip_if_unavailable=1
 
-[certify-powertools]
-name = EuroLinux certify PowerTools
-baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-PowerTools/os
+[powertools]
+name = EuroLinux PowerTools
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/PowerTools/os
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8

@@ -8,6 +8,13 @@ the `/etc/yum.repos.d/certify.repo` file.
 sudo yum update -y el-release
 ```
 
+!!! info "'certify-' prefix"
+    Since EuroLinux 8.6 the 'certify-' prefixes in repo URLs and names are no
+    longer used. These URLs are and will be kept as the symbolic link for
+    backward compatibility. The `certify.repo` file will be used for the whole
+    EuroLinux 8 lifecycle.
+
+
 If you cannot update the release package because the new `el-release` package errata
 is not security-related, you might manually add the following to the
 `/etc/yum.repos.d/certify.repo`
@@ -15,14 +22,14 @@ is not security-related, you might manually add the following to the
 ```
 [high-availability]
 name = EuroLinux High Availability
-baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-HighAvailability/os
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/HighAvailability/os
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8
 
 [resilient-storage]
 name = EuroLinux Resilient Storage
-baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-ResilientStorage/os
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/ResilientStorage/os
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8
@@ -39,7 +46,7 @@ Before edit:
 ```
 [resilient-storage]
 name = EuroLinux Resilient Storage
-baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-ResilientStorage/os
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/ResilientStorage/os
 enabled=0
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8
@@ -50,7 +57,7 @@ After Edit:
 ```
 [resilient-storage]
 name = EuroLinux Resilient Storage
-baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/certify-ResilientStorage/os
+baseurl=https://fbi.cdn.euro-linux.com/dist/eurolinux/server/8/$basearch/ResilientStorage/os
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-eurolinux8
