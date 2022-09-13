@@ -1,7 +1,8 @@
 # EuroLinux Linux distribution capabilities and limits
 
 This document describes the technology capabilities and limits for EuroLinux 6,
-7, 8. Some are theoretical, as they are connected with source code/projects
+7, 8 and 9. Some are theoretical, as they are connected with source
+code/projects
 used in the system. Minimal limits represent limits for the systems for which
 support is generally available by the EuroLinux company. Our dedicated
 solutions like:
