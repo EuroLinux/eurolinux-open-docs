@@ -10,6 +10,9 @@ Enterprise Linuxes 6 ended their life a few years ago. Still, security updates c
 
 Please download the migration script available at this location:
 https://github.com/EuroLinux/eurolinux-migration-scripts.git 
+```
+git clone https://github.com/EuroLinux/eurolinux-migration-scripts.git 
+```
 
 Once the download is complete, we navigate to the script's directory:
 ```
