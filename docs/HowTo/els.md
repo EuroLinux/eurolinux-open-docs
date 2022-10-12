@@ -8,6 +8,10 @@ Enterprise Linuxes 6 ended their life a few years ago. Still, security updates c
 
 ## How to migrate
 
+First, make sure that your system is up to date. It should be CentOS 6.10 (minor version 10).
+
+Second, in accordance with good practice, we recommend backing up your machine.
+
 Please download the migration script available at this location:
 https://github.com/EuroLinux/eurolinux-migration-scripts.git 
 ```
