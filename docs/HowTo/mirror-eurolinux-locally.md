@@ -267,3 +267,22 @@ sudo gunzip -c "$LAST_UI"  > "$REPO_DIR/updateinfo.xml"
 /usr/share/createrepo/modifyrepo.py "$REPO_DIR/updateinfo.xml"  "$REPO_DIR/repodata" || modifyrepo "$REPO_DIR/updateinfo.xml"  "$REPO_DIR/repodata"
 ```
 
+## Mirroring EuroLinux 6 ELS
+
+First, register your system to EuroLinux EuroMan with the [migration scripts](https://github.com/EuroLinux/eurolinux-migration-scripts/tree/el6-only-switch-repos) - use the `el6-only-switch-repos` branch for this.
+
+Once the system has been registered and is receiving EL6 ELS updates, you can mirror the ELS packages with the following commands. Run them as root:
+
+```
+reposync -d -m --download-metadata --plugins -r els-6-x86_64 -p /repos/
+# recreating repodata and updateinfo
+REPO_DIR=/repos/els-6-x86_64/
+cd /repos/els-6-x86_64/; createrepo . -g comps.xml
+unset -v LAST_UI
+for file in "$REPO_DIR"/*updateinfo.xml.gz; do
+  [[ $file -nt $LAST_UI ]] && LAST_UI=$file
+done
+sudo gunzip -c "$LAST_UI"  > "$REPO_DIR/updateinfo.xml"
+# Depending on the system - some has modifrepo.py script some has "normal" command
+/usr/share/createrepo/modifyrepo.py "$REPO_DIR/updateinfo.xml"  "$REPO_DIR/repodata" || modifyrepo "$REPO_DIR/updateinfo.xml"  "$REPO_DIR/repodata"
+```
