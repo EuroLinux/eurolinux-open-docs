@@ -495,6 +495,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#mirroring-eurolinux-6-els" class="md-nav__link">
+    Mirroring EuroLinux 6 ELS
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1105,6 +1112,21 @@ following step:</p>
 sudo gunzip -c <span class="s2">&quot;</span><span class="nv">$LAST_UI</span><span class="s2">&quot;</span>  &gt; <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>
 <span class="c1"># Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command</span>
 /usr/share/createrepo/modifyrepo.py <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span> <span class="o">||</span> modifyrepo <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/updateinfo.xml&quot;</span>  <span class="s2">&quot;</span><span class="nv">$REPO_DIR</span><span class="s2">/repodata&quot;</span>
+</code></pre></div>
+<h2 id="mirroring-eurolinux-6-els">Mirroring EuroLinux 6 ELS</h2>
+<p>First, register your system to EuroLinux EuroMan with the <a href="https://github.com/EuroLinux/eurolinux-migration-scripts/tree/el6-only-switch-repos">migration scripts</a> - use the <code>el6-only-switch-repos</code> branch for this.</p>
+<p>Once the system has been registered and is receiving EL6 ELS updates, you can mirror the ELS packages with the following commands. Run them as root:</p>
+<div class="highlight"><pre><span></span><code>reposync -d -m --download-metadata --plugins -r els-6-x86_64 -p /repos/
+# recreating repodata and updateinfo
+REPO_DIR=/repos/els-6-x86_64/
+cd /repos/els-6-x86_64/; createrepo . -g comps.xml
+unset -v LAST_UI
+for file in &quot;$REPO_DIR&quot;/*updateinfo.xml.gz; do
+  [[ $file -nt $LAST_UI ]] &amp;&amp; LAST_UI=$file
+done
+sudo gunzip -c &quot;$LAST_UI&quot;  &gt; &quot;$REPO_DIR/updateinfo.xml&quot;
+# Depending on the system - some has modifrepo.py script some has &quot;normal&quot; command
+/usr/share/createrepo/modifyrepo.py &quot;$REPO_DIR/updateinfo.xml&quot;  &quot;$REPO_DIR/repodata&quot; || modifyrepo &quot;$REPO_DIR/updateinfo.xml&quot;  &quot;$REPO_DIR/repodata&quot;
 </code></pre></div>
                 
               
