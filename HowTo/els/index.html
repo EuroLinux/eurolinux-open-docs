@@ -840,25 +840,28 @@
 <p>Enterprise Linuxes 6 ended their life a few years ago. Still, security updates can be provided by several vendors for a fee. That's where EuroELS comes in. You can extend the lifecycle of your Enterprise Linux up to the half of 2024.</p>
 <h2 id="how-to-migrate">How to migrate</h2>
 <p>First, make sure that your system is up to date. It should be CentOS 6.10 (minor version 10).</p>
+<div class="highlight"><pre><span></span><code>su
+yum update -y
+</code></pre></div>
 <p>Second, in accordance with good practice, we recommend backing up your machine.</p>
-<p>Please download the migration script available at this location:
-https://github.com/EuroLinux/eurolinux-migration-scripts.git 
-<div class="highlight"><pre><span></span><code>git clone https://github.com/EuroLinux/eurolinux-migration-scripts.git 
-</code></pre></div></p>
-<p>Once the download is complete, we navigate to the script's directory:
-<div class="highlight"><pre><span></span><code>cd eurolinux-migration-scripts
-</code></pre></div></p>
-<p>We switch the branch to <code>el6-only-switch-repos</code>:
-<div class="highlight"><pre><span></span><code>git checkout el6-only-switch-repos
-</code></pre></div></p>
-<p>And run the script with superuser privileges:
-<div class="highlight"><pre><span></span><code>sudo ./migrate2eurolinux.sh
-</code></pre></div></p>
-<p>Once the command is executed, we'll get a recommendation to make a backup. Type <code>YES</code> to make the script continue.</p>
+<p>Please download the migration script available at this location:</p>
+<p>https://github.com/EuroLinux/eurolinux-migration-scripts.git </p>
+<div class="highlight"><pre><span></span><code>wget https://github.com/EuroLinux/eurolinux-migration-scripts/archive/refs/heads/el6-only-switch-repos.zip
+</code></pre></div>
+<p>Please unpack the downloaded file:</p>
+<div class="highlight"><pre><span></span><code>unzip el6-only-switch-repos.zip
+</code></pre></div>
+<p>and navigate to the script's directory:</p>
+<div class="highlight"><pre><span></span><code>cd eurolinux-migration-scripts-el6-only-switch-repos
+</code></pre></div>
+<p>To start the switching process, just run the script with administrator privileges:</p>
+<div class="highlight"><pre><span></span><code>./migrate2eurolinux.sh
+</code></pre></div>
+<p>Once the command is executed, we'll get a recommendation to make a backup. Type YES to make the script continue.</p>
 <p>The script will ask us about our EuroMan credentials. We provide our login and password when asked.</p>
-<p>The repository switch has completed successfully. We can now update our Enterprise Linux 6 with the command:
-<div class="highlight"><pre><span></span><code>sudo yum update -y
-</code></pre></div></p>
+<p>The repository switch has completed successfully. We can now update our Enterprise Linux 6 with the command:</p>
+<div class="highlight"><pre><span></span><code>yum update -y
+</code></pre></div>
                 
               
               
