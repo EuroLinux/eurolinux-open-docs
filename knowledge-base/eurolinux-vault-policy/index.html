@@ -11,14 +11,14 @@
         <meta name="author" content="EuroLinux Community">
       
       
-        <link rel="canonical" href="https://docs.euro-linux.com/knowledge-base/unable-to-find-requested-software/">
+        <link rel="canonical" href="https://docs.euro-linux.com/knowledge-base/eurolinux-vault-policy/">
       
       <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.1.10">
     
     
       
-        <title>Unable to Find Requested Software - EuroLinux Documentation</title>
+        <title>EuroLinux Vault and Archiving Policy - EuroLinux Documentation</title>
       
     
     
@@ -80,7 +80,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#unable-to-find-requested-software" class="md-skip">
+        <a href="#eurolinux-vault-and-archiving-policy" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unable to Find Requested Software
+              EuroLinux Vault and Archiving Policy
             
           </span>
         </div>
@@ -605,12 +605,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Unable to Find Requested Software
+          EuroLinux Vault and Archiving Policy
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Unable to Find Requested Software
+        EuroLinux Vault and Archiving Policy
       </a>
       
         
@@ -628,63 +628,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#environment" class="md-nav__link">
-    Environment
+  <a href="#vault-vaultcdneuro-linuxcom" class="md-nav__link">
+    Vault - vault.cdn.euro-linux.com
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#issue" class="md-nav__link">
-    Issue
+  <a href="#vaults-initial-and-last-version-for-minor-releases" class="md-nav__link">
+    Vault's initial and last version for minor releases
   </a>
-  
-    <nav class="md-nav" aria-label="Issue">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#missing-package" class="md-nav__link">
-    Missing Package
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#missing-codec" class="md-nav__link">
-    Missing Codec
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#missing-hardware-support" class="md-nav__link">
-    Missing Hardware Support
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#missing-font" class="md-nav__link">
-    Missing Font
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#missing-mime-support" class="md-nav__link">
-    Missing MIME Support
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#resolution" class="md-nav__link">
-    Resolution
+  <a href="#eurolinux-sources-on-the-vaultcdneuro-linuxcom" class="md-nav__link">
+    EuroLinux sources on the vault.cdn.euro-linux.com
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bug-tracker" class="md-nav__link">
+    Bug tracker
   </a>
   
 </li>
@@ -693,6 +659,18 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../unable-to-find-requested-software/" class="md-nav__link">
+        Unable to Find Requested Software
+      </a>
     </li>
   
 
@@ -877,45 +855,63 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/EuroLinux/eurolinux-open-docs/edit/master/docs/knowledge-base/unable-to-find-requested-software.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/EuroLinux/eurolinux-open-docs/edit/master/docs/knowledge-base/eurolinux-vault-policy.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="unable-to-find-requested-software">Unable to Find Requested Software</h1>
-<h2 id="environment">Environment</h2>
+                <h1 id="eurolinux-vault-and-archiving-policy">EuroLinux Vault and Archiving Policy</h1>
+<h2 id="vault-vaultcdneuro-linuxcom">Vault - vault.cdn.euro-linux.com</h2>
+<p>The idea of the vault is simple - it stores older or archived versions of the
+software packages (mostly RPMs) and allow to create and maintain the
+environment that requires old versions of the packages, specific libraries or
+cannot or even must not be updated.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning! Security considerations</p>
+<p>Due to their nature, the old versions of the software contain security
+vulnerabilities. Many of them have ready and easy to use exploits. Using
+unsupported versions of software is a dangerous practice, especially
+when system is running in the public networks.</p>
+</div>
+<h2 id="vaults-initial-and-last-version-for-minor-releases">Vault's initial and last version for minor releases</h2>
+<p>From version 8.6 and 9.0 we decided that we will provide two versions for each
+minor release (minor release is for example EuroLinux 8.6 -&gt; 8.7 -&gt; 8.8), of the
+vault. The first one is the initial state of the release (), the second one has
+'-last' and it's the last snapshot before a minor new release. This idea
+originated from community feedback. For example:</p>
 <ul>
-<li>EuroLinux 7</li>
-<li>EuroLinux 8</li>
+<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6/</a>
+  contains the initial state</li>
+<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6-last/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6/</a>
+  contains the last snapshot of EuroLinux 8.6 before 8.7 reached GA (General Availability)</li>
 </ul>
-<h2 id="issue">Issue</h2>
-<p>An error occurs during a search for missing components. A similar message is
-shown by GNOME Software:</p>
-<blockquote>
-<p>Unfortunately, the [...] you were searching for could not be found. Please
-see [...] for more information.</p>
-</blockquote>
-<h3 id="missing-package">Missing Package</h3>
-<p>The package you are searching for is not available in EuroLinux base
-repositories.</p>
-<h3 id="missing-codec">Missing Codec</h3>
-<p>The codec you are searching for is not available in EuroLinux base
-repositories due to licensing reasons or patent encumbrance.</p>
-<h3 id="missing-hardware-support">Missing Hardware Support</h3>
-<p>A kernel module or a driver is not available in EuroLinux base repositories
-due to licensing reasons that prohibit redistribution or is not yet in the
-upstream Linux kernel.</p>
-<h3 id="missing-font">Missing Font</h3>
-<p>The font you are searching for is not available in EuroLinux base
-repositories.</p>
-<h3 id="missing-mime-support">Missing MIME Support</h3>
-<p>An application that supports operations on your file with its MIME type is not
-available in EuroLinux base repositories due to them being supported
-exclusively by a third party application or an application that runs only on a
-platform different than EuroLinux.</p>
-<h2 id="resolution">Resolution</h2>
-<p>If you would like to request for a certain component availability, please
-<a href="https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc">contact us</a>.</p>
+<p>If there is no version with <code>-last</code> suffix it means that this version is
+a newest version.</p>
+<h2 id="eurolinux-sources-on-the-vaultcdneuro-linuxcom">EuroLinux sources on the vault.cdn.euro-linux.com</h2>
+<p>We used to provide sources for EuroLinux on the GitHub. Unfortunately, due to
+GitHub's limitations, it wasn't as feasible in long run. Each source needed to
+be repacked on the client system and source wasn't signed.</p>
+<p>We decided to go in a friendlier and more standarized direction after receiving
+feedback from the community and clients Since version 8 we deliver the sources
+as .src.rpms. It's a better solution in many ways, and the advantages include:</p>
+<ul>
+<li>All source packages (sources used to build EuroLinux and other Enterprise
+  Linux distributions) are securely cryptographically signed</li>
+<li>The src.rpm is native format for distributions that leverage RPMs. It allows
+  to use common toolchains like mock, rpmbuild, EuroLinux Gaia, Open Build Service,
+  Koji and much more</li>
+<li>It's easier to mirror repositories</li>
+<li>It's also easier to maintain</li>
+</ul>
+<p>The source can be found at
+<a href="https://vault.cdn.euro-linux.com/sources/eurolinux/">https://vault.cdn.euro-linux.com/sources/eurolinux/</a>.</p>
+<h2 id="bug-tracker">Bug tracker</h2>
+<p>If you encounter any missing sources or problem with vault, please don't
+hesitate to contact as via e-mail (support[at]euro-linux.com) or fill bug in
+our <a href="https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc">distro bug
+tracker</a>. If you
+are our client you can contact us on the support site or with sale
+representative.</p>
                 
               
               
@@ -951,13 +947,13 @@ platform different than EuroLinux.</p>
       
       
         
-        <a href="../../release-notes/8.3/" class="md-footer__link md-footer__link--next" aria-label="Next: EuroLinux 8.3 Release Notes" rel="next">
+        <a href="../unable-to-find-requested-software/" class="md-footer__link md-footer__link--next" aria-label="Next: Unable to Find Requested Software" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              EuroLinux 8.3 Release Notes
+              Unable to Find Requested Software
             </div>
           </div>
           <div class="md-footer__button md-icon">
