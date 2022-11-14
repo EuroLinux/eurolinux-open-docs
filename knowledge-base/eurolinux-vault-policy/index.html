@@ -642,8 +642,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#eurolinux-sources-on-the-vaultcdneuro-linuxcom" class="md-nav__link">
-    EuroLinux sources on the vault.cdn.euro-linux.com
+  <a href="#eurolinux-sources-on-vaultcdneuro-linuxcom" class="md-nav__link">
+    EuroLinux sources on vault.cdn.euro-linux.com
   </a>
   
 </li>
@@ -876,30 +876,31 @@ when system is running in the public networks.</p>
 <h2 id="vaults-initial-and-last-version-for-minor-releases">Vault's initial and last version for minor releases</h2>
 <p>From version 8.6 and 9.0 we decided that we will provide two versions for each
 minor release (minor release is for example EuroLinux 8.6 -&gt; 8.7 -&gt; 8.8), of the
-vault. The first one is the initial state of the release (), the second one has
+vault. The first one is the initial state of the release, the second one has
 '-last' and it's the last snapshot before a minor new release. This idea
 originated from community feedback. For example:</p>
 <ul>
 <li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6/</a>
   contains the initial state</li>
-<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6-last/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6/</a>
+<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6-last/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6-last/</a>
   contains the last snapshot of EuroLinux 8.6 before 8.7 reached GA (General Availability)</li>
 </ul>
 <p>If there is no version with <code>-last</code> suffix it means that this version is
 a newest version.</p>
-<h2 id="eurolinux-sources-on-the-vaultcdneuro-linuxcom">EuroLinux sources on the vault.cdn.euro-linux.com</h2>
-<p>We used to provide sources for EuroLinux on the GitHub. Unfortunately, due to
+<h2 id="eurolinux-sources-on-vaultcdneuro-linuxcom">EuroLinux sources on vault.cdn.euro-linux.com</h2>
+<p>We used to provide sources for EuroLinux on GitHub. Unfortunately, due to
 GitHub's limitations, it wasn't as feasible in long run. Each source needed to
 be repacked on the client system and source wasn't signed.</p>
-<p>We decided to go in a friendlier and more standarized direction after receiving
-feedback from the community and clients Since version 8 we deliver the sources
-as .src.rpms. It's a better solution in many ways, and the advantages include:</p>
+<p>We decided to go with a friendlier and more standarized direction after
+receiving feedback from the community and clients. Since version 8 we deliver
+the sources as .src.rpms. It's a better solution in many ways, and the
+advantages include:</p>
 <ul>
 <li>All source packages (sources used to build EuroLinux and other Enterprise
-  Linux distributions) are securely cryptographically signed</li>
+  Linux distributions) are securely signed cryptographically </li>
 <li>The src.rpm is native format for distributions that leverage RPMs. It allows
-  to use common toolchains like mock, rpmbuild, EuroLinux Gaia, Open Build Service,
-  Koji and much more</li>
+  to use common toolchains like mock, rpmbuild, EuroLinux Gaia, Open Build
+  Service, Koji and much more</li>
 <li>It's easier to mirror repositories</li>
 <li>It's also easier to maintain</li>
 </ul>
