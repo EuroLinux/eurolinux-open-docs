@@ -2,152 +2,157 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.euro-linux.com/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/centos8-eol-solution/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/create-iso-with-repositories/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/docker/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/els/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/ha-rs-enable-repository/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/install-epel-on-eurolinux/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/mirror-eurolinux-locally/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/vagrant-with-libvirt/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/virtualbox/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/HowTo/z-documentation-markdown/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/jumpstarts/8-jumpstart/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/jumpstarts/9-beta-jumpstart/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/jumpstarts/9-jumpstart/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/jumpstarts/container-jumpstart/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/jumpstarts/vagrant-jumpstart/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/knowledge-base/eurolinux-capabilities-and-limits/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/knowledge-base/eurolinux-vault-policy/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/knowledge-base/unable-to-find-requested-software/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.3/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.4-beta/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.4/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.5-arm64/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.5/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.6-beta/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.6/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/8.7-beta/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://docs.euro-linux.com/release-notes/8.7/</loc>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/9.0-beta/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/9.0/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://docs.euro-linux.com/release-notes/ELD/</loc>
-         <lastmod>2022-11-14</lastmod>
+         <lastmod>2022-11-15</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
