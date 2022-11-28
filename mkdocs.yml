@@ -1,0 +1,43 @@
+site_name: EuroLinux Documentation
+site_author: EuroLinux Community
+site_url: https://docs.euro-linux.com/
+repo_name: eurolinux-open-docs
+repo_url: https://github.com/EuroLinux/eurolinux-open-docs
+
+# EuroLinux theme settings
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/favicon-white.png
+  favicon: assets/favicon.png
+  palette:
+    primary: indigo
+  font:
+    text: Ubuntu
+    code: Ubuntu Mono
+  language: en
+  features:
+    - navigation.tabs
+    - toc.integrate
+
+  icon:
+    repo: fontawesome/brands/github
+
+extra:
+  social:
+    - icon: fontawesome/solid/blog
+      link: https://euro-linux.com/blog
+    - icon: fontawesome/brands/github
+      link: https://github.com/EuroLinux/ 
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/eurolinux 
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/Euro_Linux
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.keys
