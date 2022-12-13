@@ -642,6 +642,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#vault-for-the-current-version" class="md-nav__link">
+    Vault for the current version
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eurolinux-sources-on-vaultcdneuro-linuxcom" class="md-nav__link">
     EuroLinux sources on vault.cdn.euro-linux.com
   </a>
@@ -898,19 +905,34 @@ unsupported versions of software is a dangerous practice, especially
 when system is running in the public networks.</p>
 </div>
 <h2 id="vaults-initial-and-last-version-for-minor-releases">Vault's initial and last version for minor releases</h2>
-<p>From version 8.6 and 9.0 we decided that we will provide two versions for each
-minor release (minor release is for example EuroLinux 8.6 -&gt; 8.7 -&gt; 8.8), of the
-vault. The first one is the initial state of the release, the second one has
-'-last' and it's the last snapshot before a minor new release. This idea
-originated from community feedback. For example:</p>
+<p>From version 8.6 and 9.0 we decided that we will provide three versions for
+each minor release (minor release is for example EuroLinux 8.6 -&gt; 8.7 -&gt; 8.8),
+of the vault. The first one is the initial state of the release, then there is
+current state (for living release), the third one has '-last' and it's the last
+snapshot before a new minor release. This idea originated from community
+feedback. For example in case of EuroLinux 8.7 (that in time of writing this documentation is the latest minor release):</p>
 <ul>
-<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6/</a>
-  contains the initial state</li>
-<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6-last/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.6-last/</a>
-  contains the last snapshot of EuroLinux 8.6 before 8.7 reached GA (General Availability)</li>
+<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.7-init/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.7-init/</a>
+  contains the initial state for 8.7</li>
+<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.7/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.7/</a>
+  contains the current state of EuroLinux 8.7</li>
+<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.7-last/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.7-last/</a>
+  <strong>Will</strong> contain the last snapshot for 8.7 before general availability of the
+  EuroLinux 8.8. It will be just a symbolic link to 8.7 that will mark the EOL
+  of this minor release.</li>
 </ul>
-<p>If there is no version with <code>-last</code> suffix it means that this version is
-a newest version.</p>
+<p>If there is no version with <code>-last</code> suffix it means that this version is a
+newest minor release.</p>
+<h2 id="vault-for-the-current-version">Vault for the current version</h2>
+<p>For your convince EuroLinux Vault also keeps the track of the current version
+of the EuroLinux as a symbolic link to <strong>the newest minor release</strong>. The
+symlinks are <code>8</code> for version 8 and <code>9</code> for version 9.</p>
+<ul>
+<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8/">https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8/</a></li>
+<li><a href="https://vault.cdn.euro-linux.com/legacy/eurolinux/9/9/">https://vault.cdn.euro-linux.com/legacy/eurolinux/9/9/</a></li>
+</ul>
+<p>These repositories are updated regularly in the same manner as main/mirrors
+repositories.</p>
 <h2 id="eurolinux-sources-on-vaultcdneuro-linuxcom">EuroLinux sources on vault.cdn.euro-linux.com</h2>
 <p>We used to provide sources for EuroLinux on GitHub. Unfortunately, due to
 GitHub's limitations, it wasn't as feasible in long run. Each source needed to
