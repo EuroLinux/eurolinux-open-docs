@@ -19,7 +19,7 @@ AWS was launched in 2006 and has since grown to become one of the largest cloud 
 With its strong focus on security and compliance, Azure has become a popular choice for organizations in regulated industries such as healthcare and finance, as well as for government agencies.
 
 ### How to create EuroLinux instance on Microsoft Azure
-1. On the Azure Marketplace page, click "Get It Now" and accept the service terms.
+1. On the [Azure Marketplace page](https://azuremarketplace.microsoft.com/en-us/marketplace/apps?search=eurolinux&page=1), click "Get It Now" and accept the service terms.
 2. You will be redirected to the Azure portal, where you will see a "Create" button after logging in.
 3. In the "Basics" section of the virtual machine settings menu, pay special attention to the "Administrator account" section, where you will choose the type of authentication and enter a username that you will use to log in to the machine.
 4. Completing the creation of a typical virtual machine requires simply filling in the required fields in the "Basics" section. Then move on to "Review + create" and click the "Create" button.
