@@ -20,6 +20,12 @@ You can:
     for our customer that are available at [EuroLinux Support
     Portal](https://support.euro-linux.com).
 
+
+!!! info EuroLinux man Pages
+    You can find our online Enterprise Linux Man pages server here
+    [https://man.docs.euro-linux.com](https://man.docs.euro-linux.com).
+
+
 ## How documentation is organized?
 
 Documentation is organized in the following manner:
