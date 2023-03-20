@@ -58,3 +58,15 @@ Alibaba Cloud, also known as Aliyun aims to provide reliable and secure cloud co
 3. Configure the instance to meet your needs. At this point, you can also change the payment type to subscription.
 4. In the System Configurations tab, select or create a "Key Pair" that will allow you to access the machine.
 5. Finally, accept the terms and create the instance by clicking "Create Instance". After a few minutes, your instance should be ready to use.
+
+## OpenStack
+OpenStack provides a flexible and customizable platform that can be used for a variety of cloud computing needs, from web hosting to big data processing to scientific computing.
+
+### How to create EuroLinux instance on OpenStack
+1. Download Your favourite EuroLinux image in qcow2 or raw format.
+2. Login to the OpenStack dashboard.
+3. Click on the "Create Image" button in "Compute" -> "Images" section.
+4. Fill in the required information and upload this image to OpenStack.
+5. To Launch Your instance with image You have just created simply click "Launch Instance" in "Compute" -> "Instances" section and fill the required informations.
+6. Make sure You create Your own key-pair and attach it to this instance.
+7. To log into Your EuroLinux instance copy the IP address and using the `ssh` comand with `-i key-file.pem` option, login as root to newly created machine.
