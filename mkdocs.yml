@@ -19,7 +19,7 @@ theme:
   features:
     - navigation.tabs
     - toc.integrate
-
+    - navigation.footer
   icon:
     repo: fontawesome/brands/github
 
