@@ -1,0 +1,10 @@
+/*general styling*/
+.md-header {position: static!important;}
+.md-header, .md-tabs {background-color: #005aa5!important;} .md-tabs {box-shadow: 1px 1px 5px #999}
+.md-tabs__link, .md-tabs[data-md-state=hidden] .md-tabs__link {transition: none!important;}
+.md-typeset h1, .md-typeset h2 {color: #222; font-weight: bold}
+/*info boxes*/
+.md-typeset .info>.admonition-title, .md-typeset .info>summary, .md-typeset .todo>.admonition-title, .md-typeset .todo>summary {background-color: #f3f2fd;}
+.md-typeset .admonition.info {border-color: #4051b5;}
+.md-typeset .info>.admonition-title:before, .md-typeset .info>summary:before, .md-typeset .todo>.admonition-title:before, .md-typeset .todo>summary:before {background-color: #4051b5;}
+.md-typeset p {margin-top: 4px}
