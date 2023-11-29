@@ -9,3 +9,15 @@
 </style>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/cookie-bar/cookiebar-latest.min.js?forceLang=en&theme=minimal&always=1&privacyPage=https%3A%2F%2Fen.euro-linux.com%2Fcompany%2Fcookie-policy%2F" defer="defer" async="async"></script>
 {% endblock %}
+{% block scripts %}
+<script src="https://swetrix.org/swetrix.js" defer></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    swetrix.init('vOE62jSIBJJ5')
+    swetrix.trackViews()
+  })
+</script>
+<noscript>
+  <img src="https://api.swetrix.com/log/noscript?pid=vOE62jSIBJJ5" alt="" referrerpolicy="no-referrer-when-downgrade" />
+</noscript>
+{% endblock %}
