@@ -65,7 +65,7 @@ OpenStack provides a flexible and customizable platform that can be used for a v
 **Important:** It is a cloud-generic images.
 
 ### How to create EuroLinux instance on OpenStack
-1. [Download](fbi.cdn.euro-linux.com/images) Your favourite EuroLinux image in qcow2 or raw format. For example: `https://fbi.cdn.euro-linux.com/images/EL-9-cloudgeneric-2023-03-19.qcow2`
+1. [Download](https://fbi.cdn.euro-linux.com/images) Your favourite EuroLinux image in qcow2 or raw format. For example: `https://fbi.cdn.euro-linux.com/images/EL-9-cloudgeneric-2023-03-19.qcow2`
 2. Login to the OpenStack dashboard.
 3. Click on the "Create Image" button in "Compute" -> "Images" section.
 4. Fill in the required information and upload this image to OpenStack.
