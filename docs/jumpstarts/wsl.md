@@ -17,7 +17,7 @@ Follow the official Microsoft documentation to enable WSL: [https://learn.micros
 
 EuroLinux provides EuroLinux version 9 for WSL. The system is based on Red Hat
 Enterprise Linux 9 and is compatible with it. We used our base container image. The official
-repository is located [here](https://github.com/EuroLinux/wsl) it also contains the build scripts and
+repository is located [https://github.com/EuroLinux/wsl](https://github.com/EuroLinux/wsl) it also contains the build scripts and
 latest documentation/releases.
 
 ## Import and install EuroLinux for WSL
