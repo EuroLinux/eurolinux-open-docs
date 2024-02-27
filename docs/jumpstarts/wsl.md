@@ -5,7 +5,7 @@ This guide provides a quick overview of setting up EuroLinux on Windows Subsyste
 
 ## Prerequisites:
 
-- Windows 10 (WSL - Windows 10 version 1709 up, WLS 2 - Windows 10 version 2004 up) or Windows 11
+- Windows 10 (Windows 10 version 1709 or newer for "legacy" WSL. Version 2004 or newer for WSL 2) or Windows 11
 - WSL/WSL 2 installed (we strongly recommended WSL 2 for better compatibility and performance)
 - Administrative privileges on your Windows system
 
@@ -15,7 +15,7 @@ Follow the official Microsoft documentation to enable WSL: [https://learn.micros
 
 ## About EuroLinux on WSL
 
-EuroLinux provides EuroLinux version 9 for WSL. The system is based on Red Hat
+EuroLinux company provides EuroLinux version 9 for WSL. The system is based on Red Hat
 Enterprise Linux 9 and is compatible with it. We used our base container image. The official
 repository is located [https://github.com/EuroLinux/wsl](https://github.com/EuroLinux/wsl) it also contains the build scripts and
 latest documentation/releases.
