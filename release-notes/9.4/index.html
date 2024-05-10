@@ -10,10 +10,10 @@
         <meta name="author" content="EuroLinux Community">
       
       
-        <link rel="canonical" href="https://docs.euro-linux.com/release-notes/9.3/">
+        <link rel="canonical" href="https://docs.euro-linux.com/release-notes/9.4/">
       
       
-        <link rel="prev" href="../9.2/">
+        <link rel="prev" href="../9.3/">
       
       
         <link rel="next" href="../ELD/">
@@ -24,7 +24,7 @@
     
     
       
-        <title>EuroLinux 9.3 Release Notes - EuroLinux Documentation</title>
+        <title>EuroLinux 9.4 Release Notes - EuroLinux Documentation</title>
       
     
     
@@ -85,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#eurolinux-93-release-notes" class="md-skip">
+        <a href="#eurolinux-94-release-notes" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              EuroLinux 9.3 Release Notes
+              EuroLinux 9.4 Release Notes
             
           </span>
         </div>
@@ -1312,6 +1312,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../9.3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    EuroLinux 9.3 Release Notes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -1327,7 +1347,7 @@
           
   
   <span class="md-ellipsis">
-    EuroLinux 9.3 Release Notes
+    EuroLinux 9.4 Release Notes
   </span>
   
 
@@ -1338,7 +1358,7 @@
         
   
   <span class="md-ellipsis">
-    EuroLinux 9.3 Release Notes
+    EuroLinux 9.4 Release Notes
   </span>
   
 
@@ -1360,8 +1380,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#major-changes-in-eurolinux-93" class="md-nav__link">
-    Major changes in EuroLinux 9.3.
+  <a href="#major-changes-in-eurolinux-94" class="md-nav__link">
+    Major changes in EuroLinux 9.4.
   </a>
   
 </li>
@@ -1383,6 +1403,62 @@
         <li class="md-nav__item">
   <a href="#compilers-and-development-tools" class="md-nav__link">
     Compilers and development tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-performance-tools-and-debuggers" class="md-nav__link">
+    Updated performance tools and debuggers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-performance-monitoring-tools" class="md-nav__link">
+    Updated performance monitoring tools
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#updated-compiler-toolsets" class="md-nav__link">
+    Updated compiler toolsets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#java-implementations-in-eurolinux-9" class="md-nav__link">
+    Java implementations in EuroLinux 9
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#known-issues" class="md-nav__link">
+    Known issues
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#batteries-repositories" class="md-nav__link">
+    Batteries repositories
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#container-and-cloud-images" class="md-nav__link">
+    Container and cloud images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    Additional resources
   </a>
   
 </li>
@@ -1441,55 +1517,51 @@
   
 
 
-<h1 id="eurolinux-93-release-notes">EuroLinux 9.3 Release Notes</h1>
-<p>This version's code name is Riga - the capital of Latvia.</p>
-<h2 id="major-changes-in-eurolinux-93">Major changes in EuroLinux 9.3.</h2>
+<h1 id="eurolinux-94-release-notes">EuroLinux 9.4 Release Notes</h1>
+<p>This version's code name is San Marino - the capital of San Marino, the world's oldest republic.</p>
+<h2 id="major-changes-in-eurolinux-94">Major changes in EuroLinux 9.4.</h2>
 <h2 id="security">Security</h2>
 <p>Key security-related highlights:</p>
 <ul>
-<li><strong>Keylime</strong> was rebased to version 7.3.0.</li>
-<li>OpenSSH was further migrated from the less secure SHA-1 message digest.</li>
-<li>The <strong>pcsc-lite-ccid</strong> USB Chip/Smart Card Interface Device(CCID)) and Integrated Circuit Card Device (ICCD) driver was rebased to version 1.5.2.</li>
-<li><strong>SEtools</strong>, the collection of graphical tools, command-line tools, and libraries for SELinux policy analysis, was rebased to version 4.4.3.</li>
-<li><strong>OpenSCAP</strong> was rebased to version 1.3.8.</li>
+<li><strong>Rsyslog</strong> log processing system introduces customizable TLS/SSL encryption settings and additional capability dropping options.</li>
+<li>The <strong>OpenSSL</strong> TLS toolkit adds a provider-specific configuration directory.</li>
+<li>The Linux kernel cryptographic API (<strong>libkcapi</strong>) 1.4.0 introduces new tools and options. You can now specify target file names for hash calculations using the -T option.</li>
+<li>The <strong>stunnel</strong> TLS/SSL tunneling service 5.71 provides many new features such as support for modern PostgreSQL clients.</li>
 </ul>
 <h2 id="programming-languages-web-and-database-servers">Programming languages, web and database servers</h2>
 <p>Later versions of the following application are now available:</p>
 <ul>
-<li><strong>Redis 7</strong></li>
-<li><strong>Node.js 20</strong></li>
+<li><strong>MariaDB 10.11</strong></li>
+<li><strong>nginx 1.24</strong></li>
+<li><strong>PHP 8.2</strong></li>
+<li><strong>PostgreSQL 16</strong></li>
+<li><strong>Python 3.12</strong></li>
 </ul>
-<p>Furthermore, the <strong>Apache HTTP Server</strong> has been updated to version 2.4.57.</p>
 <p>The following components have been upgraded:</p>
 <ul>
-<li><strong>Git LFS</strong> to version 3.2.0</li>
-<li><strong>Git</strong> to version 2.39.1</li>
+<li><strong>Git LFS</strong> to version 3.4.1</li>
+<li><strong>Git</strong> to version 2.43.0</li>
 </ul>
 <h2 id="compilers-and-development-tools">Compilers and development tools</h2>
-<p>The following system toolchain components have been updated:</p>
-<ul>
-<li><strong>GCC</strong> 11.4.1</li>
-</ul>
-<h1 id="updated-performance-tools-and-debuggers">Updated performance tools and debuggers</h1>
+<h2 id="updated-performance-tools-and-debuggers">Updated performance tools and debuggers</h2>
 <p>The following performance tools and debuggers have been updated:</p>
 <ul>
-<li><strong>Valgrind 3.21</strong></li>
-<li><strong>SystemTap 4.9</strong></li>
-<li><strong>elfutils 0.189</strong></li>
+<li><strong>elfutils 0.190</strong></li>
+<li><strong>SystemTap 5.0</strong></li>
+<li><strong>Valgrind 3.22</strong></li>
 </ul>
 <h2 id="updated-performance-monitoring-tools">Updated performance monitoring tools</h2>
 <p>The following performance monitoring tools have been updated:</p>
 <ul>
-<li><strong>PCP</strong> 6.0.5</li>
-<li><strong>Grafana</strong> 9.2.10</li>
+<li><strong>PCP</strong> 6.2.0</li>
 </ul>
 <h2 id="updated-compiler-toolsets">Updated compiler toolsets</h2>
-<p>The following compiler toolsets have been updated in:</p>
+<p>The following compiler toolsets have been updated:</p>
 <ul>
 <li><strong>GCC Toolset</strong> 13</li>
-<li><strong>LLVM Toolset</strong> 16.0.6</li>
-<li><strong>Rust Toolset</strong> 1.71.1</li>
-<li><strong>Go Toolset</strong> 1.20.10</li>
+<li><strong>Go Toolset</strong> 1.21.7</li>
+<li><strong>LLVM Toolset</strong> 17.0.6</li>
+<li><strong>Rust Toolset</strong> 1.75.1</li>
 </ul>
 <h2 id="java-implementations-in-eurolinux-9">Java implementations in EuroLinux 9</h2>
 <p>The EuroLinux 9 AppStream repository includes:</p>
@@ -1503,7 +1575,7 @@
 <li>Environment and the OpenJDK 8 Java Software Development Kit.</li>
 </ul>
 <h2 id="known-issues">Known issues</h2>
-<p>Due to evolution of build process updates for <strong>Java 21 OpenJDK</strong> and <strong>SCAP Security Guide</strong> are delayed now. They are going to be delivered soon.</p>
+<p>Due to evolution of build process update for <strong>SCAP Security Guide</strong> are delayed now. They are going to be delivered soon.</p>
 <h2 id="batteries-repositories">Batteries repositories</h2>
 <p>The battery repository is available for customers with Golden Key and Gaia
 subscriptions. There are about 330 packages that are not part of any build (so
@@ -1520,7 +1592,7 @@ rebuild EuroLinux/Custom Fork from RHEL or Eurolinux sources.</p>
 <li><a href="https://fbi2.cdn.euro-linux.com/isos/">Download EuroLinux ISO secondary download</a></li>
 <li><a href="https://github.com/EuroLinux/eurolinux-migration-scripts">EuroLinux universal migration scripts</a></li>
 <li><a href="https://github.com/EuroLinux/eurolinux-distro-bugs-and-rfc">EuroLinux Public Request for Change and Bug Tracker</a></li>
-<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html-single/9.3_release_notes/index">Red Hat 9.3 Release Notes</a> parts of our release notes are loosely based on this document.</li>
+<li><a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html-single/9.4_release_notes/index">Red Hat 9.4 Release Notes</a> parts of our release notes are loosely based on this document.</li>
 </ul>
 
 
@@ -1543,7 +1615,7 @@ rebuild EuroLinux/Custom Fork from RHEL or Eurolinux sources.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../9.2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: EuroLinux 9.2 Release Notes">
+          <a href="../9.3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: EuroLinux 9.3 Release Notes">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -1553,7 +1625,7 @@ rebuild EuroLinux/Custom Fork from RHEL or Eurolinux sources.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                EuroLinux 9.2 Release Notes
+                EuroLinux 9.3 Release Notes
               </div>
             </div>
           </a>
