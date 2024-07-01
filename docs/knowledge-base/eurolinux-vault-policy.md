@@ -21,7 +21,8 @@ each minor release (minor release is for example EuroLinux 8.6 -> 8.7 -> 8.8),
 of the vault. The first one is the initial state of the release, then there is
 current state (for living release), the third one has '-last' and it's the last
 snapshot before a new minor release. This idea originated from community
-feedback. For example in case of EuroLinux 8.7 (that in time of writing this documentation is the latest minor release):
+feedback. For example in case of EuroLinux 8.7 (that in time of writing this
+documentation is the latest minor release):
 
 - [https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.7-init/](https://vault.cdn.euro-linux.com/legacy/eurolinux/8/8.7-init/)
   contains the initial state for 8.7
@@ -33,7 +34,7 @@ feedback. For example in case of EuroLinux 8.7 (that in time of writing this doc
   of this minor release.
 
 If there is no version with `-last` suffix it means that this version is a
-newest minor release.
+newest minor release or the `-last` was not created.
 
 ## Vault for the current version
 
