@@ -15,8 +15,7 @@ vault:
 <script src="https://gist.github.com/AlexBaranowski/4d1aab197164ec55e200c00ceb6884db.js"></script>
 
 
-Or manually add the following files to `/etc/yum.repos.d/eurolinux-7-vault-repos.repo`:
-
+Or manually add the following to `/etc/yum.repos.d/eurolinux-7-vault-repos.repo`:
 
 ```ini
 [eurolinux7-base]
