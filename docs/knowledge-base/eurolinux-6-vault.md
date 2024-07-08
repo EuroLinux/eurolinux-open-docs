@@ -1,8 +1,8 @@
 # Accessing EuroLinux 6.10 Vaulted Repositories
 
-## EuroLinux 6 EOL   2024-06-30
+## EuroLinux 6 ELS EOL 2024-06-30
 
-EuroLinux 6 reached its end of life on November 30, 2020; EuroLinux 6 ELS
+EuroLinux 6 reached its end of life on 2020-11-30; EuroLinux 6 ELS
 reached EOL on 2024-06-30 and is no longer supported. This means critical
 security updated are no longer provided, making your system highly vulnerable
 to security threats.
