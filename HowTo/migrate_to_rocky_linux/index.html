@@ -1505,41 +1505,41 @@
 
 <h1 id="procedure-for-migrating-eurolinux-to-rockylinux">Procedure for migrating EuroLinux to RockyLinux</h1>
 <ol>
-<li>Preparation:</li>
+<li>
+<p>Preparation:</p>
+<ul>
 <li>Ensure a stable and reliable internet connection throughout the entire migration process. This is critical for downloading scripts and packages.</li>
 <li>Create a full backup of the system to be migrated.</li>
 <li>Test the recovery procedure to ensure you can restore the system in case of interruption or errors during migration.</li>
-<li>
-<p>It is recommended to run the migration in a session manager, e.g., tmux.</p>
+<li>It is recommended to run the migration in a session manager, e.g., tmux.</li>
+</ul>
 </li>
 <li>
 <p>Download migration scripts:</p>
-</li>
+<ul>
 <li>For EL8:
-     <div class="highlight"><pre><span></span><code>curl -O https://raw.githubusercontent.com/EuroLinux/rocky-tools/feature/vaulted_migration/migrate2rocky/migrate2rocky.sh
+  <div class="highlight"><pre><span></span><code>curl -O https://raw.githubusercontent.com/EuroLinux/rocky-tools/feature/vaulted_migration/migrate2rocky/migrate2rocky.sh
 </code></pre></div></li>
-<li>
-<p>For EL9:
-     <div class="highlight"><pre><span></span><code>curl -O https://raw.githubusercontent.com/EuroLinux/rocky-tools/feature/vaulted_migration/migrate2rocky/migrate2rocky9.sh
-</code></pre></div></p>
+<li>For EL9:
+  <div class="highlight"><pre><span></span><code>curl -O https://raw.githubusercontent.com/EuroLinux/rocky-tools/feature/vaulted_migration/migrate2rocky/migrate2rocky9.sh
+</code></pre></div></li>
+</ul>
 </li>
 <li>
 <p>Migration:</p>
-</li>
-<li>
-<p>Migrating EuroLinux 8 to RockyLinux 8:
-     <div class="highlight"><pre><span></span><code>sudo bash migrate2rocky.sh -r
-</code></pre></div></p>
-</li>
-<li>
-<p>Migrating EuroLinux 9.4 to RockyLinux 9.4:</p>
 <ul>
+<li>Migrating EuroLinux 8 to RockyLinux 8:
+  <div class="highlight"><pre><span></span><code>sudo bash migrate2rocky.sh -r
+</code></pre></div></li>
+<li>Migrating EuroLinux 9.4 to RockyLinux 9.4:<ul>
 <li>If RockyLinux has not yet released version 9.5:
-   <div class="highlight"><pre><span></span><code>sudo bash migrate2rocky9.sh -r
+  <div class="highlight"><pre><span></span><code>sudo bash migrate2rocky9.sh -r
 </code></pre></div></li>
 <li>If RockyLinux has already released version 9.5 or higher:
-   <div class="highlight"><pre><span></span><code>sudo bash migrate2rocky9.sh -rv 9.4
+  <div class="highlight"><pre><span></span><code>sudo bash migrate2rocky9.sh -rv 9.4
 </code></pre></div></li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
