@@ -1,7 +1,7 @@
 # EuroLinux
 
 !!! info EOL
-    Last packages for EuroLinux distribution were released on 23rd October 2024.
+    The last packages for EuroLinux distribution were released on 23rd October 2024.
     The EuroLinux team advises and supports migration to Rocky Linux using [linked instructions](https://docs.euro-linux.com/HowTo/migrate_to_rocky_linux/)
     For technical support services check [this page](https://euro-linux.com/en/software/technical-support/)
 
